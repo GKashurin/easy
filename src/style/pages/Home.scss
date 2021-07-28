@@ -1,0 +1,124 @@
+@import '../_variables.scss';
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.activities {
+  aspect-ratio: 1/1;
+  animation: firstLoadAnim 1.2s;
+  //width: 50%;
+  width: 50%;
+  max-width: 50vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //@media (max-width: $md1) {
+  //  width: 60%;
+  //}
+  //@media (max-width: $md2) {
+  //  width: 70%;
+  //}
+  img {
+    width: 100px;
+    height: 100px;
+    //@media (max-width: $md1) {
+    //  width: 200px;
+    //  height: 200px;
+    //}
+    //@media (max-width: $md2) {
+    //  width: 170px;
+    //  height: 170px;
+    //}
+    //@media (max-width: $md3) {
+    //  width: 150px;
+    //  height: 150px;
+    //}
+  }
+  &__row {
+    display: flex;
+    justify-content: center;
+    //margin-top: -132px;
+    &:nth-child(2n) {
+      justify-content: space-between;
+    }
+    //@media (max-width: $md1) {
+    //  margin-top: -127px;
+    //  &:first-child {
+    //    margin-top: 0;
+    //  }
+    //}
+  //@media (max-width: $md2) {
+  //    margin-top: -108px;
+  //    &:first-child {
+  //      margin-top: 0;
+  //    }
+  //  }
+  //@media (max-width: $md3) {
+  //    margin-top: -75px;
+  //    &:first-child {
+  //      margin-top: 0;
+  //    }
+  //  }
+  }
+  //@media (max-width: $md4) {
+  //  display: none;
+  //}
+}
+.active {
+  transform: scale(1);
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+  }
+}
+.active > img {
+  filter: grayscale(0%);
+  transition: filter 0.3s ease;
+}
+
+.disabled > img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.disabled.disabledAnimation {
+  animation: animDisabled 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+
+.activeAnimation {
+  animation: animActive 1.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animDisabled {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes animActive {
+  0% {}
+  30% {transform: scale(1.5);}
+  100% {transform: scale(0);}
+}
+
+@keyframes firstLoadAnim {
+  0% {transform: scale(0)}
+  50% {transform: scale(1.2)}
+  100% {transform: scale(1)}
+}
+

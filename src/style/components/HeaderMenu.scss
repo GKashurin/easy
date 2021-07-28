@@ -1,0 +1,25 @@
+@import '../_variables.scss';
+
+.headerMenu {
+  display: flex;
+  font-size: 16px;
+  white-space: nowrap;
+  justify-content: space-around;
+  li {
+    z-index: 2;
+  }
+  @media (max-width: $md2) {
+    font-size: 15px;
+  }
+}
+
+.phone > span > span {
+  @media (max-width: $md3) {
+    display: none;
+  }
+}
+.email > span > span {
+  @media (max-width: $md3) {
+    display: none;
+  }
+}

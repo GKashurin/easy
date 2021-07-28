@@ -1,0 +1,113 @@
+@import '../_variables.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.footer__contacts {
+  font-size: 14px;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  justify-content: center;
+  &:last-child {margin-right: 0;}
+}
+
+.socials__item {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  @media (min-width: $md3) {
+    &:hover {
+      background-color: #ffffff;
+      text-shadow: currentColor;
+      transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    }
+    &:hover::before {
+      left: 0;
+      right: auto;
+      width: 100%;
+      transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0;
+      z-index: -1;
+      content: "";
+      background: #ffffff;
+      border-radius: 50%;
+      transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    }
+  }
+}
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.socials__item:hover .socials__link svg {
+  @media (min-width: $md3) {
+    fill: #c95691;
+    transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  }
+
+}
+.socials__link svg {
+  fill: #fff;
+}
+
+.socials__button {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 83.52%;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 12px;
+  background-color: transparent;
+  cursor: pointer;
+  animation: radial-pulse 2.5s ease-in-out infinite;
+  box-shadow: 0 0 0 1px #fff;
+  border: none;
+  overflow: hidden;
+  @media (min-width: $md3) {
+    &:hover {
+      color: #c95691;
+    }
+
+  }
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 1px #fff;
+  }
+  50% {
+    box-shadow: 0 0 0 3px #fff;
+  }
+  100% {
+    box-shadow: 0 0 0 1px #fff;
+  }
+}
+
+
