@@ -8,9 +8,9 @@ const Chat = ({anim, setAnim }) => {
 	const [visiblePopup, setVisiblePopup] = React.useState(false)
 	const history = useHistory()
 
-	// if (!anim) {
-	// 	setTimeout(() => history.push("/"), 805);
-	// }
+	if (!anim) {
+		setTimeout(() => history.push("/"), 805);
+	}
 	console.log(visiblePopup)
 	return (
 		<div className="info">

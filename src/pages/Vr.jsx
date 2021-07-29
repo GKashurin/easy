@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/components/info.scss"
-import {Link, useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import BtnWrapper from "../components/BtnWrapper";
 import Popup from "../components/Popup";
 
