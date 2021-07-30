@@ -1,17 +1,16 @@
 import React from "react";
 import "../style/components/info.scss"
 import { useHistory} from "react-router-dom";
-import BtnWrapper from "../components/BtnWrapper";
-import Popup from "../components/Popup";
+import {BtnWrapper, Popup} from "../components/"
 
-const Chat = ({anim, setAnim }) => {
-	const [visiblePopup, setVisiblePopup] = React.useState(false)
+const Chat = ({anim, setAnim, visiblePopup, setVisiblePopup }) => {
+
 	const history = useHistory()
 
 	if (!anim) {
 		setTimeout(() => history.push("/"), 805);
 	}
-	console.log(visiblePopup)
+
 	return (
 		<div className="info">
 			<div className={anim ? "info__col-left" : "info__col-left-animBack"}>
@@ -22,13 +21,13 @@ const Chat = ({anim, setAnim }) => {
 					anim={anim}
 					setAnim={setAnim}
 					setVisiblePopup={setVisiblePopup}
+					visiblePopup={visiblePopup}
 				/>
 			</div>
 			<div className={anim ? "info__col-right" : "info__col-right-anim"}>
 				<img src={"image/chat.webp"} alt="img chatbot"/>
 			</div>
 			{visiblePopup ? <Popup
-				visiblePopup={visiblePopup}
 				setVisiblePopup={setVisiblePopup}
 			/> : null}
 		</div>

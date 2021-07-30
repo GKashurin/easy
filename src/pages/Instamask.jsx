@@ -1,11 +1,10 @@
 import React from "react";
 import "../style/components/info.scss"
 import {useHistory} from "react-router-dom";
-import BtnWrapper from "../components/BtnWrapper";
-import Popup from "../components/Popup";
+import {BtnWrapper, Popup} from "../components/"
 
-const Instamask = ({ anim, setAnim }) => {
-	const [visiblePopup, setVisiblePopup] = React.useState(false)
+const Instamask = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
+
 	const history = useHistory()
 
 	if (!anim) {
@@ -21,13 +20,13 @@ const Instamask = ({ anim, setAnim }) => {
 					anim={anim}
 					setAnim={setAnim}
 					setVisiblePopup={setVisiblePopup}
+					visiblePopup={visiblePopup}
 				/>
 			</div>
 			<div className={anim ? "info__col-right" : "info__col-right-anim"}>
 				<img src={"image/mask.webp"} alt="img instamask" />
 			</div>
 			{visiblePopup ? <Popup
-				visiblePopup={visiblePopup}
 				setVisiblePopup={setVisiblePopup}
 			/> : null}
 		</div>

@@ -1,11 +1,9 @@
 import React from "react";
 import "../style/components/info.scss"
 import {useHistory} from "react-router-dom";
-import BtnWrapper from "../components/BtnWrapper";
-import Popup from "../components/Popup";
+import {BtnWrapper, Popup} from "../components/"
 
-const Tours360 = ({ anim, setAnim }) => {
-	const [visiblePopup, setVisiblePopup] = React.useState(false)
+const Tours360 = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 	const history = useHistory()
 
 	if (!anim) {
