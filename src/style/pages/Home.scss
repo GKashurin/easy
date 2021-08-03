@@ -10,64 +10,25 @@
 .activities {
   aspect-ratio: 1/1;
   animation: firstLoadAnim 1.2s;
-  //width: 50%;
-  width: 50%;
-  max-width: 50vh;
-  margin: 0 auto;
+  width: calc(min(65vw, 65vh));
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //@media (max-width: $md1) {
-  //  width: 60%;
-  //}
-  //@media (max-width: $md2) {
-  //  width: 70%;
-  //}
+
   img {
-    width: 100px;
-    height: 100px;
-    //@media (max-width: $md1) {
-    //  width: 200px;
-    //  height: 200px;
-    //}
-    //@media (max-width: $md2) {
-    //  width: 170px;
-    //  height: 170px;
-    //}
-    //@media (max-width: $md3) {
-    //  width: 150px;
-    //  height: 150px;
-    //}
+    width: calc(min(23vw, 23vh));
+
   }
   &__row {
     display: flex;
     justify-content: center;
-    //margin-top: -132px;
+    align-items: center;
+    height: 20%;
     &:nth-child(2n) {
       justify-content: space-between;
     }
-    //@media (max-width: $md1) {
-    //  margin-top: -127px;
-    //  &:first-child {
-    //    margin-top: 0;
-    //  }
-    //}
-  //@media (max-width: $md2) {
-  //    margin-top: -108px;
-  //    &:first-child {
-  //      margin-top: 0;
-  //    }
-  //  }
-  //@media (max-width: $md3) {
-  //    margin-top: -75px;
-  //    &:first-child {
-  //      margin-top: 0;
-  //    }
-  //  }
   }
-  //@media (max-width: $md4) {
-  //  display: none;
-  //}
 }
 .active {
   transform: scale(1);

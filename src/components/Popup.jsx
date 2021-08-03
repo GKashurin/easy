@@ -39,7 +39,7 @@ const Popup = ({setVisiblePopup}) => {
 		return () => {
 			document.body.removeEventListener('click', handleOutsideClick);
 		}
-	}, []);
+	});
 
 	return (
 		<div className="popup__wrapper">

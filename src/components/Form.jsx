@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import InputMask from "react-input-mask";
+import {useHistory} from "react-router-dom";
 
 const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksModal, visibleThanksModal }) => {
 
@@ -8,38 +9,47 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 		{
 			name: 'AR',
 			text: 'AR',
+			pathname: '/vr-ar'
 		},
 		{
 			name: 'VR',
 			text: 'VR',
+			pathname: '/vr-ar'
 		},
 		{
 			name: 'mobile',
 			text: 'Мобильное приложение',
+			pathname: '/mobile'
 		},
 		{
 			name: 'web',
 			text: 'Веб-разработка',
+			pathname: '/web'
 		},
 		{
 			name: '3D',
 			text: '3D моделирование',
+			pathname: '/tours360'
 		},
 		{
 			name: 'chatbot',
 			text: 'чат-бот',
+			pathname: '/chat'
 		},
 		{
 			name: 'VFX',
 			text: 'VFX',
+			pathname: '/vfx'
 		},
 		{
 			name: 'instaMask',
 			text: 'Инстаграм-маска',
+			pathname: '/instamask'
 		},
 		{
 			name: 'another',
 			text: 'не знаю',
+			pathname: '/'
 		},
 
 	]; //вытащить в отдельный файлы js, прокидывать в контейнерные компоненнты. Под каждую контейнерную компоненту создаем свою дату. Один файл для всех страниц
@@ -62,14 +72,14 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 			price: " не знаю",
 		},
 	] //состояние для бюджета
-	const [budgetItem, setBudgetItem] = useState(prices[0])
+	const [budgetItem, setBudgetItem] = useState(prices[3])
 	const [deadline, setDeadline] = useState("")
 	const [description, setDescription] = useState("")
 	const [name, setName] = useState("")
-	const [isValidName, setIsValidName] = useState(false);
+	// const [isValidName, setIsValidName] = useState(false);
 	const [phone, setPhone] = useState("");
 	const [email, setEmail] = useState("");
-	const [isValidMail, setIsValidMail] = useState(false);
+	// const [isValidMail, setIsValidMail] = useState(false);
 	const [company, setCompany] = useState("");
 
 	const values = { //объединенные данные с формы
@@ -90,26 +100,29 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 		setVisibleThanksModal(true);
 	}
 	//Валидация почты
-	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-	const validateEmail = (event) => {
-		setEmail(event.target.value)
-		if (emailRegex.test(event.target.value)) {
-			setIsValidMail(true);
-		} else {
-			setIsValidMail(false);
-		}
-	};
+	// const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	// const validateEmail = (event) => {
+	// 	setEmail(event.target.value)
+	// 	if (emailRegex.test(event.target.value)) {
+	// 		setIsValidMail(true);
+	// 	} else {
+	// 		setIsValidMail(false);
+	// 	}
+	// };
 
 	//Валидация имени
-	const nameRegex = /^(?=.{2,15}$)[a-zA-Z][a-zA-Z0-9]*(?: [a-zA-Z0-9]+)*$/
-	const validateName = (event) => {
-		setName(event.target.value)
-		if (nameRegex.test(event.target.value)) {
-			setIsValidName(true);
-		} else {
-			setIsValidName(false);
-		}
-	};
+	// const nameRegex = /^(?=.{2,15}$)[a-zA-Z][a-zA-Z0-9]*(?: [a-zA-Z0-9]+)*$/
+	// const validateName = (event) => {
+	// 	setName(event.target.value)
+	// 	if (nameRegex.test(event.target.value)) {
+	// 		setIsValidName(true);
+	// 	} else {
+	// 		setIsValidName(false);
+	// 	}
+	// }; useEffect => function => default type check => передать урл => history.location.pathname
+
+	const history = useHistory()
+	console.log(checkedItems)
 
 	return (
 		<form className={ !visibleThanksModal ? "popup__form" : "popup__form hide-popup-form" }>
@@ -125,8 +138,9 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 								className="checkbox__input"
 								name={item.name}
 								checked={checkedItems[item.name]}
+								defaultChecked={item.pathname === history.location.pathname}
 								value={" "}
-								onChange={(e) =>
+								onChange={ e =>
 									setCheckedItems({
 										...checkedItems,
 										[e.target.name]: e.target.checked,
@@ -164,35 +178,36 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 					/>
 				</div>
 			</div>
-
 			<textarea //проект
 				className="popup__form-textarea"
 				placeholder="Расскажите о проекте подробнее"
 				value={description}
 				onChange={(e) => setDescription(e.target.value)}
 			/>
+
 			<div className="popup__form-inputs">
 				<input //имя
 					type="text"
-					className={isValidName ? "popup__form-input-name popup__form-input" : "popup__form-input-name popup__form-input invalid"}
+					className="popup__form-input-name popup__form-input"
 					placeholder="введите ваше имя"
 					value={name}
-					onChange={validateName}
+					onChange={(e) => setName(e.target.value)}
 				/>
 				<InputMask //  телефон
-					className={phone !== "" ? "popup__form-input" : "popup__form-input invalid"}
+					className="popup__form-input"
 					value={phone}
 					onChange={(e) => setPhone(e.target.value)}
 					mask="+7\(999) 999-9999"
 					maskChar=" "
-					placeholder="ваш мобильный номер"
+					placeholder="ваш мобильный номер*"
+					required
 				/>
 				<input //почта
-					className={isValidMail ? "popup__form-input-email popup__form-input" : "popup__form-input-email popup__form-input invalid"}
+					className="popup__form-input-email popup__form-input"
 					placeholder="оставьте ваш емейл"
 					type="email"
 					value={email}
-					onChange={validateEmail}
+					onChange={(e) => setEmail(e.target.value)}
 				/>
 				<input
 					type="text" //компания или сфера
@@ -206,7 +221,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 				<button
 					onClick={changeHandler}
 					className="popup__form-btn animated-button-popup"
-					disabled={!isValidMail || !isValidName || phone === ""}
+					disabled={phone === ""}
 				>отправить запрос
 				</button>
 			</div>

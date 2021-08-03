@@ -3,11 +3,13 @@
 .footer {
   display: flex;
   justify-content: space-between;
-
 }
 
 .footer__contacts {
   font-size: 14px;
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer__socials {

@@ -16,6 +16,10 @@ textarea:focus {
   background-color: #fff;
 }
 
+input:invalid {
+  background: #ffd9d9;
+}
+
 .popup__form {
   position: relative;
   background: #ffffff;
@@ -206,12 +210,11 @@ textarea:focus {
   border-radius: 10px;
   resize: none;
   border: none;
-  padding: 10px 15px;
+
   margin-bottom: 16px;
 }
 .popup__form-textarea::placeholder {
-  font-style: normal;
-  font-weight: 300;
+  padding: 10px 0 0 10px;
   font-size: 14px;
   line-height: 17px;
   color: rgba(61, 61, 61, 0.35);
@@ -245,16 +248,11 @@ textarea:focus {
   }
 }
 
-.invalid {
-  background: #ffd9d9;
-}
-
 .popup__form-btn-wrapper {
   display: inline-block;
 }
 
 .animated-button-popup {
-  font-weight: 300;
   background: transparent;
   color: #fff;
   cursor: pointer;
@@ -290,12 +288,10 @@ textarea:focus {
 }
 
 .popup__form-btn {
-  font-style: normal;
-  font-weight: 300;
   font-size: 20px;
   line-height: 83.52%;
   color: #a23d8d;
-  border: 2px solid #a23d8d;
+  border: 1px solid #a23d8d;
   border-radius: 15px;
   padding: 19px;
   background-color: transparent;

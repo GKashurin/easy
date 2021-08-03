@@ -13,9 +13,22 @@
   }
 }
 
+.phone > span {
+  @media (min-width: $md3) {
+    background: none !important;
+    padding: 0 !important;
+  }
+}
 .phone > span > span {
   @media (max-width: $md3) {
     display: none;
+  }
+}
+
+.email > span {
+  @media (min-width: $md3) {
+    background: none !important;
+    padding: 0 !important;
   }
 }
 .email > span > span {
@@ -23,3 +36,4 @@
     display: none;
   }
 }
+

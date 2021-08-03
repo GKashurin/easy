@@ -16,7 +16,15 @@ const App = () => {
 					<Header setAnim={setAnim} anim={anim} />
 					<section className="content">
 						<Switch>
-							<Route exact path="/"> <Home setAnim={setAnim} anim={anim}/> </Route>
+							<Route exact path="/">
+								<Home
+									setAnim={setAnim}
+									anim={anim}
+									setVisiblePopup={setVisiblePopup}
+									visiblePopup={visiblePopup}
+								/>
+							</Route>
+
 							<Route path="/web">
 								<Web visiblePopup={visiblePopup}
 									 setVisiblePopup={setVisiblePopup}
@@ -68,7 +76,7 @@ const App = () => {
 							</Route>
 						</Switch>
 					</section>
-					<Footer />
+					<Footer setVisiblePopup={setVisiblePopup}/>
 				</main>
 			</div>
 	);

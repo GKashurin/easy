@@ -38,17 +38,13 @@ address {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  //overflow: hidden;
+  overflow: hidden;
   position: relative;
 }
-
-
-
 
 // анимированные кнопки
 //https://codepen.io/Navedkhan012/pen/qXYyXy
 .animated-button {
-  font-weight: 300;
   background: transparent;
   color: #fff;
   cursor: pointer;

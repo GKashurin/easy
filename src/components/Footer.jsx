@@ -3,14 +3,20 @@ import "../style/components/Footer.scss"
 import {Link} from "react-router-dom";
 
 
-const Footer = () => {
+const Footer = ({setVisiblePopup}) => {
 	return (
 		<footer className="footer">
 			<div className="footer__contacts contacts">
-				<div>620144, г. Екатеринбург. ул. Степана Разина, 2, оф. 6</div>
+				<div>
+					<address>
+						<Link to="#">
+							620144, г. Екатеринбург. ул. Степана Разина, 2, оф. 6
+						</Link>
+					</address>
+				</div>
 				<div>
 					<a href="mailto:namaste@easycg.ru">namaste@easycg.ru, </a>
-					<a href="tel:3435215031">(343) 521-50-31</a>
+					<a href="tel:3435215031">+7 (343) 521-50-31</a>
 				</div>
 			</div>
 			<div className="footer__socials socials">
@@ -21,7 +27,7 @@ const Footer = () => {
 						<svg
 							width="16"
 							height="16"
-							viewBox="0 0 16 15"
+							viewBox="-1 0 16 15"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
 						>
@@ -84,7 +90,7 @@ const Footer = () => {
 						</svg>
 					</Link>
 				</div>
-				<button className="socials__button animated-button">
+				<button className="socials__button animated-button" onClick={(() => setVisiblePopup(true))}>
 					отправить запрос
 				</button>
 			</div>

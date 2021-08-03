@@ -33,9 +33,9 @@ const HeaderMenu = () => {
 							className="animated-button phone">
 							<span style={
 								{ 	background: "url(/image/Phone_white.png) no-repeat left",
-									padding: "0px 0 0 23px",
+									padding: "0 0 0 23px",
 								}
-							}><span>(343) 521-50-31</span>
+							}><span>+7 (343) 521-50-31</span>
 							</span>
 						</a>
 					</address>
