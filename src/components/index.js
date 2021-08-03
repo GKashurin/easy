@@ -1,6 +1,6 @@
-export { default as Footer } from './Footer';
-export { default as Header } from './Header';
-export { default as Popup } from './Popup';
-export { default as ThanksModal } from './ThanksModal';
-export { default as Form } from './Form';
-export { default as BtnWrapper } from './BtnWrapper';
+export { default as Footer } from './footer/Footer';
+export { default as Header } from './header/Header';
+export { default as Popup } from './popup/Popup';
+export { default as ThanksModal } from './thanksModal/ThanksModal';
+export { default as Form } from './form/Form';
+export { default as BtnWrapper } from './btnWrapper/BtnWrapper';
