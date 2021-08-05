@@ -1,5 +1,3 @@
-@import '../../variables';
-
 .headerMenu {
   display: flex;
   font-size: 16px;
@@ -8,31 +6,31 @@
   li {
     z-index: 2;
   }
-  @media (max-width: $md2) {
+  @media (max-width: 1025px) {
     font-size: 15px;
   }
 }
 
 .phone > span {
-  @media (min-width: $md3) {
+  @media (min-width: 780px) {
     background: none !important;
     padding: 0 !important;
   }
 }
 .phone > span > span {
-  @media (max-width: $md3) {
+  @media (max-width: 780px) {
     display: none;
   }
 }
 
 .email > span {
-  @media (min-width: $md3) {
+  @media (min-width: 780px) {
     background: none !important;
     padding: 0 !important;
   }
 }
 .email > span > span {
-  @media (max-width: $md3) {
+  @media (max-width: 780px) {
     display: none;
   }
 }

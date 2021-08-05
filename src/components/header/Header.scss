@@ -1,18 +1,16 @@
-@import '../../variables';
-
 .header {
   display: flex;
   justify-content: space-between;
   min-height: 3rem;
   align-items: center;
-  margin: 20px 0 10px 0;
-  @media (max-width: $md2) {
+  margin: 0 0 10px 0;
+  @media (max-width: 1025px) {
     margin: 20px 0 7px 0;
   }
   img {
     width: 303px;
     height: 74px;
-    @media (max-width: $md2) {
+    @media (max-width: 1025px) {
       width: 250px;
       left: 61.5%;
       height: 70px;

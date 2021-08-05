@@ -48,14 +48,13 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 	}, [])//получение чекбокса из адресной строки
 
 	return (
-		<form className={ !visibleThanksModal ? "popup__form" : "popup__form hide-popup-form" }>
-			<h2 className="popup__form-title">Расскажите сами</h2>
-			<h2 className="popup__form-title--mobile">Обсудим проект</h2>
-			<p className="popup__form-subtitle">выберите тип интересуемого проекта</p>
-			<ul className="popup__form-tabs">
+		<form className={ !visibleThanksModal ? "form" : "form hide-popup-form" }>
+			<h2 className="form__title">Расскажите сами</h2>
+			<p className="form__subtitle">выберите тип интересуемого проекта</p>
+			<ul className="form__checkboxes checkboxes">
 				{checkboxes.map((item) => (
-					<li className="popup__form-tab tab" key={item.name}>
-						<label className="tab__checkbox checkbox">
+					<li className="checkbox" key={item.name}>
+						<label className="checkbox__label">
 							<input
 								type="checkbox"
 								className="checkbox__input"
@@ -75,49 +74,46 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 					</li>
 				))}
 			</ul>
-			<div className="popup__form-wrapper">
-				<div className="wrapper-form__col">
-					<p className="popup__form-subtitle">Укажите бюджет проекта:</p>
-					<div className="popup__form-slider">
+
+			<div className="form__budget budget">
+				<div className="budget__sum">
+					<p className="form__subtitle">Укажите бюджет проекта:</p>
+					<div className="budget__slider slider">
 						{prices?.map((item) => (
 							<span
-								className="popup__form-slider-item"
+								className="slider__item"
 								key={item.price}
 								onClick={() => { setBudgetItem(item) }}
 							>{item.price}
-                    					</span>
+							</span>
 						))}
 						<div style={{left: 25 * budgetItem.id + "%"}}/>
 					</div>
 				</div>
-				<div className="wrapper-form__col popup__form-deadline">
-					<p className="popup__form-subtitle">дедлайн</p>
+				<div className="budget__deadline">
+					<p className="form__subtitle">дедлайн</p>
 					<input
 						type="date"
 						placeholder="укажите дату"
-						className="popup__form-deadline-input"
 						value={deadline}
 						onChange={(e) => setDeadline(e.target.value)}
 					/>
 				</div>
 			</div>
 			<textarea //проект
-				className="popup__form-textarea"
 				placeholder="Расскажите о проекте подробнее"
 				value={description}
 				onChange={(e) => setDescription(e.target.value)}
 			/>
 
-			<div className="popup__form-inputs">
+			<div className="form__userInfo userInfo">
 				<input //имя
 					type="text"
-					className="popup__form-input-name popup__form-input"
 					placeholder="введите ваше имя"
 					value={name}
 					onChange={(e) => setName(e.target.value)}
 				/>
 				<InputMask //  телефон
-					className="popup__form-input"
 					value={phone}
 					onChange={(e) => setPhone(e.target.value)}
 					mask="+7\(999) 999-9999"
@@ -126,7 +122,6 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 					required
 				/>
 				<input //почта
-					className="popup__form-input-email popup__form-input"
 					placeholder="оставьте ваш емейл"
 					type="email"
 					value={email}
@@ -134,23 +129,22 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 				/>
 				<input
 					type="text" //компания или сфера
-					className="popup__form-input-company popup__form-input"
 					placeholder="компания или сфера деятельности"
 					value={company}
 					onChange={(e) => setCompany(e.target.value)}
 				/>
 			</div>
-			<div className="popup__form-btn-wrapper">
+			<div className="form__btnWrapper btnWrapper">
 				<button
 					onClick={changeHandler}
 					className="popup__form-btn animated-button-popup"
 					disabled={phone === ""}
 				>отправить запрос
 				</button>
+				<span>
+					Нажимая на кнопку, вы даете согласие на обработку своих персональных данных.
+				</span>
 			</div>
-			<span className="popup__form-btn-span">
-				Нажимая на кнопку, вы даете согласие на обработку своих персональных данных.
-			</span>
 		</form>
 	)
 }

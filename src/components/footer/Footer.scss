@@ -1,5 +1,3 @@
-@import '../../variables';
-
 .footer {
   display: flex;
   justify-content: space-between;
@@ -33,7 +31,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  @media (min-width: $md3) {
+  @media (min-width: 768px) {
     &:hover {
       background-color: #ffffff;
       text-shadow: currentColor;
@@ -67,7 +65,7 @@
 }
 
 .socials__item:hover .socials__link svg {
-  @media (min-width: $md3) {
+  @media (min-width: 768px) {
     fill: #c95691;
     transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   }
@@ -89,23 +87,23 @@
   box-shadow: 0 0 0 1px #fff;
   border: none;
   overflow: hidden;
-  @media (min-width: $md3) {
+  @media (min-width: 768px) {
     &:hover {
       color: #c95691;
     }
   }
-  //&:before { //пробегающий блик
-  //  content: '';
-  //  width: 100%;
-  //  height: 200%;
-  //  position: absolute;
-  //  top: 0; left: 0;
-  //  opacity: 0.5;
-  //  filter: blur;
-  //  background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
-  //  transform: translate(-100%, -25%) rotate(10deg);
-  //  animation: blick 3s infinite;
-  //}
+  &:after { //пробегающий блик
+    content: '';
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0.5;
+    filter: blur;
+    background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
+    transform: translate(-100%, -25%) rotate(10deg);
+    animation: blick 3s infinite;
+  }
 }
 
 @keyframes radial-pulse {
@@ -119,15 +117,15 @@
     box-shadow: 0 0 0 1px #fff;
   }
 }
-//
-//@keyframes blick {
-//  0% {
-//    transform: translate(-100%, -25%) rotate(10deg);
-//  }
-//  20% {
-//    transform: translate(100%, -25%) rotate(10deg);
-//  }
-//  100% {
-//    transform: translate(100%, -25%) rotate(10deg);
-//  }
-//}
+
+@keyframes blick {
+  0% {
+    transform: translate(-100%, -25%) rotate(10deg);
+  }
+  20% {
+    transform: translate(100%, -25%) rotate(10deg);
+  }
+  100% {
+    transform: translate(100%, -25%) rotate(10deg);
+  }
+}

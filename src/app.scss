@@ -1,5 +1,3 @@
-@import 'variables';
-
 * {
   margin: 0;
   padding: 0;
@@ -70,14 +68,14 @@ address {
     border: 1px solid #ffffff;
     &:hover {
       color: #C95691;
-      @media (max-width: $md3) {
+      @media (max-width: 768px) {
         color: white;
       }}
   }
-  @media (max-width: $md2) {
+  @media (max-width: 1025px) {
     padding: 10px 7px;
   }
-  @media (min-width: $md3) {
+  @media (min-width: 768px) {
     &:hover {
       color: #1C98E0;
       background-color: #ffffff;

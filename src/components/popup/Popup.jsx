@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from "react";
 import "./Popup.scss"
 import "../form/Form.scss"
-import {ThanksModal, Form} from "../index"
+import {Form, PopupContacts, ThanksModal} from "../index"
 
 const Popup = ({setVisiblePopup}) => {
 	const ref = useRef();
@@ -42,9 +42,8 @@ const Popup = ({setVisiblePopup}) => {
 	});
 
 	return (
-		<div className="popup__wrapper">
-			<div className="overlay"></div>
-			<div className={!visibleThanksModal ? "popup" : "popup hide-popup"}>
+		<>
+			<div className="popup">
 				<div ref={ref} className={!changeFormContainer ? "popup__form-container" : "popup__form-container-animBack"}>
 					<Form
 						setTimerActive={setTimerActive}
@@ -53,55 +52,17 @@ const Popup = ({setVisiblePopup}) => {
 						setVisibleThanksModal={setVisibleThanksModal}
 						visibleThanksModal={visibleThanksModal}
 					/>
-					<div className={!visibleThanksModal ? "popup__inner" : "popup__inner position-inner"}>
-						<div className={ !visibleThanksModal ? "popup__inner-wrapper" : "popup__inner-wrapper hide-wrapper" } >
-							<h2 className="popup__inner-title">Обсудим проект вместе?</h2>
-							<p className="popup__inner-text">
-								Расскажите о себе и задаче. Или можете позвонить нам и мы сами
-								все заполним:
-							</p>
-							<a href="tel:73435215031" className="popup__inner-phone">
-								+7 (343) 521-50-31
-							</a>
-							<div className="popup__inner-address">
-								<span>Студия EASY</span>
-								620144, г. Екатеринбург. ул. Степана Разина, 2, оф. 6
-							</div>
-						</div>
-						<ThanksModal
-							visibleThanksModal={visibleThanksModal}
-							seconds={seconds}
-						/>
-					</div>
-					{/*<div className="popup__inner-mobile">*/}
-					{/*	<div className="popup__inner-animation-mobile">*/}
-					{/*		<h2 className="popup__inner-animation-title-mobile">*/}
-					{/*			Спасибо <br/>*/}
-					{/*			за заявку!*/}
-					{/*		</h2>*/}
-					{/*		<p className="popup__inner-animation-text-mobile">*/}
-					{/*			Совсем чуть-чуть и мы вам перезвоним, чтобы обсудить ваш проект и*/}
-					{/*			предложить решение!*/}
-					{/*		</p>*/}
-					{/*		<div className="popup__inner-animation-close-mobile">*/}
-					{/*			/!*Окно закроется через {{countDown}} секунд*!/*/}
-					{/*		</div>*/}
-					{/*		<div className="popup__inner-animation-images-mobile">*/}
-					{/*			/!*<img src="('../assets/image/hands.webp')" alt=""/>*!/*/}
-					{/*		</div>*/}
-					{/*	</div>*/}
-					{/*</div>*/}
-					<button className="popup__close-btn" onClick={animClosePopup}>
-						<img
-							width="25px"
-							height="25px"
-							src={"/image/Close_Box_Red.png"}
-							alt="кнопка закрытия"
-						/>
-					</button>
+					<PopupContacts
+						seconds={seconds}
+						visibleThanksModal={visibleThanksModal}
+					/>
 				</div>
 			</div>
-		</div>
+			<ThanksModal
+				visibleThanksModal={visibleThanksModal}
+				seconds={seconds}
+			/>
+		</>
 	);
 }
 
