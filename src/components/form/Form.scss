@@ -19,7 +19,7 @@ textarea:focus {
   background-color: #fff;
 }
 
-input:invalid {
+input:required:invalid {
   background: #ffd9d9;
 }
 

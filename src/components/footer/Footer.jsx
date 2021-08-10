@@ -7,13 +7,11 @@ const Footer = ({setVisiblePopup}) => {
 	return (
 		<footer className="footer">
 			<div className="footer__contacts contacts">
-				<div>
-					<address>
-						<Link to="#">
-							620144, г. Екатеринбург. ул. Степана Разина, 2, оф. 6
-						</Link>
-					</address>
-				</div>
+				<address>
+					<Link to="#">
+						620144, г. Екатеринбург. ул. Степана Разина, 2, оф. 6
+					</Link>
+				</address>
 				<div>
 					<a href="mailto:namaste@easycg.ru">namaste@easycg.ru, </a>
 					<a href="tel:3435215031">+7 (343) 521-50-31</a>

@@ -10,7 +10,7 @@ const HeaderMenu = () => {
 					<Link to="/portfolio" className="animated-button">портфолио</Link>
 				</li>
 				<li className="headerMenu__item" >
-					<Link to="/services" className="animated-button">команда</Link>
+					<Link to="/team" className="animated-button">команда</Link>
 				</li>
 				<li className="headerMenu__item">
 					<address>

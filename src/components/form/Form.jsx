@@ -138,7 +138,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 				<button
 					onClick={changeHandler}
 					className="popup__form-btn animated-button-popup"
-					disabled={phone === ""}
+					// disabled={phone === ""}
 				>отправить запрос
 				</button>
 				<span>

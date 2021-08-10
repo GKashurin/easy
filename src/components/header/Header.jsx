@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Header.scss"
-import HeaderMenu from "../headerMenu/HeaderMenu";
+import { Divide as Hamburger } from "hamburger-react";
 import {Link, useHistory} from "react-router-dom";
+import {OverlayMobile, HeaderMenu} from "../index";
 
 const Header = ({ setAnim }) => {
+	const [burgerOpen, setBurgerOpen] = useState(false);
 	const history = useHistory();
 	return (
 		<header className="header">
@@ -22,6 +24,10 @@ const Header = ({ setAnim }) => {
 				</Link>
 			</div>
 			<HeaderMenu/>
+			<div className="burger">
+				<Hamburger size={25} toggled={burgerOpen} toggle={setBurgerOpen} />
+			</div>
+			{burgerOpen ? <OverlayMobile burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} /> : null}
 		</header>
 	)
 }

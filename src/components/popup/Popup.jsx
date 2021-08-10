@@ -16,7 +16,7 @@ const Popup = ({setVisiblePopup}) => {
 			setTimeout(setSeconds, 1000, seconds - 1);
 		} else {
 			setTimerActive(false);
-		}
+		} 
 	}, [seconds, timerActive]);//таймер
 
 	const animClosePopup = (e) => {

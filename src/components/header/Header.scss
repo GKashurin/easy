@@ -1,11 +1,11 @@
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  min-height: 3rem;
   align-items: center;
   margin: 0 0 10px 0;
   @media (max-width: 1025px) {
-    margin: 20px 0 7px 0;
+    margin: 0 0 7px 0;
   }
   img {
     width: 303px;
@@ -15,5 +15,14 @@
       left: 61.5%;
       height: 70px;
     }
+    @media (max-width: 555px) {
+      width: 216px;
+      height: 53px;
+    }
+  }
+}
+.burger {
+  @media (min-width: 555px) {
+    display: none;
   }
 }

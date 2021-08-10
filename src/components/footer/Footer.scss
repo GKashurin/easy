@@ -1,10 +1,17 @@
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  @media (max-width: 555px) {
+    display: none;
+  }
 }
 
 .footer__contacts {
-  font-size: 14px;
+  font-size: 16px;
+  @media (max-width: 780px) {
+    font-size: 15px;
+  }
   a:hover {
     text-decoration: underline;
   }
@@ -69,7 +76,6 @@
     fill: #c95691;
     transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   }
-
 }
 .socials__link svg {
   fill: #fff;
@@ -83,7 +89,6 @@
   padding: 12px;
   background-color: transparent;
   cursor: pointer;
-  animation: radial-pulse 2.5s ease-in-out infinite;
   box-shadow: 0 0 0 1px #fff;
   border: none;
   overflow: hidden;
@@ -106,17 +111,17 @@
   }
 }
 
-@keyframes radial-pulse {
-  0% {
-    box-shadow: 0 0 0 1px #fff;
-  }
-  50% {
-    box-shadow: 0 0 0 3px #fff;
-  }
-  100% {
-    box-shadow: 0 0 0 1px #fff;
-  }
-}
+//@keyframes radial-pulse {
+//  0% {
+//    box-shadow: 0 0 0 1px #fff;
+//  }
+//  50% {
+//    box-shadow: 0 0 0 3px #fff;
+//  }
+//  100% {
+//    box-shadow: 0 0 0 1px #fff;
+//  }
+//}
 
 @keyframes blick {
   0% {

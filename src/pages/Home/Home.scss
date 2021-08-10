@@ -1,8 +1,21 @@
 .content {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 0;
+  @media (max-width: 555px) {
+    display: none;
+  }
+}
+
+.content-mobile {
+  //display: flex;
+  //justify-content: space-around;
+
+  height: 100%;
+  @media (min-width: 555px) {
+    display: none;
+  }
 }
 
 .activities {
@@ -14,10 +27,13 @@
   flex-direction: column;
   justify-content: center;
 
-  img {
+  .react-freezeframe {
     width: calc(min(23vw, 23vh));
-
   }
+  .ff-container.ff-loading-icon:before {
+    display: none;
+  }
+
   &__row {
     display: flex;
     justify-content: center;
@@ -68,13 +84,11 @@
     display: none;
   }
 }
-
 @keyframes animActive {
   0% {}
   30% {transform: scale(1.5);}
   100% {transform: scale(0);}
 }
-
 @keyframes firstLoadAnim {
   0% {transform: scale(0)}
   50% {transform: scale(1.2)}

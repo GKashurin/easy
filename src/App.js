@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./app.scss";
 import { Route, Switch } from "react-router-dom";
 import {Chat, Home, Instamask, Mobile, Tours360, Vfx, Vr, Web} from "./pages";
-import {Header, Footer} from "./components/";
+import {Header, Footer, FooterMobile, Popup, SliderMobile} from "./components/";
 import {homePageState} from "./pages/data";
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
 		<div className="App">
 			<main className="container">
 				<Header setAnim={setAnim} anim={anim} />
-				<section className="content">
+				<section className="content" >
 					<Switch>
 						<Route exact path="/">
 							<Home
@@ -77,6 +77,17 @@ const App = () => {
 					</Switch>
 				</section>
 				<Footer setVisiblePopup={setVisiblePopup}/>
+
+				{/*мобильная версия*/}
+				<section className="content-mobile">
+
+					<SliderMobile />
+
+					{visiblePopup ? <Popup
+						setVisiblePopup={setVisiblePopup}
+					/> : null}
+				</section>
+				<FooterMobile setVisiblePopup={setVisiblePopup}/>
 			</main>
 		</div>
 	);
