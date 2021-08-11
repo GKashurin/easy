@@ -10,8 +10,12 @@ function get_my_coords(theta, radius) {
 const Card = (props) => {
 	let new_coords = get_my_coords(props.theta, props.radius)
 	return (
-		<div style={{...styles.card, left: `${props.center.x + new_coords.x}px`, top: `${props.center.y - new_coords.y}px`}}>
-			
+		<div
+			style={{...styles.card,
+				left: `${props.center.x + new_coords.x}px`,
+				top: `${props.center.y - new_coords.y}px`,
+			}}>
+
 		</div>
 	);
 };
