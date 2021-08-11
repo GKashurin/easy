@@ -21,7 +21,7 @@
   }
 
   &__col-right-anim {
-    animation: colRight-anim-back 0.8s;
+    animation: colRight-anim-back 1s;
   }
 
   &__title {
@@ -86,7 +86,7 @@
 }
 
 .info__col-left-animBack {
-  animation: info-Animation-back 0.8s;
+  animation: info-Animation-back 1s;
   animation-fill-mode: forwards;
 }
 
