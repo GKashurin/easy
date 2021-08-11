@@ -20,7 +20,7 @@
 
 .activities {
   aspect-ratio: 1/1;
-  animation: firstLoadAnim 2.3s;
+  animation: firstLoadAnim 2s;
   //animation-delay: 1.3s;
   width: calc(min(65vw, 65vh));
   margin: auto;
@@ -91,8 +91,17 @@
   100% {transform: scale(0);}
 }
 @keyframes firstLoadAnim {
-  0% {transform: scale(0)}
-  50% {transform: scale(1.2)}
-  100% {transform: scale(1)}
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
