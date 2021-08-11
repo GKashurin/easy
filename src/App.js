@@ -9,6 +9,7 @@ const App = () => {
 	const [anim, setAnim] = React.useState(false) //переменная, ответственная за анимацию
 	const [visiblePopup, setVisiblePopup] = useState(false)
 
+	console.log(visiblePopup)
 	return (
 		<div className="App">
 			<main className="container">

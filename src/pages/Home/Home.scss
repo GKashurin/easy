@@ -20,14 +20,15 @@
 
 .activities {
   aspect-ratio: 1/1;
-  animation: firstLoadAnim 1.2s;
+  animation: firstLoadAnim 2.3s;
+  //animation-delay: 1.3s;
   width: calc(min(65vw, 65vh));
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  .react-freezeframe {
+  .react-freezeframe, img {
     width: calc(min(23vw, 23vh));
   }
   .ff-container.ff-loading-icon:before {

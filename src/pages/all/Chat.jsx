@@ -8,7 +8,7 @@ const Chat = ({anim, setAnim, visiblePopup, setVisiblePopup }) => {
 	const history = useHistory()
 
 	if (!anim) {
-		setTimeout(() => history.push("/"), 805);
+		setTimeout(() => history.push("/"), 1405);
 	}
 
 	return (

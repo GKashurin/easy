@@ -36,15 +36,15 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 
 	const history = useHistory()
 	useEffect(() => {
-			checkboxes.map((item) => {
-				if (item.pathname === history.location.pathname) {
-					item.checked = true
-					setCheckedItems(
-						{...checkedItems, [item.name]: item.checked}
-					)
-				}
-				return checkedItems
-			})
+		checkboxes.map((item) => {
+			if (item.pathname === history.location.pathname) {
+				item.checked = true
+				setCheckedItems(
+					{...checkedItems, [item.name]: item.checked}
+				)
+			}
+			return checkedItems
+		})
 	}, [])//получение чекбокса из адресной строки
 
 	return (
@@ -138,7 +138,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 				<button
 					onClick={changeHandler}
 					className="popup__form-btn animated-button-popup"
-					// disabled={phone === ""}
+					disabled={phone === ""}
 				>отправить запрос
 				</button>
 				<span>
