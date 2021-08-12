@@ -1,0 +1,15 @@
+.slider {
+  position: relative;
+  display: flex;
+
+  &__center {
+    display: grid;
+    place-items: center;
+    background: red;
+  }
+
+  &__item {
+    position: absolute;
+  }
+}
+

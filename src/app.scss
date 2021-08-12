@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 10px;
+  background: linear-gradient( 45deg, #C95691, #1C98E0) no-repeat fixed;
+  background-size: cover;
+  color: #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.container {
+  max-width: 1080px; //1366
+  height: 100vh;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  @media (max-width: 780px) {
+    padding: 10px;
+  }
+  @media (max-width: 555px) {
+    padding: 10px 10px 30px;
+  }
+}
+
+// анимированные кнопки
+//https://codepen.io/Navedkhan012/pen/qXYyXy
+.animated-button {
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  padding: 10px;
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: #ffffff;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  }
+  &__btn {
+    border: 1px solid #ffffff;
+    &:hover {
+      color: #C95691;
+      @media (max-width: 768px) {
+        color: white;
+      }}
+  }
+  @media (max-width: 1025px) {
+    padding: 10px 7px;
+  }
+  @media (min-width: 768px) {
+    &:hover {
+      color: #1C98E0;
+      background-color: #ffffff;
+      text-shadow: currentColor;
+    }
+    &:hover:before {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
+}
+
+

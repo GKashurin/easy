@@ -1,0 +1,40 @@
+.headerMenu {
+  display: flex;
+  font-size: 16px;
+  white-space: nowrap;
+  justify-content: space-around;
+  li {
+    z-index: 2;
+  }
+  @media (max-width: 780px) {
+    font-size: 15px;
+  }
+  @media (max-width: 555px) {
+    display: none;
+  }
+}
+
+.phone > span {
+  @media (min-width: 780px) {
+    background: none !important;
+    padding: 0 !important;
+  }
+}
+.phone > span > span {
+  @media (max-width: 780px) {
+    display: none;
+  }
+}
+
+.email > span {
+  @media (min-width: 780px) {
+    background: none !important;
+    padding: 0 !important;
+  }
+}
+.email > span > span {
+  @media (max-width: 780px) {
+    display: none;
+  }
+}
+

@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px 0;
+  @media (max-width: 1025px) {
+    margin: 0 0 7px 0;
+  }
+  img {
+    width: 303px;
+    height: 74px;
+    @media (max-width: 1025px) {
+      width: 250px;
+      left: 61.5%;
+      height: 70px;
+    }
+    @media (max-width: 555px) {
+      width: 216px;
+      height: 53px;
+    }
+  }
+}
+.burger {
+  @media (min-width: 555px) {
+    display: none;
+  }
+}

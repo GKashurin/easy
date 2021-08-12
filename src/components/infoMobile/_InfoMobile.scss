@@ -1,0 +1,30 @@
+.infoMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  width: 66%;
+  margin-left: auto;
+  h1 {
+    font-weight: 900;
+    font-size: 68px;
+    line-height: 83.52%;
+    text-align: right;
+    margin-bottom: 5px;
+  }
+  h4 {
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 83.52%;
+    text-align: right;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 100.02%;
+    text-align: right;
+  }
+}
+
