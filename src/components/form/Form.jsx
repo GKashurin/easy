@@ -78,10 +78,10 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 			<div className="form__budget budget">
 				<div className="budget__sum">
 					<p className="form__subtitle">Укажите бюджет проекта:</p>
-					<div className="budget__slider slider">
+					<div className="budget__slider slider-budget">
 						{prices?.map((item) => (
 							<span
-								className="slider__item"
+								className="slider-budget__item"
 								key={item.price}
 								onClick={() => { setBudgetItem(item) }}
 							>{item.price}

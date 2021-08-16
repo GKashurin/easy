@@ -1,4 +1,4 @@
-export const homePageState = [
+export const mainData = [
 	[{
 		"id": 1,
 		"imageUrl": "/image/mask.png",

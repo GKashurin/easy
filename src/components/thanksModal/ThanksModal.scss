@@ -11,6 +11,8 @@
     transform: translate(-130%, 110%);
   }
 
+
+
 &__title {
   font-size: 65px;
   line-height: 87.52%;
@@ -50,6 +52,9 @@
   transition: transform 1s, opacity;
   @media (max-width: 768px) {
     transform: translate(-130%, -8%);
+  }
+  @media (max-width: 550px) {
+    transform: translate(-30%, -8%);
   }
 }
 

@@ -1,11 +1,14 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
 import "./app.scss";
 import { Route, Switch } from "react-router-dom";
 import {Chat, Home, Instamask, Mobile, Tours360, Vfx, Vr, Web} from "./pages";
-import {Header, Footer, FooterMobile, Popup, SliderMobile, InfoMobile} from "./components/";
-import {homePageState} from "./pages/mainData";
+import {Header, Footer, FooterMobile, Popup, SliderMobile} from "./components/";
+import {mainData} from "./mainData";
+import "./components/sliderMobile/_sliderMobile.scss";
+import "./components/infoMobile/_InfoMobile.scss"
 
 const App = () => {
+
 	const [anim, setAnim] = React.useState(false) //переменная, ответственная за анимацию
 	const [visiblePopup, setVisiblePopup] = useState(false)
 
@@ -17,7 +20,7 @@ const App = () => {
 					<Switch>
 						<Route exact path="/">
 							<Home
-								homePageState={homePageState}
+								mainData={mainData}
 								setAnim={setAnim}
 								anim={anim}
 								setVisiblePopup={setVisiblePopup}
@@ -80,10 +83,7 @@ const App = () => {
 
 				{/*мобильная версия*/}
 				<section className="content-mobile">
-
-					<SliderMobile />
-					<InfoMobile homePageState={homePageState}/>
-
+					<SliderMobile mainData={mainData}/>
 					{visiblePopup ? <Popup
 						setVisiblePopup={setVisiblePopup}
 					/> : null}

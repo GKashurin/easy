@@ -1,23 +1,30 @@
 .infoMobile {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
-  width: 66%;
-  margin-left: auto;
+  z-index: -1;
   h1 {
-    font-weight: 900;
-    font-size: 68px;
-    line-height: 83.52%;
-    text-align: right;
-    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    span {
+      font-weight: 900;
+      font-size: 68px;
+      line-height: 65%;
+      text-align: right;
+      @media (max-width: 460px) {
+        font-size: 58px;
+      }
+    }
   }
+
   h4 {
     font-weight: normal;
-    font-size: 21px;
+    font-size: 20px;
     line-height: 83.52%;
     text-align: right;
-    margin-bottom: 5px;
+    width: 65%;
+    margin: 0 0 10px auto;
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
   }
 
   p {
@@ -25,6 +32,11 @@
     font-size: 10px;
     line-height: 100.02%;
     text-align: right;
+    width: 70%;
+    margin: 0 0 0 auto;
+    @media (max-width: 460px) {
+      width: 65%;
+    }
   }
 }
 

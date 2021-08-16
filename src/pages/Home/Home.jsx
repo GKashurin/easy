@@ -4,10 +4,10 @@ import "./Home.scss";
 import cn from "classnames";
 import {Popup} from "../../components/";
 
-const Home = ({ anim, setAnim, visiblePopup, setVisiblePopup, homePageState }) => {
+const Home = ({ anim, setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 	const [animationDisabled, setAnimationDisabled] = useState(false)//ЧБ анимация
 	const [animationActive, setAnimationActive] = useState(false)//анимация цветных картинок
-	const [items, setItems] = useState(homePageState);
+	const [items, setItems] = useState(mainData);
 
 	const toggleAnimationDisabled = () => {
 		setAnimationDisabled(true)

@@ -2,14 +2,13 @@ import React from "react";
 import "./_FooterMobile.scss"
 import {Link} from "react-router-dom";
 
-
 const FooterMobile = ({setVisiblePopup}) => {
 	return (
 		<div className="footer-mobile">
 			<button className="socials__button animated-button" onClick={(() => setVisiblePopup(true))}>
 				отправить запрос
 			</button>
-			{/*<div className="cirсle"></div>*/}
+			<div className="circle"></div>
 			<div className="footer-mobile__socials socials">
 				<div className="socials__item">
 						<Link to={"https://www.instagram.com/easy.cg/"}
