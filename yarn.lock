@@ -5438,11 +5438,6 @@
   dependencies:
     "map-cache" "^0.2.2"
 
-"freezeframe@^5.0.2":
-  "integrity" "sha512-Lp1ltC2vJGBqxdW5U4Hx+JMW+s9KfTPpxKhSTlpmQxYX5oK66y3GIZo56Jie4XtSOApSbfc8SBcsbZzeTNKfFg=="
-  "resolved" "https://registry.npmjs.org/freezeframe/-/freezeframe-5.0.2.tgz"
-  "version" "5.0.2"
-
 "fresh@0.5.2":
   "integrity" "sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac="
   "resolved" "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz"
