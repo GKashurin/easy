@@ -1,6 +1,5 @@
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
 }
 
@@ -10,7 +9,11 @@ input[type="number"] {
 
 input,
 textarea {
-  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius:0;
+
 }
 
 input:focus,
@@ -85,6 +88,9 @@ input:required:invalid {
   &__btnWrapper {
     display: flex;
     align-items: center;
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
 }
 }
 
@@ -180,10 +186,14 @@ input:required:invalid {
             transition: all 0.5s ease-out;
             &:first-child {
                padding: 7px 8px;
+              @media (max-width: 480px) {
+                padding: 7px 2px;
+              }
             }
 
           @media (max-width: 480px) {
             font-size: 11px;
+            padding: 7px 12px;
           }
         }
         div {
@@ -199,9 +209,7 @@ input:required:invalid {
         }
     }
     &__sum {
-      @media (max-width: 550px) {
         width: 100%;
-      }
     }
     &__deadline {
       @media (max-width: 970px) {
@@ -304,6 +312,7 @@ textarea {
 }
 
 .btnWrapper {
+
  span {
     font-weight: 200;
     font-size: 10px;
@@ -311,6 +320,10 @@ textarea {
     color: rgba(61, 61, 61, 0.35);
     width: 208px;
     margin-left: 11px;
+   @media (max-width: 480px) {
+     margin-top: 6px;
+     width: 100%;
+   }
  }
 }
 

@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import "./app.scss";
 import { Route, Switch } from "react-router-dom";
-import {Chat, Home, Instamask, Mobile, Tours360, Vfx, Vr, Web} from "./pages";
+import {Chat, Home, Instamask, Mobile, Tours360, Vfx, Vr, Web, Team} from "./pages";
 import {Header, Footer, FooterMobile, Popup, SliderMobile} from "./components/";
 import {mainData} from "./mainData";
 import "./components/sliderMobile/_sliderMobile.scss";
@@ -26,6 +26,10 @@ const App = () => {
 								setVisiblePopup={setVisiblePopup}
 								visiblePopup={visiblePopup}
 							/>
+						</Route>
+
+						<Route path="/team">
+							<Team />
 						</Route>
 
 						<Route path="/web">

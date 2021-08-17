@@ -1,0 +1,19 @@
+.swiper-container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.swiper-slide-next, .swiper-slide-prev {
+  opacity: 0;
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  right: 0;
+  left: auto;
+  background: '../images/web.png';
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  left: 0;
+  right: auto;
+}
