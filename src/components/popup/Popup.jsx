@@ -53,7 +53,6 @@ const Popup = ({setVisiblePopup}) => {
 						visibleThanksModal={visibleThanksModal}
 					/>
 					<PopupContacts
-						seconds={seconds}
 						visibleThanksModal={visibleThanksModal}
 					/>
 				</div>

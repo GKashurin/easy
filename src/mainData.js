@@ -1,7 +1,7 @@
 export const mainData = [
 	[{
 		"id": 1,
-		"imageUrl": "/image/mask.png",
+		"imageUrl": "/image/insta_mask_firstFrame.webp",
 		"webpUrl": "image/mask.webp",
 		"link": "/instamask",
 		"active": true,
@@ -16,7 +16,7 @@ export const mainData = [
 	}],
 	[{
 		"id": 2,
-		"imageUrl": "/image/WEB.png",
+		"imageUrl": "/image/web_site_firstFrame.webp",
 		"webpUrl": "/image/WEB.webp",
 		"link": "/web",
 		"active": true,
@@ -31,7 +31,7 @@ export const mainData = [
 	},
 		{
 			"id": 3,
-			"imageUrl": "/image/mobile.png",
+			"imageUrl": "/image/Mobie_apps_firstFrame.webp",
 			"webpUrl": "/image/mobile.webp",
 			"link": "/mobile",
 			"active": true,
@@ -46,7 +46,7 @@ export const mainData = [
 		}],
 	[{
 		"id": 4,
-		"imageUrl": "/image/AR-VR.png",
+		"imageUrl": "/image/AR_VR_firstFrame.webp",
 		"webpUrl": "/image/AR-VR.webp",
 		"link": "/vr-ar",
 		"active": true,
@@ -61,7 +61,7 @@ export const mainData = [
 	}],
 	[{
 		"id": 5,
-		"imageUrl": "/image/VFX.png",
+		"imageUrl": "/image/VFX_firstFrame.webp",
 		"webpUrl": "/image/VFX.webp",
 		"link": "/vfx",
 		"active": true,
@@ -76,7 +76,7 @@ export const mainData = [
 	},
 		{
 			"id": 6,
-			"imageUrl": "/image/chat.png",
+			"imageUrl": "/image/chat_bot_firstFrame.webp",
 			"webpUrl": "/image/chat.webp",
 			"link": "/chat",
 			"active": true,
@@ -91,7 +91,7 @@ export const mainData = [
 		}],
 	[{
 		"id": 7,
-		"imageUrl": "/image/3D.png",
+		"imageUrl": "/image/3D_360_firstFrame.webp",
 		"webpUrl": "/image/3D.webp",
 		"link": "/tours360",
 		"active": true,

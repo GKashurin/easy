@@ -4,7 +4,7 @@ import {useHistory} from "react-router-dom";
 import {prices, checkboxes} from "./data"
 
 const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksModal, visibleThanksModal }) => {
-
+	const [error, setError] = useState(false)
 	const [formState, setFormState] = useState({
 		deadline: "",
 		description: "",
@@ -28,10 +28,14 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 	}
 	const changeHandler = (e) => {
 		e.preventDefault();
-		console.log(values);
-		setTimerActive(!timerActive); //запуск таймера
-		setTimeout(() => setVisiblePopup(false), 5002);//ререндер на главную??
-		setVisibleThanksModal(true);
+		if (formState.phone.length !== 16) { //валидация инпута с телефоном
+			setError(true)
+		} else {
+			setTimerActive(!timerActive); //запуск таймера
+			setTimeout(() => setVisiblePopup(false), 5002);//ререндер на главную??
+			setVisibleThanksModal(true);
+			console.log(values);
+		}
 	}
 
 	const history = useHistory()
@@ -113,10 +117,11 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 					onChange={e => setFormState({...formState, name: e.target.value})}
 				/>
 				<InputMask //  телефон
+					className={!error || formState.phone.length === 16 ? "" : "error"}
 					value={formState.phone}
 					onChange={e => setFormState({...formState, phone: e.target.value})}
 					mask="+7\(999) 999-9999"
-					maskChar=" "
+					maskChar=""
 					placeholder="ваш мобильный номер*"
 					required
 				/>
@@ -137,7 +142,6 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 				<button
 					onClick={changeHandler}
 					className="popup__form-btn animated-button-popup"
-					disabled={formState.phone === ""}
 				>отправить запрос
 				</button>
 				<span>

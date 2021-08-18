@@ -42,3 +42,15 @@
   }
 }
 
+  .gradientOval {
+    position: absolute;
+    right: 0;
+    bottom: 31%;
+    height: 37vh;
+    width: 45vh;
+    background: linear-gradient(
+                    314deg, #abcd29, rgba(171, 205, 41, 0.8), rgba(56, 176, 193, 0.4), rgba(144, 107, 170, 0.1));
+    z-index: -2;
+    border-radius: 160px 55px 35px 70px;
+    filter: blur(5px);
+  }

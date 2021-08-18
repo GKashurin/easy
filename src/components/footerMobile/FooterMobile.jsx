@@ -8,7 +8,7 @@ const FooterMobile = ({setVisiblePopup}) => {
 			<button className="socials__button animated-button" onClick={(() => setVisiblePopup(true))}>
 				отправить запрос
 			</button>
-			<div className="circle"></div>
+			<div className="gradientCircle"></div>
 			<div className="footer-mobile__socials socials">
 				<div className="socials__item">
 						<Link to={"https://www.instagram.com/easy.cg/"}

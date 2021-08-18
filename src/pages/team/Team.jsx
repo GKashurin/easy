@@ -8,7 +8,7 @@ const Team = () => {
 			<div className="team__description description-team">
 				<div className="description-team">
 					<div className="description-team__col">
-						{/*<img className="description-team__img" src="/image/team.png" alt="team" />*/}
+						<img className="description-team__img" src="/image/team.png" alt="team" />
 					</div>
 					<div className="description-team__col">
 						<h1 className="description-team__title">

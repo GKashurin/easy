@@ -1,8 +1,7 @@
 import React from "react"
 import "./_popupContacts.scss"
-import {ThanksModal} from "../index";
 
-const PopupContacts = ({ visibleThanksModal, seconds }) => {
+const PopupContacts = ({ visibleThanksModal }) => {
 	return (
 		<>
 			<div onClick={e => e.stopPropagation()} className={!visibleThanksModal ? "popup-contacts" : "popup-contacts popup-contacts__hide"}>
@@ -21,7 +20,6 @@ const PopupContacts = ({ visibleThanksModal, seconds }) => {
 					</div>
 				</div>
 			</div>
-
 		</>
 	)
 }

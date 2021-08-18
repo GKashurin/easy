@@ -12,7 +12,7 @@ const TeamSlider = () => {
 		<Swiper
 			className="slider-team"
 			navigation={true}
-
+			loop={true}
 			onSlideChange={() => console.log("slide change")}
 			onSwiper={(swiper) => console.log(swiper)}
 		>
@@ -28,7 +28,7 @@ const TeamSlider = () => {
 			<SwiperSlide>Slide 6</SwiperSlide>
 			<SwiperSlide>Slide 7</SwiperSlide>
 			<SwiperSlide>Slide 8</SwiperSlide>
-			...
+			<br/>
 		</Swiper>
 	);
 };

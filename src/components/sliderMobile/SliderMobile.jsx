@@ -76,6 +76,7 @@ const SliderMobile = ({mainData}) => {
 					}
 				</div>
 			))}
+			<div className="gradientOval"></div>
 		</div>
 	)
 }

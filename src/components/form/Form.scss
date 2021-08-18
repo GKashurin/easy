@@ -9,6 +9,7 @@ input[type="number"] {
 
 input,
 textarea {
+  outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -20,10 +21,6 @@ input:focus,
 textarea:focus {
   box-shadow: 0 0 0 1px indigo;
   background-color: #fff;
-}
-
-input:required:invalid {
-  background: #ffd9d9;
 }
 
 .form {
@@ -308,6 +305,12 @@ textarea {
       }
     }
 
+  }
+  .error {
+    background: #ffd9d9;
+    &:focus {
+      background: #ffffff;
+    }
   }
 }
 

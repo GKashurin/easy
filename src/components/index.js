@@ -9,5 +9,4 @@ export { default as OverlayMobile } from './overlayMobile/OverlayMobile';
 export { default as PopupContacts } from './popupContacts/PopupContacts';
 export { default as FooterMobile } from './footerMobile/FooterMobile';
 export { default as SliderMobile } from './sliderMobile/SliderMobile';
-export { default as InfoMobile } from './infoMobile/InfoMobile';
 export { default as TeamSlider } from './team-slider/TeamSlider';

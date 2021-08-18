@@ -9,6 +9,7 @@ const Mobile = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 	if (!anim) {
 		setTimeout(() => history.push("/"), 805);
 	}
+
 	return (
 		<div className="info">
 			<div className={anim ? "info__col-left" : "info__col-left-animBack"}>

@@ -6,25 +6,27 @@
 .description-team {
     display: flex;
     align-items: center;
-    height: 100%;
-    margin-bottom: 25px;
 
     &__col {
         flex: 1 1 50%;
+        &:first-child {
+            //text-align: center;
+        }
         &:last-child {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
+
         }
     }
 
     &__img {
         width: 90%;
         @media (max-width: 1280px) {
-            width: 75%;
+            width: 70%;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 780px) {
             width: 90%;
         }
     }
