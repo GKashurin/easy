@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./Header.scss"
 import { Divide as Hamburger } from "hamburger-react";
 import {Link, useHistory} from "react-router-dom";
-import {OverlayMobile, HeaderMenu} from "../index";
+import {OverlayMobile, HeaderMenu} from "../../index";
 
 const Header = ({ setAnim }) => {
 	const [burgerOpen, setBurgerOpen] = useState(false);

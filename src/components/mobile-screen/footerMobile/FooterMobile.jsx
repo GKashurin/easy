@@ -1,13 +1,14 @@
 import React from "react";
 import "./_FooterMobile.scss"
 import {Link} from "react-router-dom";
+import AnimatedButton from "../../UI/animatedButton/AnimatedButton";
 
 const FooterMobile = ({setVisiblePopup}) => {
 	return (
 		<div className="footer-mobile">
-			<button className="socials__button animated-button" onClick={(() => setVisiblePopup(true))}>
-				отправить запрос
-			</button>
+			<AnimatedButton onClick={(() => setVisiblePopup(true))}>
+				Отправить запрос
+			</AnimatedButton>
 			<div className="gradientCircle"></div>
 			<div className="footer-mobile__socials socials">
 				<div className="socials__item">

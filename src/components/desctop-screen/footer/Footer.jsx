@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.scss"
 import {Link} from "react-router-dom";
+import AnimatedButton from "../../UI/animatedButton/AnimatedButton";
 
 
 const Footer = ({setVisiblePopup}) => {
@@ -8,13 +9,13 @@ const Footer = ({setVisiblePopup}) => {
 		<footer className="footer">
 			<div className="footer__contacts contacts">
 				<address>
-					<Link to="#">
+					<Link to="#" className="animated-link">
 						620144, г. Екатеринбург. ул. Степана Разина, 2, оф. 6
 					</Link>
 				</address>
-				<div>
-					<a href="mailto:namaste@easycg.ru">namaste@easycg.ru, </a>
-					<a href="tel:3435215031">+7 (343) 521-50-31</a>
+				<div className="contacts__wrapper">
+					<a className="animated-link" href="mailto:namaste@easycg.ru">namaste@easycg.ru, </a>
+					<a className="animated-link" href="tel:3435215031">&nbsp;+7 (343) 521-50-31</a>
 				</div>
 			</div>
 			<div className="footer__socials socials">
@@ -88,9 +89,9 @@ const Footer = ({setVisiblePopup}) => {
 						</svg>
 					</Link>
 				</div>
-				<button className="socials__button animated-button" onClick={(() => setVisiblePopup(true))}>
-					отправить запрос
-				</button>
+				<AnimatedButton onClick={(() => setVisiblePopup(true))}>
+					Отправить запрос
+				</AnimatedButton>
 			</div>
 		</footer>
 	)

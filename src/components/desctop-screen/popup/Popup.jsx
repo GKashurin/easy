@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from "react";
 import "./Popup.scss"
-import "../form/Form.scss"
-import {Form, PopupContacts, ThanksModal} from "../index"
+import "../popup/form/Form.scss"
+import {Form, PopupContacts, ThanksModal} from "../../index"
 
 const Popup = ({setVisiblePopup}) => {
 	const ref = useRef();

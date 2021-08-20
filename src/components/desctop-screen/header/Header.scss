@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px 0;
+  @media (max-width: 1025px) {
+    margin: 0 0 7px 0;
+  }
+  &__logo {
+    img {
+      width: 303px;
+      height: 74px;
+      @media (max-width: 1025px) {
+        width: 250px;
+        left: 61.5%;
+        height: 70px;
+      }
+      @media (max-width: 555px) {
+        width: 216px;
+        height: 53px;
+      }
+    }
+    flex: 0 2 50%;
+  }
+}
+
+nav {
+  flex: 1 1 50%;
+}
+
+.burger {
+  @media (min-width: 555px) {
+    display: none;
+  }
+}

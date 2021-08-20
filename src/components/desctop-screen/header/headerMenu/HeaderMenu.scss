@@ -2,12 +2,17 @@
   display: flex;
   font-size: 16px;
   white-space: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   li {
     z-index: 2;
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   @media (max-width: 780px) {
     font-size: 15px;
+    margin-right: 0;
   }
   @media (max-width: 555px) {
     display: none;

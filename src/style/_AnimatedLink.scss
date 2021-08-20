@@ -1,0 +1,36 @@
+//https://codepen.io/Navedkhan012/pen/qXYyXy
+//ссылки с тонкой полосой
+.animated-link {
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  &:before {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 0;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: #ffffff;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    top: 120%;
+    height: 1px;
+  }
+  @media (min-width: 768px) {
+    &:hover {
+      color: currentColor;
+      background-color: transparent;
+      text-shadow: currentColor;
+    }
+    &:hover:before {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
+}

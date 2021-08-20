@@ -58,29 +58,16 @@
 
 ._visible {
   opacity: 1;
-  background: linear-gradient(30.28deg, #a53a8b 0%, #3b98c9 103.59%);
+  background: linear-gradient( 30.28deg, #a53a8b 0%, #3b98c9 103.59%);
   z-index: 6;
   transition: transform 1s, opacity;
   margin: 0;
   position: fixed;
   top: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
 
-  @media (max-width: 780px) {
-    transform: translate(38%, -50%);
-  }
-  @media (max-width: 680px) {
-    transform: translate(25%, -50%);
-  }
-  @media (max-width: 580px) {
-    transform: translate(11%, -50%);
-  }
-  @media (max-width: 500px) {
-    transform: translate(18%, -50%);
-  }
-  @media (max-width: 400px) {
-    transform: translate(3%, -50%);
-  }
+
 }
 
 .show-animation {

@@ -41,14 +41,16 @@ const Home = ({ anim, setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 											e.preventDefault();
 											toggleAnimation();
 											setAnim(!anim)
-											setTimeout(() => history.push(`${elem.link}`), 1500);
-											setItems(items.map(
-												arr => (arr.map(elem => {
-														elem.active = true;
-														return elem;
-													})
-												)
-											))
+											setTimeout(() => {
+												history.push(`${elem.link}`);
+												setItems(items.map(
+													arr => (arr.map(elem => {
+															elem.active = true;
+															return elem;
+														})
+													)
+												))
+											}, 1500)
 										}
 									}
 										  onMouseEnter={() => {

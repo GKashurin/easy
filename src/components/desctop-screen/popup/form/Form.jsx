@@ -6,12 +6,10 @@ import {prices, checkboxes} from "./data"
 const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksModal, visibleThanksModal }) => {
 	const [error, setError] = useState(false)
 	const [formState, setFormState] = useState({
-		deadline: "",
 		description: "",
 		name: "",
 		phone: "",
-		email: "",
-		company: "",
+		messenger: false,
 	})
 	const [checkedItems, setCheckedItems] = useState({})
 	const [budgetItem, setBudgetItem] = useState(prices[3])
@@ -19,7 +17,6 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 	const values = { //объединенные данные с формы
 		project: checkedItems,
 		budget: budgetItem.price,
-		deadline: formState.deadline,
 		description: formState.description,
 		name: formState.name,
 		phone: formState.phone,
@@ -51,6 +48,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 		})
 	}, [])//получение чекбокса из адресной строки
 
+	console.log(formState)
 	return (
 		<form onClick={e => e.stopPropagation()} className={ !visibleThanksModal ? "form" : "form hide-popup-form" }>
 			<h2 className="form__title">Расскажите сами</h2>
@@ -94,17 +92,9 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 						<div style={{left: 25 * budgetItem.id + "%"}}/>
 					</div>
 				</div>
-				<div className="budget__deadline">
-					<p className="form__subtitle">дедлайн</p>
-					<input
-						type="date"
-						value={formState.deadline}
-						onChange={e => setFormState({...formState, deadline: e.target.value})}
-					/>
-				</div>
 			</div>
 			<textarea //проект
-				placeholder="Расскажите о проекте подробнее"
+				placeholder="Если есть время, оставьте, пожалуйста, описание проекта или задачи"
 				value={formState.description}
 				onChange={e => setFormState({...formState, description: e.target.value})}
 			/>
@@ -112,7 +102,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 			<div className="form__userInfo userInfo">
 				<input //имя
 					type="text"
-					placeholder="введите ваше имя"
+					placeholder="Ваше имя"
 					value={formState.name}
 					onChange={e => setFormState({...formState, name: e.target.value})}
 				/>
@@ -122,22 +112,19 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 					onChange={e => setFormState({...formState, phone: e.target.value})}
 					mask="+7\(999) 999-9999"
 					maskChar=""
-					placeholder="ваш мобильный номер*"
+					placeholder="Ваш телефон*"
 					required
 				/>
-				<input //почта
-					placeholder="оставьте ваш емейл"
-					type="email"
-					value={formState.email}
-					onChange={e => setFormState({...formState, email: e.target.value})}
-				/>
-				<input
-					type="text" //компания или сфера
-					placeholder="компания или сфера деятельности"
-					value={formState.company}
-					onChange={e => setFormState({...formState, company: e.target.value})}
-				/>
 			</div>
+			<label className="messenger__label">Не звонить, а написать в мессенджер
+				<input
+					type="checkbox"
+					name="messenger"
+					checked={formState.messenger}
+					// value={" "}
+					onChange={() => setFormState({...formState, messenger: !formState.messenger}) }
+				/>
+			</label>
 			<div className="form__btnWrapper btnWrapper">
 				<button
 					onClick={changeHandler}

@@ -2,6 +2,7 @@ import React from "react";
 import "./info.scss"
 import { useHistory} from "react-router-dom";
 import {BtnWrapper, Popup} from "../../components/"
+import AnimatedButton from "../../components/UI/animatedButton/AnimatedButton";
 
 const Chat = ({anim, setAnim, visiblePopup, setVisiblePopup }) => {
 
@@ -14,19 +15,21 @@ const Chat = ({anim, setAnim, visiblePopup, setVisiblePopup }) => {
 	return (
 		<>
 			<div className="info">
-				<div className={anim ? "info__col-left" : "info__col-left-animBack"}>
+				<div className={anim ? "info__col info__col_left" : "info__col info__col_left-animBack"}>
 					<h2 className="info__secondTitle">НА<br/>ПИ<br/>ШЕМ</h2>
 					<h1 className="info__title">ЧАТ-БОТА</h1>
 					<h4 className="info__subtitle">используйте роботов вместо тысячи слов </h4>
-					<BtnWrapper
-						anim={anim}
-						setAnim={setAnim}
-						setVisiblePopup={setVisiblePopup}
-						visiblePopup={visiblePopup}
-					/>
+
 				</div>
-				<div className={anim ? "info__col-right" : "info__col-right-anim"}>
+				<div className={anim ? "info__col info__col_right" : "info__col info__col_right-anim"}>
 					<img src={"image/chat.webp"} alt="img chatbot"/>
+					{/*<BtnWrapper*/}
+					{/*	anim={anim}*/}
+					{/*	setAnim={setAnim}*/}
+					{/*	setVisiblePopup={setVisiblePopup}*/}
+					{/*	visiblePopup={visiblePopup}*/}
+					{/*/>*/}
+					<AnimatedButton onClick={() => setVisiblePopup(true)}>Обсудить проект</AnimatedButton>
 				</div>
 				{visiblePopup ? <Popup
 					setVisiblePopup={setVisiblePopup}

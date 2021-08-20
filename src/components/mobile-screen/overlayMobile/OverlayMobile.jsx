@@ -2,7 +2,7 @@ import React from "react"
 import "./_OverlayMobile.scss"
 import {Link, useHistory} from "react-router-dom";
 import { Divide as Hamburger } from "hamburger-react";
-import "../header/Header.scss"
+import "../../desctop-screen/header/Header.scss"
 
 const OverlayMobile = ({burgerOpen, setBurgerOpen}) => {
 const history = useHistory()
