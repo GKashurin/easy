@@ -1,10 +1,10 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, {useEffect, useState} from "react";
 import "./Popup.scss"
 import "../popup/form/Form.scss"
 import {Form, PopupContacts, ThanksModal} from "../../index"
 
 const Popup = ({setVisiblePopup}) => {
-	const ref = useRef();
+
 	const [seconds, setSeconds] = useState(5);//состояние для таймера
 	const [timerActive, setTimerActive] = useState(false);//состояние для таймера
 	const [visibleThanksModal, setVisibleThanksModal] = useState(false) //состояние для окна с благодарностью
@@ -26,25 +26,15 @@ const Popup = ({setVisiblePopup}) => {
 	// }
 
 	const handleOutsideClick = (event) => {
-		const path = event.path || (event.composedPath && event.composedPath());
-		if (!path.includes(ref.current)) {
-			event.preventDefault();
-			setChangeFormContainer(true)
-			setTimeout(() => setVisiblePopup(false), 600)
-		}
+		event.preventDefault();
+		setChangeFormContainer(true);
+		setTimeout(() => setVisiblePopup(false), 600);
 	};
-
-	useEffect(() => {
-		document.body.addEventListener('click', handleOutsideClick);
-		return () => {
-			document.body.removeEventListener('click', handleOutsideClick);
-		}
-	});
 
 	return (
 		<>
-			<div className="popup">
-				<div ref={ref} className={!changeFormContainer ? "popup__form-container" : "popup__form-container-animBack"}>
+			<div className="popup" onClick={handleOutsideClick}>
+				<div className={!changeFormContainer ? "popup__form-container" : "popup__form-container-animBack"}>
 					<Form
 						setTimerActive={setTimerActive}
 						timerActive={timerActive}

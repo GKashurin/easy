@@ -10,3 +10,4 @@ export { default as PopupContacts } from './desctop-screen/popup/popupContacts/P
 export { default as FooterMobile } from './mobile-screen/footerMobile/FooterMobile';
 export { default as SliderMobile } from './mobile-screen/sliderMobile/SliderMobile';
 export { default as TeamSlider } from './desctop-screen/team-slider/TeamSlider';
+export { default as Hamburger } from './mobile-screen/hamburger/Hamburger';

@@ -6,14 +6,17 @@
   @media (max-width: 1025px) {
     margin: 0 0 7px 0;
   }
+  @media (max-width: 555px) {
+    margin: 0;
+  }
   &__logo {
     img {
       width: 303px;
       height: 74px;
-      @media (max-width: 1025px) {
-        width: 250px;
+      @media (max-width: 1370px) {
+        width: 230px;
         left: 61.5%;
-        height: 70px;
+        height: 55px;
       }
       @media (max-width: 555px) {
         width: 216px;
@@ -21,6 +24,7 @@
       }
     }
     flex: 0 2 50%;
+
   }
 }
 
@@ -28,8 +32,5 @@ nav {
   flex: 1 1 50%;
 }
 
-.burger {
-  @media (min-width: 555px) {
-    display: none;
-  }
-}
+
+

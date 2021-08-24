@@ -22,13 +22,7 @@ const Chat = ({anim, setAnim, visiblePopup, setVisiblePopup }) => {
 
 				</div>
 				<div className={anim ? "info__col info__col_right" : "info__col info__col_right-anim"}>
-					<img src={"image/chat.webp"} alt="img chatbot"/>
-					{/*<BtnWrapper*/}
-					{/*	anim={anim}*/}
-					{/*	setAnim={setAnim}*/}
-					{/*	setVisiblePopup={setVisiblePopup}*/}
-					{/*	visiblePopup={visiblePopup}*/}
-					{/*/>*/}
+					<img src={"image/chat-bot-big.png"} alt="img chatbot"/>
 					<AnimatedButton onClick={() => setVisiblePopup(true)}>Обсудить проект</AnimatedButton>
 				</div>
 				{visiblePopup ? <Popup

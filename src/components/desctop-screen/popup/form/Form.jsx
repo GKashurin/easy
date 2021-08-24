@@ -20,8 +20,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 		description: formState.description,
 		name: formState.name,
 		phone: formState.phone,
-		email: formState.email,
-		company: formState.company
+		messenger: formState.messenger,
 	}
 	const changeHandler = (e) => {
 		e.preventDefault();
@@ -48,7 +47,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 		})
 	}, [])//получение чекбокса из адресной строки
 
-	console.log(formState)
+	console.log(values)
 	return (
 		<form onClick={e => e.stopPropagation()} className={ !visibleThanksModal ? "form" : "form hide-popup-form" }>
 			<h2 className="form__title">Расскажите сами</h2>
@@ -112,19 +111,25 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 					onChange={e => setFormState({...formState, phone: e.target.value})}
 					mask="+7\(999) 999-9999"
 					maskChar=""
-					placeholder="Ваш телефон*"
+					placeholder="Ваш телефон"
 					required
 				/>
 			</div>
-			<label className="messenger__label">Не звонить, а написать в мессенджер
-				<input
-					type="checkbox"
-					name="messenger"
-					checked={formState.messenger}
-					// value={" "}
-					onChange={() => setFormState({...formState, messenger: !formState.messenger}) }
-				/>
-			</label>
+
+			<div className="messenger">
+				<label className="messenger__label">
+					<input
+						className="messenger__input"
+						type="checkbox"
+						name="messenger"
+						checked={formState.messenger}
+						// value={" "}
+						onChange={() => setFormState({...formState, messenger: !formState.messenger}) }
+					/>
+					<span className="messenger__text">Не звонить, а написать мне в мессенджер</span>
+					<span className="messenger__checkmark"></span>
+				</label>
+			</div>
 			<div className="form__btnWrapper btnWrapper">
 				<button
 					onClick={changeHandler}

@@ -12,7 +12,7 @@ const App = () => {
 
 	const [anim, setAnim] = React.useState(false) //переменная, ответственная за анимацию
 	const [visiblePopup, setVisiblePopup] = useState(false)
-	console.log(visiblePopup)
+
 	return (
 		<div className="App">
 			<main className="container">
@@ -30,7 +30,7 @@ const App = () => {
 						</Route>
 
 						<Route path="/team">
-							<Team />
+							<Team visiblePopup={visiblePopup} setVisiblePopup={setVisiblePopup}/>
 						</Route>
 
 						<Route path="/web">

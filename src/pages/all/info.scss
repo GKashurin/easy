@@ -1,23 +1,22 @@
 .info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+
 
   &__col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     &_left {
       animation: info-Animation 0.8s;
     }
   &_right {
+    align-items: center;
     animation: colRight-anim 0.8s;
+    padding-bottom: 10px;
     img {
-      max-width: 475px;
-      @media (max-width: 1025px) {
-        width: 400px;
-        height: 400px;
-      }
+      max-width: 320px;
+      margin-bottom: 20px;
     }
   }
   }
@@ -47,7 +46,6 @@
   &__subtitle {
     font-weight: 300;
     font-size: 20px;
-    margin-bottom: 2rem;
     @media (max-width: 1025px) {
       font-size: 18px;
     }

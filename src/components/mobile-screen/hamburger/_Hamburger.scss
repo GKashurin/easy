@@ -1,0 +1,33 @@
+.hamburger {
+  z-index: 3;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.4s;
+  @media (min-width: 555px) {
+    display: none;
+  }
+  &__plank {
+    display: block;
+    background: white;
+    height: 3px;
+    width: 100%;
+    transition: all 0.4s;
+  }
+}
+
+.hamburger--active .hamburger__plank:nth-child(1) {
+  transform: rotate(-45deg);
+  background-color: #000000;
+
+}
+.hamburger--active .hamburger__plank:nth-child(2) {
+  opacity: 0;
+}
+.hamburger--active .hamburger__plank:nth-child(3) {
+  transform: rotate(45deg) ;
+  background-color: #000000;
+}
