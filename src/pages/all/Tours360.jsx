@@ -1,7 +1,7 @@
 import React from "react";
 import "./info.scss"
 import {useHistory} from "react-router-dom";
-import {BtnWrapper, Popup} from "../../components/"
+import {AnimatedButton, Popup} from "../../components/"
 
 const Tours360 = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 	const history = useHistory()
@@ -15,7 +15,7 @@ const Tours360 = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 				<h2 className="info__secondTitle">МО<br/>ДЕЛИ<br/>РУЕМ</h2>
 				<h1 className="info__title">И СКАНИРУЕМ В 3D</h1>
 				<h4 className="info__subtitle">+</h4>
-				<BtnWrapper
+				<AnimatedButton
 					anim={anim}
 					setAnim={setAnim}
 					setVisiblePopup={setVisiblePopup}

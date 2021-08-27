@@ -1,7 +1,7 @@
 import React from "react";
 import "./info.scss"
 import { useHistory} from "react-router-dom";
-import {BtnWrapper, Popup} from "../../components/"
+import { Popup} from "../../components/"
 import AnimatedButton from "../../components/UI/animatedButton/AnimatedButton";
 
 const Chat = ({anim, setAnim, visiblePopup, setVisiblePopup }) => {

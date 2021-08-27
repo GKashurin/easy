@@ -4,10 +4,12 @@ export { default as HeaderMenu } from './desctop-screen/header/headerMenu/Header
 export { default as Popup } from './desctop-screen/popup/Popup';
 export { default as ThanksModal } from './desctop-screen/popup/thanksModal/ThanksModal';
 export { default as Form } from './desctop-screen/popup/form/Form';
-export { default as BtnWrapper } from './UI/animatedButton/AnimatedButton';
+export { default as AnimatedButton } from './UI/animatedButton/AnimatedButton';
 export { default as OverlayMobile } from './mobile-screen/overlayMobile/OverlayMobile';
 export { default as PopupContacts } from './desctop-screen/popup/popupContacts/PopupContacts';
 export { default as FooterMobile } from './mobile-screen/footerMobile/FooterMobile';
 export { default as SliderMobile } from './mobile-screen/sliderMobile/SliderMobile';
 export { default as TeamSlider } from './desctop-screen/team-slider/TeamSlider';
 export { default as Hamburger } from './mobile-screen/hamburger/Hamburger';
+export { default as AppRouter } from '../components/appRouter/AppRouter';
+

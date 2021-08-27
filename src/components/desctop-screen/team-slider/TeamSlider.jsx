@@ -1,33 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css"
-import SwiperCore, {Navigation} from 'swiper/core';
+import SwiperCore, {Controller, Navigation} from 'swiper/core';
 import "./_TeamSlider.scss"
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Controller]);
 
-const TeamSlider = () => {
+const TeamSlider = ({teamData, setTeamData}) => {
+	const [controlledSwiper, setControlledSwiper] = useState(null)
+
 	return (
 		<Swiper
+			controller={{control: controlledSwiper}}
+			autoHeight={true}
 			className="slider-team"
 			navigation={true}
 			loop={true}
-			onSlideChange={() => console.log("slide change")}
-			onSwiper={(swiper) => console.log(swiper)}
+			onSlideChange={(swiper) => {
+				console.log(swiper)
+					setTeamData(teamData.map((elem, index) =>
+					swiper.activeIndex % teamData.length === index
+						?
+						{...elem, active: true }
+						:
+						{...elem, active: false }))
+				}
+			}
+				onSwiper={setControlledSwiper}
 		>
-			<SwiperSlide>
-				Бесконечно можно смотреть на три вещи: горящий огонь, бегущую воду и на ожидаемый результат работы нашей команды. Бесконечно можно смотреть на три вещи: горящий огонь, бегущую воду и на ожидаемый результат работы нашей команды.
-			</SwiperSlide>
-			<SwiperSlide>
-				Slide 2 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-			</SwiperSlide>
-			<SwiperSlide>Slide 3</SwiperSlide>
-			<SwiperSlide>Slide 4</SwiperSlide>
-			<SwiperSlide>Slide 5</SwiperSlide>
-			<SwiperSlide>Slide 6</SwiperSlide>
-			<SwiperSlide>Slide 7</SwiperSlide>
-			<SwiperSlide>Slide 8</SwiperSlide>
+			{teamData.map((person, i) => <SwiperSlide key={person.id}>{person.description}</SwiperSlide>)}
 			<br/>
 		</Swiper>
 	);

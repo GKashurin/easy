@@ -10,17 +10,36 @@
 
 .content-mobile {
   display: flex;
-
-  height: 100%;
+  justify-content: center;
+  flex: auto;
+  flex-direction: column;
   @media (min-width: 555px) {
     display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    height: 60%;
+   }
+  &__col {
+    flex: 1 ;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &-left {
+      width: 40%;
+    }
+    &-right {
+      width: 60%;
+      position: relative;
+    }
   }
 }
 
 .activities {
   aspect-ratio: 1/1;
-  animation: firstLoadAnim 1.2s;
   width: calc(min(65vw, 65vh));
+  animation: firstLoadAnim 1.2s;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -92,7 +111,6 @@
 .disabled.disabledAnimation {
   animation: animDisabled 1s;
   animation-fill-mode: forwards;
-  //animation-delay: 0.4s;
 }
 
 .activeAnimation {

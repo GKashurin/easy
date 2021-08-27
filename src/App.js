@@ -1,11 +1,8 @@
 import React, { useState} from "react";
-import { Route, Switch } from "react-router-dom";
-import {Chat, Home, Instamask, Mobile, Tours360, Vfx, Vr, Web, Team} from "./pages";
-import {Header, Footer, FooterMobile, Popup, SliderMobile} from "./components/";
+import {Header, Footer, FooterMobile, Popup, SliderMobile, AppRouter} from "./components/";
 import {mainData} from "./mainData";
 import "./style/app.scss";
 import "./components/mobile-screen/sliderMobile/_sliderMobile.scss";
-import "./components/mobile-screen/infoMobile/_InfoMobile.scss"
 import "./style/_AnimatedLink.scss"
 
 const App = () => {
@@ -18,81 +15,20 @@ const App = () => {
 			<main className="container">
 				<Header setAnim={setAnim} anim={anim} />
 				<section className="content" >
-					<Switch>
-						<Route exact path="/">
-							<Home
-								mainData={mainData}
-								setAnim={setAnim}
-								anim={anim}
-								setVisiblePopup={setVisiblePopup}
-								visiblePopup={visiblePopup}
-							/>
-						</Route>
-
-						<Route path="/team">
-							<Team visiblePopup={visiblePopup} setVisiblePopup={setVisiblePopup}/>
-						</Route>
-
-						<Route path="/web">
-							<Web visiblePopup={visiblePopup}
-								 setVisiblePopup={setVisiblePopup}
-								 setAnim={setAnim}
-								 anim={anim}
-							/>
-						</Route>
-						<Route path="/instamask">
-							<Instamask visiblePopup={visiblePopup}
-									   setVisiblePopup={setVisiblePopup}
-									   setAnim={setAnim}
-									   anim={anim}
-							/>
-						</Route>
-						<Route path="/mobile">
-							<Mobile visiblePopup={visiblePopup}
-									setVisiblePopup={setVisiblePopup}
-									setAnim={setAnim}
-									anim={anim}
-							/>
-						</Route>
-						<Route path="/vr-ar">
-							<Vr visiblePopup={visiblePopup}
-								setVisiblePopup={setVisiblePopup}
-								setAnim={setAnim}
-								anim={anim}
-							/>
-						</Route>
-						<Route path="/vfx">
-							<Vfx visiblePopup={visiblePopup}
-								 setVisiblePopup={setVisiblePopup}
-								 setAnim={setAnim}
-								 anim={anim}
-							/>
-						</Route>
-						<Route path="/tours360">
-							<Tours360 visiblePopup={visiblePopup}
-									  setVisiblePopup={setVisiblePopup}
-									  setAnim={setAnim}
-									  anim={anim}
-							/>
-						</Route>
-						<Route path="/chat">
-							<Chat visiblePopup={visiblePopup}
-								  setVisiblePopup={setVisiblePopup}
-								  setAnim={setAnim}
-								  anim={anim}
-							/>
-						</Route>
-					</Switch>
+					<AppRouter visiblePopup={visiblePopup}
+							   setVisiblePopup={setVisiblePopup}
+							   setAnim={setAnim}
+							   anim={anim}
+							   mainData={mainData}
+					/>
 				</section>
 				<Footer setVisiblePopup={setVisiblePopup}/>
 
 				{/*мобильная версия*/}
-				<section className="content-mobile">
-					<SliderMobile mainData={mainData}/>
-					{visiblePopup ? <Popup
-						setVisiblePopup={setVisiblePopup}
-					/> : null}
-				</section>
+				<SliderMobile mainData={mainData}/>
+				{visiblePopup ? <Popup
+					setVisiblePopup={setVisiblePopup}
+				/> : null}
 				<FooterMobile setVisiblePopup={setVisiblePopup}/>
 			</main>
 		</div>

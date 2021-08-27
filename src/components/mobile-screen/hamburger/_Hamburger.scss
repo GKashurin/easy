@@ -1,19 +1,22 @@
 .hamburger {
   z-index: 3;
-  width: 30px;
+  width: 24px;
   height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
   transition: all 0.4s;
+  position: absolute;
+  right: 15px;
+
   @media (min-width: 555px) {
     display: none;
   }
   &__plank {
     display: block;
     background: white;
-    height: 3px;
+    height: 4px;
     width: 100%;
     transition: all 0.4s;
   }

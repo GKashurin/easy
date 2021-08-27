@@ -1,7 +1,7 @@
 import React from "react";
 import "./info.scss"
 import {useHistory} from "react-router-dom";
-import {BtnWrapper, Popup} from "../../components/"
+import {AnimatedButton, Popup} from "../../components/"
 
 const Mobile = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 	const history = useHistory()
@@ -16,7 +16,7 @@ const Mobile = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 				<h2 className="info__secondTitle">СОЗ<br/>ДА<br/>ДИМ</h2>
 				<h1 className="info__title">МОБИЛЬНОЕ ПРИЛОЖЕНИЕ</h1>
 				<h4 className="info__subtitle">простой способ быть рядом с клиентами или сотрудниками</h4>
-				<BtnWrapper
+				<AnimatedButton
 					anim={anim}
 					setAnim={setAnim}
 					setVisiblePopup={setVisiblePopup}

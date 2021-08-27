@@ -26,59 +26,58 @@ const SliderMobile = ({mainData}) => {
 		},
 	});
 
-	return (
-		<div {...handlers} className="slider">
-			<div className="slider__wrapper">
-				<div className="slider__center"
-					 style={{
-						 transform: `rotateZ(${angle}deg)`,
-						 transition: `transform ${transitionTime}s`
-					 }}
-				>
-					{
-						mainDataFlat.map((obj, index) => (
-							<div
+	const current_object = mainDataFlat[activeItem];
 
-								className={activeItem === index ? "slider__item" : "slider__item_disabled"}
-								key={obj.id}
-								style={{
-									transform: `rotateZ(calc(${stepAngle}deg * ${index})) translateX(25vh) rotateZ(calc(-${stepAngle}deg * ${index} - ${angle}deg))`,
-									transition: `transform ${transitionTime}s`,
-								}}
-							>
-								<img style={{
-									width: "25vw",
-									height: "25vw",
-								}}
-									 src={obj.imageUrl}
-									 alt={obj.link}
-								/>
-							</div>
-							)
-						)
-					}
+	return (
+		<>
+			<section className="content-mobile">
+				<div className="content-mobile__wrapper">
+					<div className="content-mobile__col content-mobile__col-left">
+						<div {...handlers} className="slider"
+							 style={{
+								 transform: `translateX(-43%)rotateZ(${angle}deg)`,
+								 transition: `transform ${transitionTime}s`
+							 }}
+						>
+							{
+								mainDataFlat.map((obj, index) => (
+										<div
+											className={activeItem === index ? "slider__item" : "slider__item disabled-mobile"}
+											key={obj.id}
+											style={{
+												transform: `rotateZ(calc(${stepAngle}deg * ${index})) translateX(65%) rotateZ(calc(-${stepAngle}deg * ${index} - ${angle}deg))`,
+												transition: `transform ${transitionTime}s`,
+											}}
+										>
+											<img style={{
+												width: "60%"
+											}}
+												 src={obj.imageUrl_mobile}
+												 alt={obj.link}
+											/>
+										</div>
+									)
+								)
+							}
+						</div>
+					</div>
+					<div className="content-mobile__col content-mobile__col-right">
+						<div key={current_object.id} className="description-wrapper">
+							<img src={current_object.h1_Mobile} alt="text"/>
+							<pre>{current_object.h4_Mobile}</pre>
+							<p>{current_object.p_Mobile}</p>
+							<div className="gradientOval"></div>
+						</div>
+					</div>
 				</div>
-			</div>
-			{mainDataFlat.map((obj, index) => (
-				<div key={obj.id} className="slider__description infoMobile">
-					{
-						activeItem === index ?
-							<div>
-								<h1>
-									<span>{obj.h1_Mobile["1"]}</span>
-									<span>{obj.h1_Mobile["2"]}</span>
-									<span>{obj.h1_Mobile["3"]}</span>
-								</h1>
-								<h4>{obj.h4_Mobile}</h4>
-								<p>{obj.p_Mobile}</p>
-							</div>
-							: null
-					}
-				</div>
-			))}
-			<div className="gradientOval"></div>
-		</div>
+
+			</section>
+
+		</>
+
 	)
 }
 
 export default SliderMobile;
+
+

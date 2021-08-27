@@ -1,7 +1,7 @@
 import React from "react";
 import "./info.scss"
 import {useHistory} from "react-router-dom";
-import {BtnWrapper, Popup} from "../../components/"
+import {AnimatedButton, Popup} from "../../components/"
 
 const Vr = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 	const history = useHistory()
@@ -16,7 +16,7 @@ const Vr = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 				<h2 className="info__secondTitle">ПОГ<br/>РУЗ<br/>ИМ</h2>
 				<h1 className="info__title">В ВИРТУАЛЬНУЮ РЕАЛЬНОСТЬ (VR)</h1>
 				<h4 className="info__subtitle">Когда нужно снизить ошибки персонала, сократить затраты на обучение и расширить границы бизнеса</h4>
-				<BtnWrapper
+				<AnimatedButton
 					anim={anim}
 					setAnim={setAnim}
 					setVisiblePopup={setVisiblePopup}

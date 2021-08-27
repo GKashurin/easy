@@ -31,6 +31,7 @@ const Popup = ({setVisiblePopup}) => {
 		setTimeout(() => setVisiblePopup(false), 600);
 	};
 
+
 	return (
 		<>
 			<div className="popup" onClick={handleOutsideClick}>

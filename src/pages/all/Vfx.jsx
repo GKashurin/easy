@@ -1,7 +1,7 @@
 import React from "react";
 import "./info.scss"
 import {useHistory} from "react-router-dom";
-import {BtnWrapper, Popup} from "../../components/"
+import {AnimatedButton, Popup} from "../../components/"
 
 const Vfx= ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 	const history = useHistory()
@@ -15,7 +15,7 @@ const Vfx= ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 				<h2 className="info__secondTitle">СОЗ<br/>ДА<br/>ЕМ</h2>
 				<h1 className="info__title">ВИЗУАЛЬНЫЕ ЭФФЕКТЫ(VFX)</h1>
 				<h4 className="info__subtitle">Сделаем ваше видео захватывающим и запоминающимся</h4>
-				<BtnWrapper
+				<AnimatedButton
 					anim={anim}
 					setAnim={setAnim}
 					setVisiblePopup={setVisiblePopup}

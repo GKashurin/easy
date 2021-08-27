@@ -1,40 +1,71 @@
 .slider {
-
-  &__wrapper {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transform: translateX(-100px);
-  }
-  &__center {
-    display: grid;
-    place-items: center;
-  }
-
+  aspect-ratio: 1/1;
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
   &__item {
     position: absolute;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
     img {
       filter: grayscale(0);
       opacity: 1;
-      transform: scale(1.5);
+      transform: scale(1.1);
       transition: all 0.3s;
     }
-    &_disabled {
-      position: absolute;
-      img {
-        filter: grayscale(1);
-        transform: scale(1);
-        opacity: (0.7);
-        transition: all 0.3s;
-
-      }
-    }
-  }
-  &__description {
-    position: absolute;
-    right: 5%;
-    top: 33vh;
   }
 }
 
+.disabled-mobile {
+  z-index: -1;
+  img {
+    filter: grayscale(1);
+    transform: scale(0.6);
+    opacity: (0.6);
+    transition: all 0.3s;
+  }
+}
+
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: -1;
+  position: relative;
+
+  img {
+    width: 108%;
+    margin-bottom: 15px;
+  }
+
+  pre {
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: right;
+
+  }
+  p {
+    font-weight: 300;
+    font-size: 19px;
+    text-align: right;
+    position: absolute;
+    top: 100%;
+    width: 90vw;
+  }
+}
+
+.gradientOval {
+  position: absolute;
+  right: -20px;
+  bottom: -30%;
+  height: 55vh;
+  width: 45vh;
+  background: linear-gradient(
+                  314deg, #abcd29, rgba(171, 205, 41, 0.8), rgba(56, 176, 193, 0.9), rgba(144, 107, 170, 0.9));
+  z-index: -2;
+  border-radius: 160px 55px 35px 70px;
+  filter: blur(13px);
+}

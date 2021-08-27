@@ -1,7 +1,7 @@
 import React from "react";
 import "./info.scss"
 import {useHistory} from "react-router-dom";
-import {BtnWrapper, Popup} from "../../components/"
+import {AnimatedButton, Popup} from "../../components/"
 
 const Instamask = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 
@@ -17,7 +17,7 @@ const Instamask = ({ anim, setAnim, visiblePopup, setVisiblePopup }) => {
 				<h2 className="info__secondTitle">СДЕ<br/>ЛА<br/>ЕМ</h2>
 				<h1 className="info__title">INSTA МАСКУ</h1>
 				<h4 className="info__subtitle">Инструмент вовлечения аудитории и повышения продаж</h4>
-				<BtnWrapper
+				<AnimatedButton
 					anim={anim}
 					setAnim={setAnim}
 					setVisiblePopup={setVisiblePopup}

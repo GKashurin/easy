@@ -1,7 +1,7 @@
 import React from "react";
 import "./info.scss"
 import {useHistory} from "react-router-dom";
-import {BtnWrapper, Popup} from "../../components/"
+import {AnimatedButton, Popup} from "../../components/"
 
 const Web = ({anim, setAnim, visiblePopup, setVisiblePopup }) => {
 	const history = useHistory()
@@ -17,7 +17,7 @@ const Web = ({anim, setAnim, visiblePopup, setVisiblePopup }) => {
 				<h1 className="info__title">WEB-ПРИЛОЖЕНИЕ</h1>
 				<h4 className="info__subtitle">Обновить сайт, создать соверменный сайт с нуля, повысить
 					производительность текущего сайта</h4>
-				<BtnWrapper
+				<AnimatedButton
 					anim={anim}
 					setAnim={setAnim}
 					setVisiblePopup={setVisiblePopup}
