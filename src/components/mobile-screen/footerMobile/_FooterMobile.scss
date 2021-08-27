@@ -9,7 +9,7 @@
     z-index: 1;
     &:nth-child(1) {
       position: absolute;
-      transform: rotateZ(95deg) translateY(65px) rotateZ(-95deg)
+      transform: rotateZ(90deg) translateY(65px) rotateZ(-90deg)
     };
     &:nth-child(2) {
       position: absolute;
@@ -18,7 +18,7 @@
 
     &:nth-child(3) {
       position: absolute;
-      transform: rotateZ(175deg) translateY(65px) rotateZ(-175deg)
+      transform: rotateZ(180deg) translateY(65px) rotateZ(-180deg)
     }
 
     &_invisible {
@@ -28,7 +28,7 @@
       z-index: 0;
       &:nth-child(1) {
         position: absolute;
-        transform: rotateZ(95deg) translateY(0) rotateZ(-95deg)
+        transform: rotateZ(90deg) translateY(0) rotateZ(-90deg)
       };
       &:nth-child(2) {
         position: absolute;
@@ -37,7 +37,7 @@
 
       &:nth-child(3) {
         position: absolute;
-        transform: rotateZ(175deg) translateY(0) rotateZ(-175deg)
+        transform: rotateZ(180deg) translateY(0) rotateZ(-180deg)
       }
     }
   }

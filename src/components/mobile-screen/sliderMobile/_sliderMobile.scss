@@ -34,22 +34,25 @@
   align-items: flex-end;
   z-index: -1;
   position: relative;
+  transform: translateY(-14%);
+  min-width: 67vw;
 
   img {
-    width: 108%;
-    margin-bottom: 15px;
+    width: 95%;
+    margin-bottom: 3.5%;
   }
 
   pre {
     font-family: Inter;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 7vw;
     text-align: right;
-
+    margin-bottom: 3.5%;
+    line-height: 90%;
   }
   p {
-    font-weight: 300;
-    font-size: 19px;
+    font-weight: 200;
+    font-size: 4vw;
     text-align: right;
     position: absolute;
     top: 100%;
