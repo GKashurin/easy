@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import {Header, Footer, FooterMobile, Popup, SliderMobile, AppRouter} from "./components/";
+import {Header, Footer, FooterMobile, SliderMobile, AppRouter, FormMobile} from "./components/";
 import {mainData} from "./mainData";
 import "./style/app.scss";
 import "./components/mobile-screen/sliderMobile/_sliderMobile.scss";
@@ -8,7 +8,10 @@ import "./style/_AnimatedLink.scss"
 const App = () => {
 
 	const [anim, setAnim] = React.useState(false) //переменная, ответственная за анимацию
-	const [visiblePopup, setVisiblePopup] = useState(false)
+	const [visiblePopup, setVisiblePopup] = useState(false) //модальное оно на десктопе
+	const [visibleFormMobile, setVisibleFormMobile] = useState(false) //модальное оно на мобильных
+	const [visibleFormContainer, setVisibleFormContainer] = useState(false)// состояние для темного контейнера
+
 
 	return (
 		<div className="App">
@@ -26,10 +29,16 @@ const App = () => {
 
 				{/*мобильная версия*/}
 				<SliderMobile mainData={mainData}/>
-				{visiblePopup ? <Popup
-					setVisiblePopup={setVisiblePopup}
-				/> : null}
-				<FooterMobile setVisiblePopup={setVisiblePopup}/>
+				<FormMobile
+					visibleFormMobile={visibleFormMobile}
+					setVisibleFormMobile={setVisibleFormMobile}
+					setVisibleFormContainer={setVisibleFormContainer}
+					visibleFormContainer={visibleFormContainer}
+				/>
+				<FooterMobile
+					setVisibleFormMobile={setVisibleFormMobile}
+					setVisibleFormContainer={setVisibleFormContainer}
+				/>
 			</main>
 		</div>
 	);

@@ -1,7 +1,6 @@
 import React from 'react';
 import "./_Team.scss"
 import {Popup, TeamSlider} from "../../components";
-// import { teamData } from "./teamData"
 
 const Team = ({visiblePopup, setVisiblePopup}) => {
 	const [teamData, setTeamData] = React.useState([
@@ -25,9 +24,7 @@ const Team = ({visiblePopup, setVisiblePopup}) => {
 		},
 	]);
 
-	const shareControl = () => {
 
-	}
 
 	return (
 		<>

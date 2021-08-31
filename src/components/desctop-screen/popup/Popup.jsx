@@ -19,12 +19,6 @@ const Popup = ({setVisiblePopup}) => {
 		} 
 	}, [seconds, timerActive]);//таймер
 
-	// const animClosePopup = (e) => {
-	// 	e.preventDefault();
-	// 	setChangeFormContainer(true)
-	// 	setTimeout(() => setVisiblePopup(false), 600)
-	// }
-
 	const handleOutsideClick = (event) => {
 		event.preventDefault();
 		setChangeFormContainer(true);

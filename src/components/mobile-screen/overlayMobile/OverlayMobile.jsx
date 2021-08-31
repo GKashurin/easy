@@ -11,7 +11,7 @@ const history = useHistory()
 				<div className="header">
 					<div className="header__logo">
 						<Link to={"/"}>
-							<img src={"/image/logo_mobile.jpg"} alt={"logo"}/>
+							<img src={"/image/LOGO_black.svg"} alt={"logo"}/>
 						</Link>
 					</div>
 				</div>

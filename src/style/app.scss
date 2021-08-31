@@ -4,14 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  background: linear-gradient( 45deg, #C95691, #1C98E0);
+  overflow: hidden;
+}
+
 body, html {//
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  font-size: 10px;
-  @media (max-width: 320px) {
-    font-size: 16px;
-  }
 }
 
 #root {
@@ -21,13 +21,9 @@ body, html {//
 
 body {
   font-family: Inter, Arial, sans-serif;
-  background: linear-gradient( 45deg, #C95691, #1C98E0) no-repeat fixed;
-  background-size: cover;
+  font-size: 10px;
   color: #ffffff;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-text-size-adjust: none;
+
 }
 
 a {
@@ -44,9 +40,13 @@ address {
   font-style: normal;
 }
 
+.App {
+  height: 100%;
+}
+
 .container {
   max-width: 1080px;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   padding: 15px;
   display: flex;

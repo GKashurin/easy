@@ -11,9 +11,12 @@
   @media (max-width: 768px) {
     transform: translate(-130%, 110%);
   }
-  @media (max-width: 480px) {
+  @media (max-width: 550px)
+  {
+    transform: translate(-50%, 110%);
     height: 550px;
     width: 300px;
+
   }
 
 &__title {

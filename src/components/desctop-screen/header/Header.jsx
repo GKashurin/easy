@@ -20,7 +20,7 @@ const Header = ({ setAnim }) => {
 				}
 				to={"#"}
 				>
-					<img src={"/image/logo.png"} alt={"logo"}/>
+					<img src={"/image/LOGO.svg"} alt={"logo"}/>
 				</Link>
 			</div>
 			<HeaderMenu/>

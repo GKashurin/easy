@@ -12,4 +12,6 @@ export { default as SliderMobile } from './mobile-screen/sliderMobile/SliderMobi
 export { default as TeamSlider } from './desctop-screen/team-slider/TeamSlider';
 export { default as Hamburger } from './mobile-screen/hamburger/Hamburger';
 export { default as AppRouter } from '../components/appRouter/AppRouter';
+export { default as FormMobile } from '../components/mobile-screen/formMobile/FormMobile';
+
 
