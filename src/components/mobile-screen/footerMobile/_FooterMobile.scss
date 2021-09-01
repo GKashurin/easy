@@ -3,6 +3,12 @@
   justify-content: space-between;
   padding: 0 15px 15px 15px;
 
+  &__socials {
+    display: grid;
+    place-items: center;
+    z-index: 1;
+  }
+
   .socials__item {
     width: 44px;
     height: 44px;
@@ -28,7 +34,7 @@
       transition: all 0.3s;
       margin: 0;
       opacity: 0;
-      z-index: 0;
+      z-index: -1;
       &:nth-child(1) {
         position: absolute;
         transform: rotateZ(90deg) translateY(0) rotateZ(-90deg)

@@ -10,13 +10,16 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 		setVisibleFormContainer(true);
 		setVisibleFormMobile(true)
 	}
+
 	return (
 		<div className="footer-mobile">
 			<AnimatedButton onClick={handleClick}>
 				Отправить запрос
 			</AnimatedButton>
 			<div className="gradientCircle"></div>
-			<div className="footer-mobile__socials socials">
+			<div className="footer-mobile__socials socials"
+				 onClick={() => setVisibleIcons(!visibleIcons)}
+			>
 				<div className={visibleIcons ? "socials__item" : "socials__item socials__item_invisible"}>
 					<Link to={"https://www.instagram.com/easy.cg/"}
 						  className="socials__link animated-button"
@@ -87,13 +90,11 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 							</svg>
 						</Link>
 					</div>
-				<div className="socials__toggle"
-					 onClick={() => setVisibleIcons(!visibleIcons)}>
+				<div className="socials__toggle" >
 					<img
 						src={visibleIcons ? "/image/footer_mobile_cross.svg" : "/image/footer_mobile_message.svg"}
 						alt="social item"
 					/>
-
 				</div>
 			</div>
 		</div>

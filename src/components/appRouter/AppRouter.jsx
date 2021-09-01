@@ -68,7 +68,7 @@ const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData}) => 
 					  anim={anim}
 				/>
 			</Route>
-			<Redirect to="/"/>
+			{/*<Redirect to="/"/>*/}
 		</Switch>
 	);
 };

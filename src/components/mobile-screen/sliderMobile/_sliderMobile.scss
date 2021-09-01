@@ -1,9 +1,12 @@
 .slider {
   aspect-ratio: 1/1;
-  height: 100%;
   position: relative;
   display: grid;
   place-items: center;
+  flex-shrink: 0;
+  height: 60vw;
+  width: 60vw;
+
   &__item {
     position: absolute;
     aspect-ratio: 1/1;
@@ -12,7 +15,7 @@
     img {
       filter: grayscale(0);
       opacity: 1;
-      transform: scale(1.1);
+      transform: scale(1.5);
       transition: all 0.3s;
     }
   }
@@ -22,7 +25,7 @@
   z-index: -1;
   img {
     filter: grayscale(1);
-    transform: scale(0.6);
+    transform: scale(0.8);
     opacity: (0.6);
     transition: all 0.3s;
   }

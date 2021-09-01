@@ -11,7 +11,7 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 	const handleOutsideClick = (event) => { //закрытие формы по клику вне ее
 		event.preventDefault();
 		setVisibleFormMobile(false)
-		setTimeout(() => setVisibleFormContainer(false),1002)
+		setVisibleFormContainer(false)
 	};
 
 	const [error, setError] = useState(false)
@@ -106,10 +106,10 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 					Нажимая на кнопку, вы даете согласие на обработку своих персональных данных.
 				</span>
 			</form>
-			<ThanksModal
-				visibleThanksModal={visibleThanksModal}
-				seconds={seconds}
-			/>
+			{/*<ThanksModal*/}
+			{/*	visibleThanksModal={visibleThanksModal}*/}
+			{/*	seconds={seconds}*/}
+			{/*/>*/}
 		</div>
 	);
 };

@@ -66,7 +66,7 @@ const SliderMobile = ({mainData}) => {
 							<img src={current_object.h1_Mobile} alt="text"/>
 							<pre>{current_object.h4_Mobile}</pre>
 							<p>{current_object.p_Mobile}</p>
-							<div className="gradientOval"></div>
+							{/*<div className="gradientOval"></div>*/}
 						</div>
 					</div>
 				</div>
