@@ -8,20 +8,36 @@ const Footer = ({setVisiblePopup}) => {
 	return (
 		<footer className="footer">
 			<div className="footer__contacts contacts">
-				<address>
-					<Link to="#" className="animated-link">
-						620144, г. Екатеринбург. ул. Степана Разина, 2, оф. 6
+				<div className="footer__item">
+					<Link to={"https://yandex.ru/maps/54/yekaterinburg/?ll=60.607184%2C56.824544&mode=routes&no-distribution=1&rtext=~56.824797%2C60.606731&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D97124593337&source=wizbiz_new_map_single&z=18"}
+						  className="footer__link animated-button"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="32"
+							height="32"
+							version="1.1"
+							viewBox="0 0 1454.73 1454.73"
+						>
+							<path
+								fillRule="evenodd"
+								clipRule="evenodd"
+								d="M513 593.62c0,-109.11 95.11,-205.2 197.87,-205.2 66.3,0 116.66,8.99 164.05,55.81 18.74,18.51 29.08,29.71 41.2,54.07 41.46,83.36 21.38,151.39 -17.15,228.46 -18.06,36.11 -34.3,68.86 -54.64,102.93l-87.09 151.1c-9,16.52 -23.97,35.01 -28.06,52.56 -8.77,-6.43 -78.33,-129.43 -90.35,-151.49 -32.23,-59.16 -90.88,-156.76 -112.25,-217.53 -5.28,-15 -13.59,-52.81 -13.59,-70.69zm-62.29 -21.99c0,92.6 7.02,105.64 48.86,189.32 45.81,91.63 124.22,227.8 179.05,319.29 14.56,24.28 22.69,52.03 54.24,52.03 18.27,0 37.1,-38.57 45.19,-53.74 12.25,-22.99 24.13,-42.88 36.68,-65.92 12.66,-23.25 24.83,-41.15 37.92,-64.68l73.24 -128.3c35.79,-71.62 81.79,-141.93 81.79,-229.67 0,-145.58 -136.83,-267.49 -263.83,-267.49 -114.72,0 -212.78,47.84 -265.05,145.34 -12.12,22.61 -28.09,70.85 -28.09,103.83z"
+							/>
+							<path
+								fillRule="evenodd"
+								clipRule="evenodd"
+								d="M736.53 674.23l-18.32 0c-68.97,0 -101.61,-91.39 -56.1,-136.71 45.23,-45.04 151.37,-30.63 151.37,56.1 0,41.17 -36.43,80.61 -76.95,80.61zm-161.23 -80.61c0,163.46 230.43,199.48 290.66,59.81 46.86,-108.66 -42.73,-206.38 -125.77,-206.38 -49.18,0 -89.86,8.49 -123.79,44.76 -21.42,22.89 -41.1,58.48 -41.1,101.81z"
+							/>
+						</svg>
 					</Link>
-				</address>
-				<div className="contacts__wrapper">
-					<a className="animated-link" href="mailto:namaste@easycg.ru">namaste@easycg.ru, </a>
-					<a className="animated-link" href="tel:3435215031">&nbsp;+7 (343) 521-50-31</a>
 				</div>
+				<span>Мы на карте</span>
 			</div>
 			<div className="footer__socials socials">
-				<div className="socials__item">
+				<div className="footer__item">
 					<Link to={"https://www.instagram.com/easy.cg/"}
-						className="socials__link animated-button"
+						  className="footer__link animated-button"
 					>
 						<svg
 							width="16"
@@ -50,9 +66,9 @@ const Footer = ({setVisiblePopup}) => {
 						</svg>
 					</Link>
 				</div>
-				<div className="socials__item">
+				<div className="footer__item">
 					<Link to={"https://t.me/easy_cg"}
-						className="socials__link animated-button"
+						  className="footer__link animated-button"
 					>
 						<svg
 							width="16"
@@ -68,9 +84,9 @@ const Footer = ({setVisiblePopup}) => {
 						</svg>
 					</Link>
 				</div>
-				<div className="socials__item">
+				<div className="footer__item">
 					<Link to={"https://clck.ru/VC5TX"}
-						className="socials__link animated-button"
+						  className="footer__link animated-button"
 					>
 						<svg
 							width="16"

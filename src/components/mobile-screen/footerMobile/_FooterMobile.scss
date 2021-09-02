@@ -9,7 +9,7 @@
     z-index: 1;
   }
 
-  .socials__item {
+  .footer__item {
     width: 44px;
     height: 44px;
     margin: 0;
@@ -56,10 +56,14 @@
   }
 }
 
+.footer-mobile__link svg {
+  fill: #fff;
+}
+
 .gradientCircle {
   position: absolute;
   right: -35px;
-  bottom: -35px;
+  bottom: -px;
   height: 29vh;
   width: 29vh;
   border-radius: 50%;

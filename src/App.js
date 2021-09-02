@@ -1,11 +1,11 @@
-import React, { useState} from "react";
+import React, {useState} from "react";
 import {Route, Switch, useHistory} from "react-router-dom";
 import {Header, Footer, FooterMobile, SliderMobile, AppRouter, FormMobile} from "./components/";
 import {mainData} from "./mainData";
 import useWindowDimensions from "./hooks/useWindowDimensions";
-import "./style/app.scss";
+import "./app.scss";
 import "./components/mobile-screen/sliderMobile/_sliderMobile.scss";
-import "./style/_AnimatedLink.scss"
+import "./components/UI/_AnimatedLink.scss"
 
 const App = () => {
 
@@ -16,9 +16,9 @@ const App = () => {
 	const { height, width } = useWindowDimensions();
 	const history = useHistory()
 
-	if (width <= 550 || height <= 550) {
+	if (width <= 550 ) {
 		history.push("/mobile-version")
-	} else if (width > 550 && height > 550) {
+	} else if (width > 550) {
 		history.push("/")
 	}
 

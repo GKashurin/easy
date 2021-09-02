@@ -4,7 +4,7 @@ import "./Home.scss";
 import cn from "classnames";
 import {Popup} from "../../components/";
 
-const Home = ({ anim, setAnim, visiblePopup, setVisiblePopup, mainData }) => {
+const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 	const [animationDisabled, setAnimationDisabled] = useState(false)//ЧБ анимация
 	const [animationActive, setAnimationActive] = useState(false)//анимация цветных картинок
 	const [items, setItems] = useState(mainData);
@@ -40,7 +40,7 @@ const Home = ({ anim, setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 										e => {
 											e.preventDefault();
 											toggleAnimation();
-											setAnim(!anim)
+											setAnim(true)
 											setTimeout(() => {
 												history.push(`${elem.link}`);
 												setItems(items.map(

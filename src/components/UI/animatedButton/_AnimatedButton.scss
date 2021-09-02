@@ -1,12 +1,12 @@
 .animated-button_blick {
+  height: 32px;
   position: relative;
   background: transparent;
   color: #fff;
   cursor: pointer;
   display: block;
   transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
-  padding: 10px;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 6px;
   overflow: hidden;
   width: 140px;

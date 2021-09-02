@@ -9,7 +9,7 @@ export const mainData = [
 		"selector": "active",
 		"h1_Mobile": "image/sdelaem.svg",
 		"h4_Mobile": "INSTA МАСКУ",
-		"p_Mobile": "Инструмент вовлечения аудитории и повышения продаж"
+		"p_Mobile": "Инструмент вовлечения аудитории\nи повышения продаж"
 	}],
 	[{
 		"id": 2,
@@ -19,9 +19,9 @@ export const mainData = [
 		"link": "/web",
 		"active": true,
 		"selector": "active",
-		"h1_Mobile": "image/pogruzim.svg",
+		"h1_Mobile": "image/sozdaem.svg",
 		"h4_Mobile": "WEB\nПРИЛОЖЕНИЕ",
-		"p_Mobile": "Обновить сайт, создать соверменный сайт с нуля, повысить производительность текущего сайта"
+		"p_Mobile": "Обновить сайт, создать соверменный\nсайт с нуля, повысить\nпроизводительность текущего сайта"
 	},
 		{
 			"id": 3,
@@ -33,7 +33,7 @@ export const mainData = [
 			"selector": "active",
 			"h1_Mobile": "image/sozdaem.svg",
 			"h4_Mobile": "МОБИЛЬНОЕ\nПРИЛОЖЕНИЕ",
-			"p_Mobile": "Простой способ быть рядом с клиентами или сотрудниками"
+			"p_Mobile": "Простой способ быть рядом\nс клиентами или сотрудниками"
 		}],
 	[{
 		"id": 4,
@@ -45,7 +45,7 @@ export const mainData = [
 		"selector": "active",
 		"h1_Mobile": "image/pogruzim.svg",
 		"h4_Mobile": "В ВИРТУАЛЬНУЮ\nРЕАЛЬНОСТЬ (VR)",
-		"p_Mobile": "Когда нужно снизить ошибки персонала, сократить затраты на обучение и расширить границы бизнеса"
+		"p_Mobile": "Когда нужно снизить ошибки\nперсонала, сократить затраты на\nобучение и расширить границы бизнеса"
 	}],
 	[{
 		"id": 5,
@@ -57,7 +57,7 @@ export const mainData = [
 		"selector": "active",
 		"h1_Mobile": "image/sozdaem.svg",
 		"h4_Mobile": "ВИЗУАЛЬНЫЕ\nЭФФЕКТЫ(VFX)",
-		"p_Mobile": "Сделаем ваше видео захватывающим и запоминающимся"
+		"p_Mobile": "Сделаем ваше видео\nзахватывающим и запоминающимся"
 	},
 		{
 			"id": 6,
@@ -69,7 +69,7 @@ export const mainData = [
 			"selector": "active",
 			"h1_Mobile": "image/napishem.svg",
 			"h4_Mobile": "ЧАТ-БОТА",
-			"p_Mobile": "Используйте роботов вместо тысячи слов"
+			"p_Mobile": "Используйте роботов\nвместо тысячи слов"
 		}],
 	[{
 		"id": 7,

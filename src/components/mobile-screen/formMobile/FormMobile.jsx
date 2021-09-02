@@ -37,7 +37,7 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 	const changeHandler = (e) => {
 		e.preventDefault();
 
-		if (formState.phone.length !== 16) { //валидация инпута с телефоном
+		if (formState.phone.length !== 18) { //валидация инпута с телефоном
 			setError(true)
 		} else {
 			setTimerActive(true); //запуск таймера
@@ -72,18 +72,18 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 					<div className="formMobile__item">
 						<InputMask //  телефон
 							id="phone"
-							className={!error || formState.phone.length === 16 ? "" : "error-input"}
+							className={!error || formState.phone.length === 18 ? "" : "error-input"}
 							value={formState.phone}
 							onChange={e => setFormState({...formState, phone: e.target.value})}
-							mask="+7\(999) 999-9999"
+							mask="+7\ (999) 999-99-99"
 							maskChar=""
-							placeholder="+7 (999) 999-9999"
+							placeholder="+7 (999) 999-99-99"
 							required
 							autoComplete="off"
 						/>
-						<span className={!error || formState.phone.length === 16 ? "formMobile__reminder" : "error-reminder"}>Введите номер телефона</span>
+						<span className={!error || formState.phone.length === 18 ? "formMobile__reminder" : "error-reminder"}>Введите номер телефона</span>
 						{/*<label*/}
-						{/*	className={!error || formState.phone.length === 16 ? "" : "error-label"}*/}
+						{/*	className={!error || formState.phone.length === 18 ? "" : "error-label"}*/}
 						{/*	htmlFor="phone">+7 (999) 999-9999*/}
 						{/*</label>*/}
 					</div>
@@ -103,13 +103,13 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 				>Обсудить проект
 				</AnimatedButton>
 				<span className="formMobile__agreement">
-					Нажимая на кнопку, вы даете согласие на обработку своих персональных данных.
+					Нажимая на кнопку, вы даете согласие на <br/> обработку своих персональных данных.
 				</span>
 			</form>
-			{/*<ThanksModal*/}
-			{/*	visibleThanksModal={visibleThanksModal}*/}
-			{/*	seconds={seconds}*/}
-			{/*/>*/}
+			<ThanksModal
+				visibleThanksModal={visibleThanksModal}
+				seconds={seconds}
+			/>
 		</div>
 	);
 };

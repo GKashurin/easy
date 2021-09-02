@@ -1,8 +1,9 @@
 .content {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 0;
+  align-items: center;
+
+  flex: 1;
   @media (max-width: 555px) {
     display: none;
   }

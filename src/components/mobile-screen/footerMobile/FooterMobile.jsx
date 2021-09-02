@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import AnimatedButton from "../../UI/animatedButton/AnimatedButton";
 
 const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
-	const [visibleIcons, setVisibleIcons] = useState(true) // сворачивание блока с иконками
+	const [visibleIcons, setVisibleIcons] = useState(false) // сворачивание блока с иконками
 
 	const handleClick = () => {
 		setVisibleFormContainer(true);
@@ -20,9 +20,9 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 			<div className="footer-mobile__socials socials"
 				 onClick={() => setVisibleIcons(!visibleIcons)}
 			>
-				<div className={visibleIcons ? "socials__item" : "socials__item socials__item_invisible"}>
-					<Link to={"https://www.instagram.com/easy.cg/"}
-						  className="socials__link animated-button"
+				<div className={visibleIcons ? "footer__item" : "footer__item footer__item_invisible"}>
+					<a href="https://www.instagram.com/easy.cg/"
+						  className="footer-mobile__link animated-button"
 					>
 						<svg
 							width="16"
@@ -49,11 +49,11 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 								strokeMiterlimit="22.9256"
 							/>
 						</svg>
-					</Link>
+					</a>
 				</div>
-				<div className={visibleIcons ? "socials__item" : "socials__item socials__item_invisible"}>
-					<Link to={"https://t.me/easy_cg"}
-						  className="socials__link animated-button"
+				<div className={visibleIcons ? "footer__item" : "footer__item footer__item_invisible"}>
+					<a href="https://t.me/easy_cg"
+						  className="footer-mobile__link animated-button"
 					>
 						<svg
 							width="16"
@@ -67,11 +67,11 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 								d="M11.1182 3.65182C10.8616 4.01101 10.7847 4.11364 10.4768 4.42152L6.73095 7.83382C5.88429 8.65483 6.01258 8.44958 6.01258 10.0146C5.26854 9.80937 4.80672 7.75685 4.75541 7.19241C5.9356 6.62797 5.55076 7.03847 7.19277 5.93525C7.44934 5.75565 7.65459 5.60171 7.93681 5.42212C8.57822 5.01161 10.3485 3.72879 11.1439 3.65182H11.1182ZM0.111595 6.16615C0.111595 6.34575 0.676038 6.75625 0.829976 6.85888C2.83118 7.88513 3.57522 6.11484 4.72976 10.3482C4.83238 10.6817 5.42248 12.4007 5.67904 12.4007C6.57702 12.4007 7.34671 11.1178 8.27034 10.5021C9.32226 11.0665 11.5544 13.0934 12.1958 13.0934C13.1451 13.0934 13.3247 11.7849 13.6325 10.5021C13.8378 9.68108 15.4285 1.72759 15.4285 0.957897C15.4285 -0.14533 14.6845 -0.119673 13.6582 0.29083L9.73276 1.88153C9.01438 2.16375 8.37297 2.369 7.65459 2.65122L0.547754 5.21687C0.239877 5.34515 0.0859375 5.78131 0.0859375 6.16615H0.111595Z"
 							/>
 						</svg>
-					</Link>
+					</a>
 				</div>
-				<div className={visibleIcons ? "socials__item" : "socials__item socials__item_invisible"}>
-						<Link to={"https://clck.ru/VC5TX"}
-							  className="socials__link animated-button"
+				<div className={visibleIcons ? "footer__item" : "footer__item footer__item_invisible"}>
+						<a href="https://clck.ru/VC5TX"
+							  className="footer-mobile__link animated-button"
 						>
 							<svg
 								width="16"
@@ -88,7 +88,7 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 									d="M4.15039 4.96044C4.15039 6.96164 4.43261 8.06487 5.81806 9.34769C6.02331 9.52728 6.33119 9.78385 6.5621 9.93779C6.84432 10.143 7.07522 10.2713 7.3831 10.4509C10.2823 12.2212 12.6427 9.93779 10.7954 8.68062C10.4106 8.3984 9.10208 7.70568 9.10208 8.96284C8.07583 8.96284 7.33179 8.62931 6.69038 7.83396C5.74109 6.60245 6.66472 7.26952 6.66472 5.57619C6.66472 3.44671 4.15039 3.19014 4.15039 4.93478V4.96044Z"
 								/>
 							</svg>
-						</Link>
+						</a>
 					</div>
 				<div className="socials__toggle" >
 					<img

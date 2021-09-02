@@ -24,7 +24,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 	}
 	const changeHandler = (e) => {
 		e.preventDefault();
-		if (formState.phone.length !== 16) { //валидация инпута с телефоном
+		if (formState.phone.length !== 18) { //валидация инпута с телефоном
 			setError(true)
 		} else {
 			setTimerActive(!timerActive); //запуск таймера
@@ -93,7 +93,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 				</div>
 			</div>
 			<textarea //проект
-				placeholder="Если есть время, оставьте, пожалуйста, описание проекта или задачи"
+				placeholder="Описание проекта или задачи"
 				value={formState.description}
 				onChange={e => setFormState({...formState, description: e.target.value})}
 			/>
@@ -106,12 +106,12 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 					onChange={e => setFormState({...formState, name: e.target.value})}
 				/>
 				<InputMask //  телефон
-					className={!error || formState.phone.length === 16 ? "" : "error"}
+					className={!error || formState.phone.length === 18 ? "" : "error"}
 					value={formState.phone}
 					onChange={e => setFormState({...formState, phone: e.target.value})}
-					mask="+7\(999) 999-9999"
+					mask="+7\ (999) 999-99-99"
 					maskChar=""
-					placeholder="Ваш телефон"
+					placeholder="+7 (999) 999-99-99"
 					required
 				/>
 			</div>

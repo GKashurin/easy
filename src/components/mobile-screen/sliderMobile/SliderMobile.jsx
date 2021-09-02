@@ -35,7 +35,7 @@ const SliderMobile = ({mainData}) => {
 					<div className="content-mobile__col content-mobile__col-left">
 						<div {...handlers} className="slider"
 							 style={{
-								 transform: `translateX(-43%)rotateZ(${angle}deg)`,
+								 transform: `translateX(-50%)rotateZ(${angle}deg)`,
 								 transition: `transform ${transitionTime}s`
 							 }}
 						>
@@ -45,7 +45,7 @@ const SliderMobile = ({mainData}) => {
 											className={activeItem === index ? "slider__item" : "slider__item disabled-mobile"}
 											key={obj.id}
 											style={{
-												transform: `rotateZ(calc(${stepAngle}deg * ${index})) translateX(65%) rotateZ(calc(-${stepAngle}deg * ${index} - ${angle}deg))`,
+												transform: `rotateZ(calc(${stepAngle}deg * ${index})) translateX(70%) rotateZ(calc(-${stepAngle}deg * ${index} - ${angle}deg))`,
 												transition: `transform ${transitionTime}s`,
 											}}
 										>
@@ -65,7 +65,7 @@ const SliderMobile = ({mainData}) => {
 						<div key={current_object.id} className="description-wrapper">
 							<img src={current_object.h1_Mobile} alt="text"/>
 							<pre>{current_object.h4_Mobile}</pre>
-							<p>{current_object.p_Mobile}</p>
+							<pre>{current_object.p_Mobile}</pre>
 							{/*<div className="gradientOval"></div>*/}
 						</div>
 					</div>

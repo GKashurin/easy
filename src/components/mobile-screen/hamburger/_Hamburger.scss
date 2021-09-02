@@ -1,7 +1,7 @@
 .hamburger {
   z-index: 3;
-  width: 24px;
-  height: 20px;
+  width: 29px;
+  height: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,7 +24,7 @@
 }
 
 .hamburger--active .hamburger__plank:nth-child(1) {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(-8px, 8px);
   background-color: #3d3d3d;
 
 }
@@ -32,6 +32,6 @@
   opacity: 0;
 }
 .hamburger--active .hamburger__plank:nth-child(3) {
-  transform: rotate(45deg) ;
+  transform: rotate(45deg) translate(-6px, -6px);
   background-color: #3d3d3d;
 }
