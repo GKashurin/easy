@@ -1,18 +1,14 @@
 import React from "react"
 import "./_OverlayMobile.scss"
-import {Link, useHistory} from "react-router-dom";
 import "../../desctop-screen/header/Header.scss"
 
 const OverlayMobile = ({burgerOpen}) => {
-const history = useHistory()
 	return (
 		<div className={burgerOpen ? "overlayMobile" : "overlayMobile overlayMobile_invisible"}>
 			<div className="overlayMobile__wrapper">
 				<div className="header">
 					<div className="header__logo">
-						<Link to={"/"}>
-							<img src={"/image/LOGO_black.svg"} alt={"logo"}/>
-						</Link>
+						<img src={"/image/LOGO_black.svg"} alt={"logo"}/>
 					</div>
 				</div>
 				<nav className="overlayMobile__menu overlayMobile-menu">

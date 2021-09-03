@@ -3,19 +3,28 @@ import "./Header.scss"
 
 import {Link, useHistory} from "react-router-dom";
 import {OverlayMobile, HeaderMenu, Hamburger} from "../../index";
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 const Header = ({ setAnim }) => {
 	const [burgerOpen, setBurgerOpen] = useState(false);
 	const history = useHistory();
+	const { height, width } = useWindowDimensions();
+
 	return (
 		<header className="header">
 			<div className="header__logo">
 				<Link
 					onClick={
-					(e) => {
+					e => {
 						e.preventDefault();
 						setAnim(false)
-						setTimeout(() => history.push("/"), 805);
+						setTimeout(() => {
+							if (width <= 550 ) {
+								history.push("/mobile-version")
+							} else {
+								history.push("/")
+							}
+						}, 805);
 					}
 				}
 				to={"#"}

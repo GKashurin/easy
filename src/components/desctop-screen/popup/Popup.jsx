@@ -16,7 +16,8 @@ const Popup = ({setVisiblePopup}) => {
 			setTimeout(setSeconds, 1000, seconds - 1);
 		} else {
 			setTimerActive(false);
-		} 
+		}
+		return () => console.log(".")
 	}, [seconds, timerActive]);//таймер
 
 	const handleOutsideClick = (event) => {

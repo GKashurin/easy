@@ -105,7 +105,7 @@ const Footer = ({setVisiblePopup}) => {
 						</svg>
 					</Link>
 				</div>
-				<AnimatedButton onClick={(() => setVisiblePopup(true))}>
+				<AnimatedButton onClick={() => setVisiblePopup(true)}>
 					Отправить запрос
 				</AnimatedButton>
 			</div>

@@ -6,6 +6,7 @@
     &__wrapper {
         aspect-ratio: 1/1;
         width: calc(min(75vw, 75vh));
+        height: calc(min(75vw, 75vh));
         display: flex;
         justify-content: center;
         align-items: center;

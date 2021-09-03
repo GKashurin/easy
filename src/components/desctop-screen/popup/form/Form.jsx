@@ -47,7 +47,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 		})
 	}, [])//получение чекбокса из адресной строки
 
-	console.log(values)
+
 	return (
 		<form onClick={e => e.stopPropagation()} className={ !visibleThanksModal ? "form" : "form hide-popup-form" }>
 			<h2 className="form__title">Расскажите сами</h2>

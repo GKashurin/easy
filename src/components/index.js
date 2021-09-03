@@ -9,7 +9,6 @@ export { default as OverlayMobile } from './mobile-screen/overlayMobile/OverlayM
 export { default as PopupContacts } from './desctop-screen/popup/popupContacts/PopupContacts';
 export { default as FooterMobile } from './mobile-screen/footerMobile/FooterMobile';
 export { default as SliderMobile } from './mobile-screen/sliderMobile/SliderMobile';
-export { default as TeamSlider } from './desctop-screen/team-slider/TeamSlider';
 export { default as Hamburger } from './mobile-screen/hamburger/Hamburger';
 export { default as AppRouter } from '../components/appRouter/AppRouter';
 export { default as FormMobile } from '../components/mobile-screen/formMobile/FormMobile';

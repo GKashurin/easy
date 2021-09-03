@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import "./_FooterMobile.scss"
-import {Link} from "react-router-dom";
 import AnimatedButton from "../../UI/animatedButton/AnimatedButton";
 
 const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
@@ -16,7 +15,7 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 			<AnimatedButton onClick={handleClick}>
 				Отправить запрос
 			</AnimatedButton>
-			<div className="gradientCircle"></div>
+			<div className={visibleIcons ? "gradientCircle" : "gradientCircle gradientCircle_small"}></div>
 			<div className="footer-mobile__socials socials"
 				 onClick={() => setVisibleIcons(!visibleIcons)}
 			>

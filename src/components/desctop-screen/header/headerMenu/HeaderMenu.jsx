@@ -7,7 +7,7 @@ const HeaderMenu = () => {
 		<nav>
 			<ul className="headerMenu">
 				<li className="headerMenu__item">
-					<Link to="/portfolio" className="animated-link">портфолио</Link>
+					{/*<Link to="/portfolio" className="animated-link">портфолио</Link>*/}
 				</li>
 				<li className="headerMenu__item" >
 					<Link to="/team" className="animated-link">команда</Link>

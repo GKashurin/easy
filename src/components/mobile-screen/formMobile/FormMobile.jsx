@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import "./FormMobile.scss"
 import InputMask from "react-input-mask";
-import {ThanksModal} from "../../index";
-import AnimatedButton from "../../UI/animatedButton/AnimatedButton";
+import {ThanksModal, AnimatedButton} from "../../index";
+import "./FormMobile.scss"
 
 const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContainer, setVisibleFormContainer}) => {
 	const [seconds, setSeconds] = useState(5);//состояние для таймера
@@ -32,11 +31,11 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 		} else {
 			setTimerActive(false);
 		}
+		return () => console.log(".")
 	}, [seconds, timerActive]);//таймер
 
 	const changeHandler = (e) => {
 		e.preventDefault();
-
 		if (formState.phone.length !== 18) { //валидация инпута с телефоном
 			setError(true)
 		} else {
@@ -55,7 +54,8 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 
 	return (
 		<div onClick={handleOutsideClick} className={visibleFormContainer ? "formMobile__wrapper" : "formMobile__wrapper formMobile__wrapper_invisible"}>
-			<form className={visibleFormMobile ? "formMobile" : "formMobile formMobile_invisible"} onClick={e => e.stopPropagation()}>
+			<form className={visibleFormMobile ? "formMobile" : "formMobile formMobile_invisible"}
+				  onClick={e => e.stopPropagation()}>
 				<h2 className="formMobile__title">Обсудим проект?</h2>
 				<div className="formMobile__inputsWrapper">
 					<div className="formMobile__item">
@@ -82,10 +82,6 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 							autoComplete="off"
 						/>
 						<span className={!error || formState.phone.length === 18 ? "formMobile__reminder" : "error-reminder"}>Введите номер телефона</span>
-						{/*<label*/}
-						{/*	className={!error || formState.phone.length === 18 ? "" : "error-label"}*/}
-						{/*	htmlFor="phone">+7 (999) 999-9999*/}
-						{/*</label>*/}
 					</div>
 					<div className="formMobile__item">
 					<textarea //проект
@@ -94,7 +90,6 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 						value={formState.description}
 						onChange={e => setFormState({...formState, description: e.target.value})}
 					/>
-						{/*<label htmlFor="comment">Комментарии</label>*/}
 					</div>
 				</div>
 				<AnimatedButton

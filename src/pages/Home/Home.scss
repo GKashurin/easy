@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  flex: 1;
+  height: 100%;
   @media (max-width: 555px) {
     display: none;
   }
@@ -38,7 +37,7 @@
 }
 
 .activities {
-  aspect-ratio: 1/1;
+  height: calc(min(65vw, 65vh));
   width: calc(min(65vw, 65vh));
   animation: firstLoadAnim 1.2s;
   margin: auto;

@@ -10,24 +10,24 @@
   }
 
   .footer__item {
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
     margin: 0;
     opacity: 1;
     transition: all 0.3s;
     z-index: 1;
     &:nth-child(1) {
       position: absolute;
-      transform: rotateZ(90deg) translateY(65px) rotateZ(-90deg)
+      transform: rotateZ(90deg) translateY(50px) rotateZ(-90deg)
     };
     &:nth-child(2) {
       position: absolute;
-      transform: rotateZ(135deg) translateY(65px) rotateZ(-135deg)
+      transform: rotateZ(135deg) translateY(50px) rotateZ(-135deg)
     }
 
     &:nth-child(3) {
       position: absolute;
-      transform: rotateZ(180deg) translateY(65px) rotateZ(-180deg)
+      transform: rotateZ(180deg) translateY(50px) rotateZ(-180deg)
     }
 
     &_invisible {
@@ -63,18 +63,24 @@
 .gradientCircle {
   position: absolute;
   right: -35px;
-  bottom: -px;
-  height: 29vh;
-  width: 29vh;
+  bottom: -15px;
+  height: 160px;
+  width: 170px;
   border-radius: 50%;
-  background:linear-gradient(314deg, rgba(171, 205, 41, 1), rgba(171, 205, 41, 0.8), rgba(56, 176, 193, 0.4), rgba(144, 107, 170, 0.1));
+  background: linear-gradient(318.95deg, #BCDB0F 26.95%, #1FB1DA 82.35%);
   filter: blur(13px);
   z-index: -1;
+  transition: all 0.3s;
+  &_small {
+    transition: all 0.3s;
+    height: 110px;
+    width: 120px;
+  }
 }
 
 .socials__toggle {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
 }
 
 

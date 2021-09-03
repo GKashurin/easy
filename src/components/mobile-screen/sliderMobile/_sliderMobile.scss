@@ -1,3 +1,33 @@
+.content-mobile {
+  //clip-path: circle(50% at 60% 50%);
+  &__wrapper {
+    //mask-image: radial-gradient(rgba(0, 0,0,0) 10%, rgba(0,0,0,1) 70%);
+    //-webkit-mask-image: radial-gradient(rgba(0,0,0,0) 10%, rgba(0,0,0,1) 70%);
+    //mask-position: right;
+  }
+  &__subtitle {
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 7vw;
+    text-align: right;
+    margin-bottom: 3.5%;
+    line-height: 90%;
+  }
+  &__text {
+    font-family: Inter;
+    font-weight: 200;
+    font-size: 4vw;
+    text-align: right;
+    position: absolute;
+    top: 100%;
+    width: 90vw;
+    line-height: 115%;
+  }
+  &__svg {
+    position: absolute;
+  }
+}
+
 .slider {
   aspect-ratio: 1/1;
   position: relative;
@@ -44,35 +74,26 @@
     width: 95%;
     margin-bottom: 6%;
   }
-
-  pre {
-    font-family: Inter;
-    font-weight: normal;
-    font-size: 7vw;
-    text-align: right;
-    margin-bottom: 3.5%;
-    line-height: 90%;
-    &:last-child{
-      font-weight: 200;
-      font-size: 4vw;
-      text-align: right;
-      position: absolute;
-      top: 100%;
-      width: 90vw;
-      line-height: 115%;
-    }
-  }
 }
 
 .gradientOval {
   position: absolute;
   right: -20px;
-  bottom: -30%;
+  bottom: -15%;
   height: 55vh;
   width: 45vh;
-  background: linear-gradient(
-                  314deg, #abcd29, rgba(171, 205, 41, 0.8), rgba(56, 176, 193, 0.9), rgba(144, 107, 170, 0.9));
+  background: linear-gradient(318.95deg, #BCDB0F 26.95%, #1FB1DA 82.35%);;
   z-index: -2;
-  border-radius: 160px 55px 35px 70px;
-  filter: blur(13px);
+  border-radius: 170px 5px 0 5px;
+  filter: blur(20px);
+
+}
+.background {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 95%;
+  border-radius: 50%;
+  mask-image: radial-gradient(rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 80%);
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 60%);
 }

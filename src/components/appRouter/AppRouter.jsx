@@ -1,5 +1,5 @@
 import React from 'react';
-import {Redirect, Route, Switch} from "react-router-dom";
+import { Route, Switch} from "react-router-dom";
 import {Chat, Home, Instamask, Mobile, Team, Tours360, Vfx, Vr, Web} from "../../pages";
 
 const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData}) => {
@@ -64,7 +64,6 @@ const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData}) => 
 			<Route path="/chat">
 				<Chat visiblePopup={visiblePopup}
 					  setVisiblePopup={setVisiblePopup}
-					  setAnim={setAnim}
 					  anim={anim}
 				/>
 			</Route>

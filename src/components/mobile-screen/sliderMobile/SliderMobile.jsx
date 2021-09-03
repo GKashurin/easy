@@ -30,7 +30,8 @@ const SliderMobile = ({mainData}) => {
 
 	return (
 		<>
-			<section className="content-mobile">
+			<section className="content-mobile"
+			>
 				<div className="content-mobile__wrapper">
 					<div className="content-mobile__col content-mobile__col-left">
 						<div {...handlers} className="slider"
@@ -64,15 +65,26 @@ const SliderMobile = ({mainData}) => {
 					<div className="content-mobile__col content-mobile__col-right">
 						<div key={current_object.id} className="description-wrapper">
 							<img src={current_object.h1_Mobile} alt="text"/>
-							<pre>{current_object.h4_Mobile}</pre>
-							<pre>{current_object.p_Mobile}</pre>
-							{/*<div className="gradientOval"></div>*/}
+							<pre className="content-mobile__subtitle">{current_object.h4_Mobile}</pre>
+							<pre className="content-mobile__text">{current_object.p_Mobile}</pre>
+							<div className="gradientOval"></div>
 						</div>
 					</div>
 				</div>
 
-			</section>
+				{/*<svg className="content-mobile__svg"*/}
+				{/*	 width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">*/}
+				{/*	<defs>*/}
+				{/*		<radialGradient id="MyGradient">*/}
+				{/*			<stop offset="30%"  stopColor="rgba(255, 255, 255, 0.2)"/>*/}
+				{/*			<stop offset="99%" stopColor="rgba(255, 255, 255, 0.9)"/>*/}
+				{/*		</radialGradient>*/}
+				{/*	</defs>*/}
+				{/*	<circle cx="65%" cy="50%" r="55vw" stroke="transparent" fill="url(#MyGradient)" strokeWidth="1"/>*/}
+				{/*</svg>*/}
 
+			</section>
+			<img className="background" src="/image/grid.svg" alt="grid"/>
 		</>
 
 	)

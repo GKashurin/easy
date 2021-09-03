@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import {Link, useHistory} from "react-router-dom";
-import "./Home.scss";
 import cn from "classnames";
+import ReactImageFallback from "react-image-fallback";
 import {Popup} from "../../components/";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+import "./Home.scss";
 
 const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 	const [animationDisabled, setAnimationDisabled] = useState(false)//ЧБ анимация
@@ -22,6 +24,8 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 	}
 
 	const history = useHistory();
+	const { height, width } = useWindowDimensions();
+
 
 	return (
 		<>
@@ -81,10 +85,18 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 											src={elem.imageUrl}
 											alt={elem.link}
 										/>
-										<img className="webp"
+
+										{width > 1025 ? <ReactImageFallback
+											className="webp"
+											fallbackImage={elem.imageUrl}
 											src={elem.webpUrl}
+											initialImage={elem.imageUrl}
 											alt={elem.link}
-										/>
+										/> :
+											<img className="webp"
+												 src={elem.imageUrl}
+												 alt={elem.link}
+											/>}
 									</Link>
 								))
 							}</div>

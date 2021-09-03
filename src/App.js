@@ -18,7 +18,7 @@ const App = () => {
 
 	if (width <= 550 ) {
 		history.push("/mobile-version")
-	} else if (width > 550) {
+	} else if (width > 550 && width < 600) {
 		history.push("/")
 	}
 
