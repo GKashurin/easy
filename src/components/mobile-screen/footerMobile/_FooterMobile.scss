@@ -10,24 +10,24 @@
   }
 
   .footer__item {
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
     margin: 0;
     opacity: 1;
     transition: all 0.3s;
     z-index: 1;
     &:nth-child(1) {
       position: absolute;
-      transform: rotateZ(90deg) translateY(50px) rotateZ(-90deg)
+      transform: rotateZ(90deg) translateY(75px) rotateZ(-90deg)
     };
     &:nth-child(2) {
       position: absolute;
-      transform: rotateZ(135deg) translateY(50px) rotateZ(-135deg)
+      transform: rotateZ(135deg) translateY(75px) rotateZ(-135deg)
     }
 
     &:nth-child(3) {
       position: absolute;
-      transform: rotateZ(180deg) translateY(50px) rotateZ(-180deg)
+      transform: rotateZ(180deg) translateY(75px) rotateZ(-180deg)
     }
 
     &_invisible {
@@ -60,27 +60,10 @@
   fill: #fff;
 }
 
-.gradientCircle {
-  position: absolute;
-  right: -35px;
-  bottom: -15px;
-  height: 160px;
-  width: 170px;
-  border-radius: 50%;
-  background: linear-gradient(318.95deg, #BCDB0F 26.95%, #1FB1DA 82.35%);
-  filter: blur(13px);
-  z-index: -1;
-  transition: all 0.3s;
-  &_small {
-    transition: all 0.3s;
-    height: 110px;
-    width: 120px;
-  }
-}
 
 .socials__toggle {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
 }
 
 

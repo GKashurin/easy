@@ -26,10 +26,10 @@ const OverlayMobile = ({burgerOpen}) => {
 					</ul>
 				</nav>
 				<div className="overlayMobile__footer">
-					<a href="https://yandex.ru/maps/54/yekaterinburg/?ll=60.607184%2C56.824544&mode=routes&no-distribution=1&rtext=~56.824797%2C60.606731&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D97124593337&source=wizbiz_new_map_single&z=18">
+					<a target="_blank" rel="noreferrer" href="https://yandex.ru/maps/54/yekaterinburg/?ll=60.607184%2C56.824544&mode=routes&no-distribution=1&rtext=~56.824797%2C60.606731&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D97124593337&source=wizbiz_new_map_single&z=18">
 						<img src="/image/map_icon.svg" alt="address icon"/>
+						<span>Мы на карте</span>
 					</a>
-					<span>Мы на карте</span>
 				</div>
 			</div>
 		</div>

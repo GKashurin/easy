@@ -15,13 +15,14 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 			<AnimatedButton onClick={handleClick}>
 				Отправить запрос
 			</AnimatedButton>
-			<div className={visibleIcons ? "gradientCircle" : "gradientCircle gradientCircle_small"}></div>
 			<div className="footer-mobile__socials socials"
 				 onClick={() => setVisibleIcons(!visibleIcons)}
 			>
 				<div className={visibleIcons ? "footer__item" : "footer__item footer__item_invisible"}>
 					<a href="https://www.instagram.com/easy.cg/"
 						  className="footer-mobile__link animated-button"
+					   target="_blank"
+					   rel="noreferrer"
 					>
 						<svg
 							width="16"
@@ -52,7 +53,9 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 				</div>
 				<div className={visibleIcons ? "footer__item" : "footer__item footer__item_invisible"}>
 					<a href="https://t.me/easy_cg"
-						  className="footer-mobile__link animated-button"
+					   className="footer-mobile__link animated-button"
+					   target="_blank"
+					   rel="noreferrer"
 					>
 						<svg
 							width="16"
@@ -70,7 +73,9 @@ const FooterMobile = ({setVisibleFormMobile, setVisibleFormContainer}) => {
 				</div>
 				<div className={visibleIcons ? "footer__item" : "footer__item footer__item_invisible"}>
 						<a href="https://clck.ru/VC5TX"
-							  className="footer-mobile__link animated-button"
+						   className="footer-mobile__link animated-button"
+						   target="_blank"
+						   rel="noreferrer"
 						>
 							<svg
 								width="16"

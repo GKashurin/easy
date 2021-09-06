@@ -24,15 +24,14 @@
   align-items: center;
   width: 100%;
   height: 380px;
-  box-shadow: inset 0 0 3px -2px rgba(255, 255, 255, 0.8), inset 0px 11px 40px rgba(255, 255, 255, 0.24), inset 0px 190px 29px rgba(0, 0, 0, 0.1), inset 0px -1.5px 6px rgba(255, 255, 255, 0.24), inset 0px -10px 40px rgba(47, 47, 59, 0.1), inset 0px -1.5px 117px rgba(255, 255, 255, 0.4);
+  box-shadow: inset -5px -5px 34px rgba(255, 255, 255, 0.25), inset -20px -20px 40px rgba(255, 255, 255, 0.5), 0px -4px 5px rgba(0, 0, 0, 0.15);
   -webkit-backdrop-filter: blur(13px);
   backdrop-filter: blur(13px);
   color: white;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
   text-align: center;
   transform: translateY(0);
   transition: transform 1s;
-  transition-delay: 0.3s;
   z-index: 5;
 
   &_invisible {
@@ -131,19 +130,6 @@
     }
   }
 
-  //&__btn {
-  //
-  //  font-size: 16px;
-  //  font-weight: 100;
-  //  margin-bottom: 10px;
-  //  @media (max-width: 380px) {
-  //    font-size: 14px;
-  //  }
-  //  @media (max-width: 340px) {
-  //    font-size: 13px;
-  //  }
-  //}
-
   &__item {
     position: relative;
     width: 100%;
@@ -164,7 +150,38 @@
   &__agreement {
     margin-top: 10px;
   }
+  &__greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    animation: opacityAnim 1s;
+    p {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    div {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    img {
+      width: 156px;
+      height: 156px;
+      margin-bottom: 20px;
+    }
+  }
 }
+
+
 
 .error-input {
   box-shadow: 0 0 20px #FF9900;
@@ -182,3 +199,12 @@
   opacity: 1;
 }
 
+@keyframes opacityAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

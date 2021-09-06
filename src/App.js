@@ -53,6 +53,7 @@ const App = () => {
 						/>
 					</Route>
 				</Switch>
+			<img className="background-mobile" src="/image/grid.svg" alt="grid"/>
 			</main>
 		</div>
 	);

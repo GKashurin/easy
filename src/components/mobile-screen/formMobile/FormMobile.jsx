@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import InputMask from "react-input-mask";
-import {ThanksModal, AnimatedButton} from "../../index";
+import { AnimatedButton} from "../../index";
 import "./FormMobile.scss"
 
 const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContainer, setVisibleFormContainer}) => {
-	const [seconds, setSeconds] = useState(5);//состояние для таймера
+	const [seconds, setSeconds] = useState(3);//состояние для таймера
 	const [timerActive, setTimerActive] = useState(false);//состояние для таймера
 	const [visibleThanksModal, setVisibleThanksModal] = useState(false) //состояние для окна с благодарностью
 	const handleOutsideClick = (event) => { //закрытие формы по клику вне ее
@@ -46,20 +46,31 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 				setVisibleThanksModal(false);
 				setTimerActive(false);
 				setVisibleFormContainer(false);
-			}, 5002);
-			setTimeout(() => setSeconds(5),6000)
+			}, 3002);
+			setTimeout(() => setSeconds(3),4000)
 			console.log(values);
 		}
 	}
 
+	const input = useRef()
+	const form = useRef()
+
+	// useEffect(() => {
+	// 	input.current.addEventListener('focus', function () {
+	// 		form.current.style.transform = "translateY(-15%)"
+	// 		document.scrollTo(0, 0)
+	// 	})
+	// })
 	return (
 		<div onClick={handleOutsideClick} className={visibleFormContainer ? "formMobile__wrapper" : "formMobile__wrapper formMobile__wrapper_invisible"}>
-			<form className={visibleFormMobile ? "formMobile" : "formMobile formMobile_invisible"}
+			<form ref={form} className={visibleFormMobile ? "formMobile" : "formMobile formMobile_invisible"}
 				  onClick={e => e.stopPropagation()}>
-				<h2 className="formMobile__title">Обсудим проект?</h2>
-				<div className="formMobile__inputsWrapper">
-					<div className="formMobile__item">
+				<h2 className="formMobile__title">{!visibleThanksModal ? "Обсудим проект?" : "Спасибо за заявку"}</h2>
+				{!visibleThanksModal ?
+					<div className="formMobile__inputsWrapper">
+						<div className="formMobile__item">
 						<input //имя
+							ref={input}
 							id="name"
 							type="text"
 							placeholder="Ваше имя"
@@ -92,19 +103,18 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 					/>
 					</div>
 				</div>
-				<AnimatedButton
-					onClick={changeHandler}
-					className="formMobile__btn"
-				>Обсудить проект
-				</AnimatedButton>
-				<span className="formMobile__agreement">
+				:
+					<div className="formMobile__greeting">
+						<img src="/image/high-five.svg" alt="high-five"/>
+						<p>Совсем чуть-чуть и мы вам перезвоним.</p>
+						<div> Окно закроется через {seconds} секунд </div>
+					</div>
+				}
+				{!visibleThanksModal ? <AnimatedButton onClick={changeHandler} className="formMobile__btn">Обсудить проект</AnimatedButton> : null}
+				{!visibleThanksModal ? <span className="formMobile__agreement">
 					Нажимая на кнопку, вы даете согласие на <br/> обработку своих персональных данных.
-				</span>
+				</span> : null}
 			</form>
-			<ThanksModal
-				visibleThanksModal={visibleThanksModal}
-				seconds={seconds}
-			/>
 		</div>
 	);
 };

@@ -26,11 +26,10 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 	const history = useHistory();
 	const { height, width } = useWindowDimensions();
 
-
 	return (
 		<>
 			<div style={{
-				background: "url(/image/Background.png)",
+				background: "url(/image/Background.svg)",
 				backgroundSize: "100%",
 				width: "80%",
 				margin: "0 auto"

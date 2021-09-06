@@ -1,16 +1,16 @@
 import React from "react";
 import "./Footer.scss"
-import {Link} from "react-router-dom";
 import AnimatedButton from "../../UI/animatedButton/AnimatedButton";
-
 
 const Footer = ({setVisiblePopup}) => {
 	return (
 		<footer className="footer">
 			<div className="footer__contacts contacts">
 				<div className="footer__item">
-					<Link to={"https://yandex.ru/maps/54/yekaterinburg/?ll=60.607184%2C56.824544&mode=routes&no-distribution=1&rtext=~56.824797%2C60.606731&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D97124593337&source=wizbiz_new_map_single&z=18"}
-						  className="footer__link animated-button"
+					<a href="https://yandex.ru/maps/54/yekaterinburg/?ll=60.607184%2C56.824544&mode=routes&no-distribution=1&rtext=~56.824797%2C60.606731&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D97124593337&source=wizbiz_new_map_single&z=18"
+					   className="footer__link animated-button"
+					   target="_blank"
+					   rel="noreferrer"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -30,14 +30,16 @@ const Footer = ({setVisiblePopup}) => {
 								d="M736.53 674.23l-18.32 0c-68.97,0 -101.61,-91.39 -56.1,-136.71 45.23,-45.04 151.37,-30.63 151.37,56.1 0,41.17 -36.43,80.61 -76.95,80.61zm-161.23 -80.61c0,163.46 230.43,199.48 290.66,59.81 46.86,-108.66 -42.73,-206.38 -125.77,-206.38 -49.18,0 -89.86,8.49 -123.79,44.76 -21.42,22.89 -41.1,58.48 -41.1,101.81z"
 							/>
 						</svg>
-					</Link>
+					</a>
 				</div>
 				<span>Мы на карте</span>
 			</div>
 			<div className="footer__socials socials">
 				<div className="footer__item">
-					<Link to={"https://www.instagram.com/easy.cg/"}
-						  className="footer__link animated-button"
+					<a href="https://www.instagram.com/easy.cg/"
+					   className="footer__link animated-button"
+					   target="_blank"
+					   rel="noreferrer"
 					>
 						<svg
 							width="16"
@@ -64,11 +66,13 @@ const Footer = ({setVisiblePopup}) => {
 								strokeMiterlimit="22.9256"
 							/>
 						</svg>
-					</Link>
+					</a>
 				</div>
 				<div className="footer__item">
-					<Link to={"https://t.me/easy_cg"}
-						  className="footer__link animated-button"
+					<a href="https://t.me/easy_cg"
+					   className="footer__link animated-button"
+					   target="_blank"
+					   rel="noreferrer"
 					>
 						<svg
 							width="16"
@@ -82,11 +86,13 @@ const Footer = ({setVisiblePopup}) => {
 								d="M11.1182 3.65182C10.8616 4.01101 10.7847 4.11364 10.4768 4.42152L6.73095 7.83382C5.88429 8.65483 6.01258 8.44958 6.01258 10.0146C5.26854 9.80937 4.80672 7.75685 4.75541 7.19241C5.9356 6.62797 5.55076 7.03847 7.19277 5.93525C7.44934 5.75565 7.65459 5.60171 7.93681 5.42212C8.57822 5.01161 10.3485 3.72879 11.1439 3.65182H11.1182ZM0.111595 6.16615C0.111595 6.34575 0.676038 6.75625 0.829976 6.85888C2.83118 7.88513 3.57522 6.11484 4.72976 10.3482C4.83238 10.6817 5.42248 12.4007 5.67904 12.4007C6.57702 12.4007 7.34671 11.1178 8.27034 10.5021C9.32226 11.0665 11.5544 13.0934 12.1958 13.0934C13.1451 13.0934 13.3247 11.7849 13.6325 10.5021C13.8378 9.68108 15.4285 1.72759 15.4285 0.957897C15.4285 -0.14533 14.6845 -0.119673 13.6582 0.29083L9.73276 1.88153C9.01438 2.16375 8.37297 2.369 7.65459 2.65122L0.547754 5.21687C0.239877 5.34515 0.0859375 5.78131 0.0859375 6.16615H0.111595Z"
 							/>
 						</svg>
-					</Link>
+					</a>
 				</div>
 				<div className="footer__item">
-					<Link to={"https://clck.ru/VC5TX"}
-						  className="footer__link animated-button"
+					<a href="https://clck.ru/VC5TX"
+					   className="footer__link animated-button"
+					   target="_blank"
+					   rel="noreferrer"
 					>
 						<svg
 							width="16"
@@ -103,7 +109,7 @@ const Footer = ({setVisiblePopup}) => {
 								d="M4.15039 4.96044C4.15039 6.96164 4.43261 8.06487 5.81806 9.34769C6.02331 9.52728 6.33119 9.78385 6.5621 9.93779C6.84432 10.143 7.07522 10.2713 7.3831 10.4509C10.2823 12.2212 12.6427 9.93779 10.7954 8.68062C10.4106 8.3984 9.10208 7.70568 9.10208 8.96284C8.07583 8.96284 7.33179 8.62931 6.69038 7.83396C5.74109 6.60245 6.66472 7.26952 6.66472 5.57619C6.66472 3.44671 4.15039 3.19014 4.15039 4.93478V4.96044Z"
 							/>
 						</svg>
-					</Link>
+					</a>
 				</div>
 				<AnimatedButton onClick={() => setVisiblePopup(true)}>
 					Отправить запрос

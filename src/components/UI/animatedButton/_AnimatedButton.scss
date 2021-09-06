@@ -1,5 +1,5 @@
 .animated-button_blick {
-  height: 32px;
+  height: 44px;
   position: relative;
   background: transparent;
   color: #fff;
@@ -10,6 +10,7 @@
   border-radius: 6px;
   overflow: hidden;
   width: 140px;
+  font-weight: bold;
   &:after { //пробегающий блик
     content: '';
     width: 100%;
@@ -48,18 +49,6 @@
     }
   }
 }
-
-//@keyframes radial-pulse {
-//  0% {
-//    box-shadow: 0 0 0 1px #fff;
-//  }
-//  50% {
-//    box-shadow: 0 0 0 3px #fff;
-//  }
-//  100% {
-//    box-shadow: 0 0 0 1px #fff;
-//  }
-//}
 
 @keyframes blick {
   0% {
