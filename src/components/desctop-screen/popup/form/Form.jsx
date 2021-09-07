@@ -47,7 +47,6 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 		})
 	}, [])//получение чекбокса из адресной строки
 
-
 	return (
 		<form onClick={e => e.stopPropagation()} className={ !visibleThanksModal ? "form" : "form hide-popup-form" }>
 			<h2 className="form__title">Расскажите сами</h2>
@@ -80,11 +79,11 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 				<div className="budget__sum">
 					<p className="form__subtitle">Укажите бюджет проекта:</p>
 					<div className="budget__slider slider-budget">
-						{prices?.map((item) => (
+						{prices?.map((item, index) => (
 							<span
-								className="slider-budget__item"
 								key={item.price}
 								onClick={() => { setBudgetItem(item) }}
+								className={budgetItem.id !== index ? "slider-budget__item" : "slider-budget__item slider-budget__item_select"}
 							>{item.price}
 							</span>
 						))}
@@ -123,7 +122,6 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 						type="checkbox"
 						name="messenger"
 						checked={formState.messenger}
-						// value={" "}
 						onChange={() => setFormState({...formState, messenger: !formState.messenger}) }
 					/>
 					<span className="messenger__text">Не звонить, а написать мне в мессенджер</span>

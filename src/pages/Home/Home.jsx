@@ -29,10 +29,12 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 	return (
 		<>
 			<div style={{
-				background: "url(/image/Background.svg)",
-				backgroundSize: "100%",
 				width: "80%",
-				margin: "0 auto"
+				margin: "0 auto",
+				background: "url(/image/Background.svg)",
+				backgroundSize: "cover",
+				backgroundRepeat: "no-repeat",
+				backgroundPosition: "center"
 			}}>
 				<div className="activities" >
 					{

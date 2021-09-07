@@ -52,25 +52,15 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 		}
 	}
 
-	const input = useRef()
-	const form = useRef()
-
-	// useEffect(() => {
-	// 	input.current.addEventListener('focus', function () {
-	// 		form.current.style.transform = "translateY(-15%)"
-	// 		document.scrollTo(0, 0)
-	// 	})
-	// })
 	return (
 		<div onClick={handleOutsideClick} className={visibleFormContainer ? "formMobile__wrapper" : "formMobile__wrapper formMobile__wrapper_invisible"}>
-			<form ref={form} className={visibleFormMobile ? "formMobile" : "formMobile formMobile_invisible"}
+			<form className={visibleFormMobile ? "formMobile" : "formMobile formMobile_invisible"}
 				  onClick={e => e.stopPropagation()}>
 				<h2 className="formMobile__title">{!visibleThanksModal ? "Обсудим проект?" : "Спасибо за заявку"}</h2>
 				{!visibleThanksModal ?
 					<div className="formMobile__inputsWrapper">
 						<div className="formMobile__item">
 						<input //имя
-							ref={input}
 							id="name"
 							type="text"
 							placeholder="Ваше имя"
@@ -78,7 +68,7 @@ const FormMobile = ({visibleFormMobile, setVisibleFormMobile, visibleFormContain
 							onChange={e => setFormState({...formState, name: e.target.value})}
 							autoComplete="off"
 						/>
-						{/*<label htmlFor="name">Ваше имя</label>*/}
+
 					</div>
 					<div className="formMobile__item">
 						<InputMask //  телефон

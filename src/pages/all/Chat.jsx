@@ -1,8 +1,9 @@
-import React from "react";
-import "./info.scss"
+import React, {useEffect} from "react";
 import { useHistory} from "react-router-dom";
-import { Popup} from "../../components/"
-import AnimatedButton from "../../components/UI/animatedButton/AnimatedButton";
+import { Popup, AnimatedButton} from "../../components/";
+import lottie from "lottie-web";
+import "./info.scss"
+import chatSvg from "../../json-img/Chat-bot.json"
 
 const Chat = ({anim, visiblePopup, setVisiblePopup }) => {
 
@@ -12,6 +13,16 @@ const Chat = ({anim, visiblePopup, setVisiblePopup }) => {
 		setTimeout(() => history.push("/"), 805);
 	}
 
+	useEffect(() => {
+		lottie.loadAnimation({
+			container: document.querySelector("#lottie-container"),
+			animationData: chatSvg,
+			renderer: "svg",
+			loop: true,
+			autoplay: true,
+		});
+	}, []);
+
 	return (
 		<>
 			<div className={anim ? "info" : "info info_animBack"}>
@@ -20,10 +31,15 @@ const Chat = ({anim, visiblePopup, setVisiblePopup }) => {
 						<h2 className="info__secondTitle">НА<br/>ПИ<br/>ШЕМ</h2>
 						<h1 className="info__title">ЧАТ-БОТА</h1>
 					</div>
-					<div className={anim ? "info__col info__col_right" : "info__col info__col_right-anim"}>
-						<img src={"image/chat.webp"} alt="img chatbot"/>
-
-					</div>
+					<div
+						id="lottie-container"
+						className={anim ? "info__col info__col_right" : "info__col info__col_right-anim"}
+						style={{
+							background: "url(/image/Background.svg)",
+							backgroundSize: "cover",
+							backgroundRepeat: "no-repeat",
+							backgroundPosition: "center"
+						}}></div>
 				</div>
 				<div className="info__bottomContainer">
 					<h4 className="info__subtitle">используйте роботов вместо тысячи слов </h4>

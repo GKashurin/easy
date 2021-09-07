@@ -54,7 +54,9 @@
   &__images {
     position: relative;
    img {
-    width: 100%;
+     width: 100%;
+     position: absolute;
+     top: 2px;
    }
   }
 }
@@ -69,8 +71,6 @@
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
-
-
 }
 
 .show-animation {

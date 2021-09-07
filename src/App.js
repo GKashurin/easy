@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Route, Switch, useHistory} from "react-router-dom";
 import {Header, Footer, FooterMobile, SliderMobile, AppRouter, FormMobile} from "./components/";
 import {mainData} from "./mainData";
@@ -13,6 +13,8 @@ const App = () => {
 	const [visiblePopup, setVisiblePopup] = useState(false) //модальное оно на десктопе
 	const [visibleFormMobile, setVisibleFormMobile] = useState(false) //модальное оно на мобильных
 	const [visibleFormContainer, setVisibleFormContainer] = useState(false)// состояние для темного контейнера
+	const [collapseGrid, setCollapseGrid] = useState(false)
+
 	const { height, width } = useWindowDimensions();
 	const history = useHistory()
 
@@ -21,6 +23,10 @@ const App = () => {
 	} else if (width > 550 && width < 600) {
 		history.push("/")
 	}
+
+	useEffect(() => {
+		setTimeout(() => setCollapseGrid(false), 550)
+	}, [collapseGrid])
 
 	return (
 		<div className="App">
@@ -40,7 +46,7 @@ const App = () => {
 				{/*мобильная версия*/}
 				<Switch>
 					<Route path="/mobile-version">
-						<SliderMobile mainData={mainData}/>
+						<SliderMobile mainData={mainData} setCollapseGrid={setCollapseGrid}/>
 						<FormMobile
 							visibleFormMobile={visibleFormMobile}
 							setVisibleFormMobile={setVisibleFormMobile}
@@ -53,7 +59,7 @@ const App = () => {
 						/>
 					</Route>
 				</Switch>
-			<img className="background-mobile" src="/image/grid.svg" alt="grid"/>
+			<img className={!collapseGrid ? "background-mobile" : "background-mobile background-mobile_collapsed"} src="/image/grid.svg" alt="grid"/>
 			</main>
 		</div>
 	);

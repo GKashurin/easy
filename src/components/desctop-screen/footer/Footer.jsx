@@ -8,9 +8,9 @@ const Footer = ({setVisiblePopup}) => {
 			<div className="footer__contacts contacts">
 				<div className="footer__item">
 					<a href="https://yandex.ru/maps/54/yekaterinburg/?ll=60.607184%2C56.824544&mode=routes&no-distribution=1&rtext=~56.824797%2C60.606731&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D97124593337&source=wizbiz_new_map_single&z=18"
-					   className="footer__link animated-button"
 					   target="_blank"
 					   rel="noreferrer"
+					   className="footer__link animated-button"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,11 @@ const Footer = ({setVisiblePopup}) => {
 						</svg>
 					</a>
 				</div>
-				<span>Мы на карте</span>
+				<a href="https://yandex.ru/maps/54/yekaterinburg/?ll=60.607184%2C56.824544&mode=routes&no-distribution=1&rtext=~56.824797%2C60.606731&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D97124593337&source=wizbiz_new_map_single&z=18"
+				   target="_blank"
+				   rel="noreferrer"
+				   className="animated-link">Мы на карте
+				</a>
 			</div>
 			<div className="footer__socials socials">
 				<div className="footer__item">

@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import "./_sliderMobile.scss"
 import {useSwipeable} from "react-swipeable";
 
-const SliderMobile = ({mainData}) => {
+const SliderMobile = ({mainData, setCollapseGrid}) => {
 	const [angle, setAngle] = useState(0);
 	const transitionTime = 0.3
 	const [activeItem, setActiveItem] = React.useState(0);
@@ -13,6 +13,7 @@ const SliderMobile = ({mainData}) => {
 
 	const changeAngle = (angle, deg) => {
 		setAngle(angle + deg)
+		setCollapseGrid(true)
 	}
 
 	const handlers = useSwipeable({
