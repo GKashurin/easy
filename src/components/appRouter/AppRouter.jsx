@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch} from "react-router-dom";
 import {Chat, Home, Instamask, Mobile, Team, Tours360, Vfx, Vr, Web} from "../../pages";
 
-const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData}) => {
+const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData, collapseGridDesktop, setCollapseGridDesktop}) => {
 	return (
 		<Switch>
 			<Route exact path="/">
@@ -12,6 +12,8 @@ const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData}) => 
 					anim={anim}
 					setVisiblePopup={setVisiblePopup}
 					visiblePopup={visiblePopup}
+					collapseGridDesktop={collapseGridDesktop}
+					setCollapseGridDesktop={setCollapseGridDesktop}
 				/>
 			</Route>
 
@@ -65,6 +67,7 @@ const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData}) => 
 				<Chat visiblePopup={visiblePopup}
 					  setVisiblePopup={setVisiblePopup}
 					  anim={anim}
+					  collapseGridDesktop={collapseGridDesktop}
 				/>
 			</Route>
 			{/*<Redirect to="/"/>*/}

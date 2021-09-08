@@ -82,10 +82,10 @@ address {
     display: none;
   }
   &_collapsed {
-    animation: collapseGrid 0.5s;
+    animation: collapseGridMobile 0.5s;
   }
 }
-@keyframes collapseGrid {
+@keyframes collapseGridMobile {
   0% {
     -webkit-mask-image: radial-gradient(black 17%, rgba(0, 0, 0, 0) 48%);
     mask-image: radial-gradient(black 17%, rgba(0, 0, 0, 0) 48%);

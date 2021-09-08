@@ -6,7 +6,7 @@ import {Popup} from "../../components/";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import "./Home.scss";
 
-const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData }) => {
+const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData, collapseGridDesktop, setCollapseGridDesktop }) => {
 	const [animationDisabled, setAnimationDisabled] = useState(false)//ЧБ анимация
 	const [animationActive, setAnimationActive] = useState(false)//анимация цветных картинок
 	const [items, setItems] = useState(mainData);
@@ -17,10 +17,14 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 	const toggleAnimationActive = () => {
 		setAnimationActive(true)
 	}
+	const toggleAnimationGrid = () => {
+		setCollapseGridDesktop(true)
+	}
 
 	const toggleAnimation = () => {
 		toggleAnimationDisabled();
 		toggleAnimationActive();
+		toggleAnimationGrid()
 	}
 
 	const history = useHistory();
@@ -28,7 +32,7 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData }) => {
 
 	return (
 		<>
-			<div style={{
+			<div className={!collapseGridDesktop ? "background-desktop" : "background-desktop background-desktop_collapsed"} style={{
 				width: "80%",
 				margin: "0 auto",
 				background: "url(/image/Background.svg)",

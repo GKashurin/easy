@@ -13,7 +13,8 @@ const App = () => {
 	const [visiblePopup, setVisiblePopup] = useState(false) //модальное оно на десктопе
 	const [visibleFormMobile, setVisibleFormMobile] = useState(false) //модальное оно на мобильных
 	const [visibleFormContainer, setVisibleFormContainer] = useState(false)// состояние для темного контейнера
-	const [collapseGrid, setCollapseGrid] = useState(false)
+	const [collapseGridMobile, setCollapseGridMobile] = useState(false) //сужение сетки на моб. версии
+	const [collapseGridDesktop, setCollapseGridDesktop] = useState(false) //сужение сетки на десктопной версии
 
 	const { height, width } = useWindowDimensions();
 	const history = useHistory()
@@ -24,20 +25,31 @@ const App = () => {
 		history.push("/")
 	}
 
-	useEffect(() => {
-		setTimeout(() => setCollapseGrid(false), 550)
-	}, [collapseGrid])
+	useEffect(() => {//сужение сетки на моб. версии
+		setTimeout(() => setCollapseGridMobile(false), 550)
+	}, [collapseGridMobile])
+
+	useEffect(() => {//сужение сетки на десктопной версии
+		setTimeout(() => setCollapseGridDesktop(false), 1550)
+	}, [collapseGridDesktop])
+
 
 	return (
 		<div className="App">
 			<main className="container">
-				<Header setAnim={setAnim} anim={anim} />
+				<Header
+					setAnim={setAnim}
+					anim={anim}
+					setCollapseGridDesktop={setCollapseGridDesktop}
+				/>
 				<section className="content" >
 					<AppRouter visiblePopup={visiblePopup}
 							   setVisiblePopup={setVisiblePopup}
 							   setAnim={setAnim}
 							   anim={anim}
 							   mainData={mainData}
+							   collapseGridDesktop={collapseGridDesktop}
+							   setCollapseGridDesktop={setCollapseGridDesktop}
 					/>
 				</section>
 
@@ -46,7 +58,7 @@ const App = () => {
 				{/*мобильная версия*/}
 				<Switch>
 					<Route path="/mobile-version">
-						<SliderMobile mainData={mainData} setCollapseGrid={setCollapseGrid}/>
+						<SliderMobile mainData={mainData} setCollapseGridMobile={setCollapseGridMobile}/>
 						<FormMobile
 							visibleFormMobile={visibleFormMobile}
 							setVisibleFormMobile={setVisibleFormMobile}
@@ -59,7 +71,7 @@ const App = () => {
 						/>
 					</Route>
 				</Switch>
-			<img className={!collapseGrid ? "background-mobile" : "background-mobile background-mobile_collapsed"} src="/image/grid.svg" alt="grid"/>
+			<img className={!collapseGridMobile ? "background-mobile" : "background-mobile background-mobile_collapsed"} src="/image/grid.svg" alt="grid"/>
 			</main>
 		</div>
 	);

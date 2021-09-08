@@ -5,7 +5,7 @@ import {Link, useHistory} from "react-router-dom";
 import {OverlayMobile, HeaderMenu, Hamburger} from "../../index";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
-const Header = ({ setAnim }) => {
+const Header = ({ setAnim, setCollapseGridDesktop }) => {
 	const [burgerOpen, setBurgerOpen] = useState(false);
 	const history = useHistory();
 	const { height, width } = useWindowDimensions();
@@ -17,7 +17,8 @@ const Header = ({ setAnim }) => {
 					onClick={
 					e => {
 						e.preventDefault();
-						setAnim(false)
+						setAnim(false);
+						history.location.pathname !== "/" ? setCollapseGridDesktop(true) : setCollapseGridDesktop(false)
 						setTimeout(() => {
 							if (width <= 550 ) {
 								history.push("/mobile-version")
