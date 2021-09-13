@@ -33,8 +33,7 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData, collapseGridDe
 	return (
 		<>
 			<div className={!collapseGridDesktop ? "background-desktop" : "background-desktop background-desktop_collapsed"} style={{
-				width: "80%",
-				margin: "0 auto",
+				// width: "80%",
 				background: "url(/image/Background.svg)",
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
@@ -52,6 +51,7 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData, collapseGridDe
 											setAnim(true)
 											setTimeout(() => {
 												history.push(`${elem.link}`);
+												setAnim(false)
 												setItems(items.map(
 													arr => (arr.map(elem => {
 															elem.active = true;

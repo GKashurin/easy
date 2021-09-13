@@ -17,15 +17,16 @@ const Header = ({ setAnim, setCollapseGridDesktop }) => {
 					onClick={
 					e => {
 						e.preventDefault();
-						setAnim(false);
+						setAnim(true);
 						history.location.pathname !== "/" ? setCollapseGridDesktop(true) : setCollapseGridDesktop(false)
 						setTimeout(() => {
+							setCollapseGridDesktop(false);
 							if (width <= 550 ) {
-								history.push("/mobile-version")
+								history.push("/mobile-version");
 							} else {
-								history.push("/")
+								history.push("/");
 							}
-						}, 805);
+						}, 1505);
 					}
 				}
 				to={"#"}

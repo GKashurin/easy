@@ -21,7 +21,7 @@ const App = () => {
 
 	if (width <= 550 ) {
 		history.push("/mobile-version")
-	} else if (width > 550 && width < 600) {
+	} else if (width > 550 && width < 560) {
 		history.push("/")
 	}
 
@@ -32,7 +32,6 @@ const App = () => {
 	useEffect(() => {//сужение сетки на десктопной версии
 		setTimeout(() => setCollapseGridDesktop(false), 1550)
 	}, [collapseGridDesktop])
-
 
 	return (
 		<div className="App">

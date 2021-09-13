@@ -41,11 +41,13 @@
   height: calc(min(65vw, 65vh));
   width: calc(min(65vw, 65vh));
   animation: firstLoadAnim 1.2s;
-  margin: auto;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(0);
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  margin: 30px;
 
   a {
     position: relative;
@@ -121,13 +123,13 @@
 }
 
 .background-desktop {
-  //animation: expandGridDesktop 1s;
-  //animation-fill-mode: forwards;
+  animation: expandGridDesktop 1s;
+  animation-fill-mode: forwards;
 
   &_collapsed {
     animation: collapseGridDesktop 1s;
     animation-fill-mode: forwards;
-    animation-delay: 0.3s;
+    animation-delay: 0.4s;
   }
 }
 
@@ -216,49 +218,49 @@
   }
 }
 
-//@keyframes expandGridDesktop {
-//  0% {
-//    -webkit-mask-image: radial-gradient(black 0, rgba(0, 0, 0, 0) 10%);
-//    mask-image: radial-gradient(black 0, rgba(0, 0, 0, 0) 10%);
-//  }
-//  10% {
-//    -webkit-mask-image: radial-gradient(black 10%, rgba(0, 0, 0, 0) 20%);
-//    mask-image: radial-gradient(black 10%, rgba(0, 0, 0, 0) 20%);
-//  }
-//  20% {
-//    -webkit-mask-image: radial-gradient(black 20%, rgba(0, 0, 0, 0) 30%);
-//    mask-image: radial-gradient(black 20%, rgba(0, 0, 0, 0) 30%);
-//  }
-//  30% {
-//    -webkit-mask-image: radial-gradient(black 30%, rgba(0, 0, 0, 0) 40%);
-//    mask-image: radial-gradient(black 30%, rgba(0, 0, 0, 0) 40%);
-//  }
-//  40% {
-//    -webkit-mask-image: radial-gradient(black 40%, rgba(0, 0, 0, 0) 50%);
-//    mask-image: radial-gradient(black 40%, rgba(0, 0, 0, 0) 50%);
-//  }
-//  50% {
-//    -webkit-mask-image: radial-gradient(black 50%, rgba(0, 0, 0, 0) 60%);
-//    mask-image: radial-gradient(black 50%, rgba(0, 0, 0, 0) 60%);
-//  }
-//  60% {
-//    -webkit-mask-image: radial-gradient(black 60%, rgba(0, 0, 0, 0) 70%);
-//    mask-image: radial-gradient(black 60%, rgba(0, 0, 0, 0) 70%);
-//  }
-//  70% {
-//    -webkit-mask-image: radial-gradient(black 75%, rgba(0, 0, 0, 0) 90%);
-//    mask-image: radial-gradient(black 75%, rgba(0, 0, 0, 0) 90%);
-//  }
-//  80% {
-//    -webkit-mask-image: radial-gradient(black 90%, rgba(0, 0, 0, 0) 95%);
-//    mask-image: radial-gradient(black 90%, rgba(0, 0, 0, 0) 95%);
-//  }
-//  90% {
-//    -webkit-mask-image: radial-gradient(black 100%, rgba(0, 0, 0, 0) 110%);
-//    mask-image: radial-gradient(black 100%, rgba(0, 0, 0, 0) 110%);
-//  }
-//  100% {
-//    -webkit-mask-image: radial-gradient(black 100%, rgba(0, 0, 0, 0) 110%);
-//    mask-image: radial-gradient(black 100%, rgba(0, 0, 0, 0) 110%);
-//  }
-//}
+@keyframes expandGridDesktop {
+  0% {
+    -webkit-mask-image: radial-gradient(black 0, rgba(0, 0, 0, 0) 10%);
+    mask-image: radial-gradient(black 0, rgba(0, 0, 0, 0) 10%);
+  }
+  10% {
+    -webkit-mask-image: radial-gradient(black 10%, rgba(0, 0, 0, 0) 20%);
+    mask-image: radial-gradient(black 10%, rgba(0, 0, 0, 0) 20%);
+  }
+  20% {
+    -webkit-mask-image: radial-gradient(black 20%, rgba(0, 0, 0, 0) 30%);
+    mask-image: radial-gradient(black 20%, rgba(0, 0, 0, 0) 30%);
+  }
+  30% {
+    -webkit-mask-image: radial-gradient(black 30%, rgba(0, 0, 0, 0) 40%);
+    mask-image: radial-gradient(black 30%, rgba(0, 0, 0, 0) 40%);
+  }
+  40% {
+    -webkit-mask-image: radial-gradient(black 40%, rgba(0, 0, 0, 0) 50%);
+    mask-image: radial-gradient(black 40%, rgba(0, 0, 0, 0) 50%);
+  }
+  50% {
+    -webkit-mask-image: radial-gradient(black 50%, rgba(0, 0, 0, 0) 60%);
+    mask-image: radial-gradient(black 50%, rgba(0, 0, 0, 0) 60%);
+  }
+  60% {
+    -webkit-mask-image: radial-gradient(black 60%, rgba(0, 0, 0, 0) 70%);
+    mask-image: radial-gradient(black 60%, rgba(0, 0, 0, 0) 70%);
+  }
+  70% {
+    -webkit-mask-image: radial-gradient(black 75%, rgba(0, 0, 0, 0) 90%);
+    mask-image: radial-gradient(black 75%, rgba(0, 0, 0, 0) 90%);
+  }
+  80% {
+    -webkit-mask-image: radial-gradient(black 90%, rgba(0, 0, 0, 0) 95%);
+    mask-image: radial-gradient(black 90%, rgba(0, 0, 0, 0) 95%);
+  }
+  90% {
+    -webkit-mask-image: radial-gradient(black 110%, rgba(0, 0, 0, 0) 110%);
+    mask-image: radial-gradient(black 110%, rgba(0, 0, 0, 0) 110%);
+  }
+  100% {
+    -webkit-mask-image: radial-gradient(black 110%, rgba(0, 0, 0, 0) 110%);
+    mask-image: radial-gradient(black 110%, rgba(0, 0, 0, 0) 110%);
+  }
+}

@@ -1,17 +1,10 @@
 import React, {useEffect} from "react";
-import {useHistory} from "react-router-dom";
 import {Popup, AnimatedButton} from "../../components/";
 import lottie from "lottie-web";
 import "./info.scss"
 import chatSvg from "../../json-img/Chat-bot.json"
 
-const Chat = ({anim, visiblePopup, setVisiblePopup, collapseGridDesktop,}) => {
-
-	const history = useHistory()
-
-	if (!anim) {
-		setTimeout(() => history.push("/"), 805);
-	}
+const Chat = ({anim, visiblePopup, setVisiblePopup, collapseGridDesktop}) => {
 
 	useEffect(() => {
 		lottie.loadAnimation({
@@ -23,50 +16,45 @@ const Chat = ({anim, visiblePopup, setVisiblePopup, collapseGridDesktop,}) => {
 		});
 	}, []);
 
-	console.log(collapseGridDesktop)
 	return (
-		<div className={!collapseGridDesktop ? "background-desktop" : "background-desktop background-desktop_collapsed"}
-			 style={{
-				 width: "80%",
-				 margin: "0 auto",
-				 background: "url(/image/Background.svg)",
-				 backgroundSize: "cover",
-				 backgroundRepeat: "no-repeat",
-				 backgroundPosition: "center",
-				 height: "100%"
-			 }}>
-			<div className={anim ? "info" : "info info_animBack"}>
-
-				<div className="info__columns">
-					<div className={anim ? "info__col info__col_left" : "info__col info__col_left-animBack"}>
-						<h2 className="info__secondTitle">НА<br/>ПИ<br/>ШЕМ</h2>
-						<h1 className="info__title">ЧАТ-БОТА</h1>
+		<>
+			<div
+				className={!collapseGridDesktop ? "background-desktop" : "background-desktop background-desktop_collapsed"}
+				style={{
+					// width: "80%",
+					margin: "0 auto",
+					background: "url(/image/Background.svg)",
+					backgroundSize: "cover",
+					backgroundRepeat: "no-repeat",
+					backgroundPosition: "center",
+					display: "flex",
+					justifyContent: "center",
+				}}>
+				<div className={!anim ? "info" : "info info_animBack"}>
+					<div className="info__columns">
+						<div className="info__column">
+							<h2 className="info__secondTitle">НА<br/>ПИ<br/>ШЕМ</h2>
+							<h1 className="info__title">ЧАТ-БОТА</h1>
+						</div>
+						<div id="lottie-container" className="info__column"></div>
 					</div>
-					<div
-						id="lottie-container"
-						className={anim ? "info__col info__col_right" : "info__col info__col_right-anim"}
-					></div>
+					<div className="info__bottomContainer">
+						<div className="bottom-container__item">
+							<h4 className="info__subtitle">используйте роботов вместо<br/> тысячи слов </h4>
+						</div>
+						<div className="bottom-container__item">
+							<button
+								className="info__btn"
+								onClick={() => setVisiblePopup(true)}>Обсудить проект
+							</button>
+						</div>
+					</div>
 				</div>
-				<div className="info__bottomContainer">
-					<h4 className="info__subtitle">используйте роботов вместо тысячи слов </h4>
-					<AnimatedButton style={{
-						marginRight: "6.25%",
-						height: 72,
-						width: "auto",
-						fontSize: 36,
-						whiteSpace: "nowrap",
-						padding: 14,
-						fontWeight: 300,
-						borderRadius: 10,
-						border: "3px solid #fff",
-					}} onClick={() => setVisiblePopup(true)}>Обсудить проект</AnimatedButton>
-				</div>
-				{visiblePopup ? <Popup
-					setVisiblePopup={setVisiblePopup}
-				/> : null}
-				<div/>
 			</div>
-		</div>
+			{visiblePopup ? <Popup
+				setVisiblePopup={setVisiblePopup}
+			/> : null}
+		</>
 	)
 }
 
