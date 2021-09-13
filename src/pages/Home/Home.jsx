@@ -34,10 +34,13 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData, collapseGridDe
 		<>
 			<div className={!collapseGridDesktop ? "background-desktop" : "background-desktop background-desktop_collapsed"} style={{
 				// width: "80%",
+				height: "100%",
 				background: "url(/image/Background.svg)",
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
-				backgroundPosition: "center"
+				backgroundPosition: "center",
+				display: "flex",
+				alignItems: "center",
 			}}>
 				<div className="activities" >
 					{

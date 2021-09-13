@@ -21,10 +21,8 @@ const Chat = ({anim, visiblePopup, setVisiblePopup, collapseGridDesktop}) => {
 			<div
 				className={!collapseGridDesktop ? "background-desktop" : "background-desktop background-desktop_collapsed"}
 				style={{
-					// width: "80%",
-					margin: "0 auto",
 					background: "url(/image/Background.svg)",
-					backgroundSize: "cover",
+					backgroundSize: "85%",
 					backgroundRepeat: "no-repeat",
 					backgroundPosition: "center",
 					display: "flex",

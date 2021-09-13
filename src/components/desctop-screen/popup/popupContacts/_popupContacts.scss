@@ -1,4 +1,5 @@
 .popup-contacts {
+  font-family: Inter, Roboto, sans-serif;
   background: linear-gradient(30.28deg, #a53a8b 0%, #3b98c9 103.59%);
   margin: auto -135px auto 0;
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.25);
@@ -19,6 +20,7 @@
     height: 90%;
   }
 &__title {
+  font-family: Inter, Roboto, sans-serif;
   font-weight: bold;
   font-size: 46px;
   line-height: 87.52%;
@@ -40,12 +42,12 @@
   white-space: nowrap;
 }
 &__address {
-  font-weight: 300;
-  font-size: 10px;
+  font-weight: 200;
+  font-size: 12px;
   line-height: 17px;
   color: #ffffff;
   span {
-    display: block;
+    font-weight: 300;
   }
 }
   &__hide {

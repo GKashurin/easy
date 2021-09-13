@@ -50,7 +50,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 	return (
 		<form onClick={e => e.stopPropagation()} className={ !visibleThanksModal ? "form" : "form hide-popup-form" }>
 			<h2 className="form__title">Расскажите сами</h2>
-			<p className="form__subtitle">выберите тип интересуемого проекта</p>
+			<p className="form__subtitle">Выберите тип проекта</p>
 			<ul className="form__checkboxes checkboxes">
 				{checkboxes.map((item) => (
 					<li className="checkbox" key={item.name}>
@@ -77,7 +77,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 
 			<div className="form__budget budget">
 				<div className="budget__sum">
-					<p className="form__subtitle">Укажите бюджет проекта:</p>
+					<p className="form__subtitle">Укажите бюджет проекта</p>
 					<div className="budget__slider slider-budget">
 						{prices?.map((item, index) => (
 							<span
@@ -131,8 +131,8 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 			<div className="form__btnWrapper btnWrapper">
 				<button
 					onClick={changeHandler}
-					className="popup__form-btn animated-button-popup"
-				>отправить запрос
+					className="animated-button-popup"
+				>Отправить запрос
 				</button>
 				<span>
 					Нажимая на кнопку, вы даете согласие на обработку своих персональных данных.

@@ -10,9 +10,9 @@ const PopupContacts = ({visibleThanksModal}) => {
 					<h2 className="popup-contacts__title">Обсудим проект вместе?</h2>
 					<p className="popup-contacts__text">
 						Расскажите о себе и задаче. Или можете позвонить нам и мы сами
-						все заполним:
+						все заполним.
 					</p>
-					<a href="tel:73435215031" className="popup-contacts__phone">
+					<a href="tel:+73435215031" className="popup-contacts__phone">
 						+7 (343) 521-50-31
 					</a>
 					<div className="popup-contacts__address">
@@ -20,8 +20,9 @@ const PopupContacts = ({visibleThanksModal}) => {
 						   target="_blank"
 						   rel="noreferrer"
 						>
-							<span>Студия EASY</span>
-							620144, г. Екатеринбург. ул. Степана Разина, 2, оф. 6
+							Студия <span>EASY</span>
+							<br/>620144, г. Екатеринбург,
+							<br/> ул. Степана Разина, 2, оф. 6
 						</a>
 					</div>
 				</div>
