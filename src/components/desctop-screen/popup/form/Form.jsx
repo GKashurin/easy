@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import InputMask from "react-input-mask";
 import {useHistory} from "react-router-dom";
 import {prices, checkboxes} from "./data"
+import FileLoader from "../../../UI/FileLoader/FileLoader";
+import {sendForm} from "../../../../API/API";
 
 const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksModal, visibleThanksModal }) => {
 	const [error, setError] = useState(false)
@@ -13,6 +15,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 	})
 	const [checkedItems, setCheckedItems] = useState({})
 	const [budgetItem, setBudgetItem] = useState(prices[3])
+	const [selectedFile, setSelectedFile] = useState(null);
 
 	const values = { //объединенные данные с формы
 		project: checkedItems,
@@ -21,16 +24,19 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 		name: formState.name,
 		phone: formState.phone,
 		messenger: formState.messenger,
+		file: selectedFile,
 	}
+
 	const changeHandler = (e) => {
 		e.preventDefault();
 		if (formState.phone.length !== 18) { //валидация инпута с телефоном
 			setError(true)
 		} else {
 			setTimerActive(!timerActive); //запуск таймера
-			setTimeout(() => setVisiblePopup(false), 5002);//ререндер на главную??
+			setTimeout(() => setVisiblePopup(false), 5002);
 			setVisibleThanksModal(true);
-			console.log(values);
+			// sendForm(values)
+			console.log(values)
 		}
 	}
 
@@ -48,7 +54,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 	}, [])//получение чекбокса из адресной строки
 
 	return (
-		<form onClick={e => e.stopPropagation()} className={ !visibleThanksModal ? "form" : "form hide-popup-form" }>
+		<form onClick={e => e.stopPropagation()} className={ !visibleThanksModal ? "form" : "form hide-popup-form" } method="post">
 			<h2 className="form__title">Расскажите сами</h2>
 			<p className="form__subtitle">Выберите тип проекта</p>
 			<ul className="form__checkboxes checkboxes">
@@ -91,11 +97,20 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 					</div>
 				</div>
 			</div>
-			<textarea //проект
-				placeholder="Описание проекта или задачи"
-				value={formState.description}
-				onChange={e => setFormState({...formState, description: e.target.value})}
-			/>
+
+			<div className="form__project">
+				<textarea //проект
+					placeholder="Описание проекта или задачи"
+					value={formState.description}
+					onChange={e => setFormState({...formState, description: e.target.value})}
+				/>
+				<FileLoader
+					selectedFile={selectedFile}
+					onFileSelectSuccess={(file) => setSelectedFile(file)}
+					onFileSelectError={({ error }) => alert(error)}
+				/>
+			</div>
+
 
 			<div className="form__userInfo userInfo">
 				<input //имя

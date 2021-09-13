@@ -2,11 +2,12 @@
   font-family: Inter, Roboto, sans-serif;
   background: linear-gradient(30.28deg, #a53a8b 0%, #3b98c9 103.59%);
   margin: auto -135px auto 0;
-  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 11px rgba(0, 0, 0, 0.20);
   height: 90%;
   max-width: 310px;
   z-index: 1;
   transition: all 1s;
+
   @media (max-width: 900px) {
     display: none;
   }
@@ -25,6 +26,7 @@
   font-size: 46px;
   line-height: 87.52%;
   color: #ffffff;
+  margin-bottom: 15px;
 }
 &__text {
   font-weight: 300;
