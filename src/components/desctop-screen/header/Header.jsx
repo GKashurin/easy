@@ -8,7 +8,7 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 const Header = ({ setAnim, setCollapseGridDesktop }) => {
 	const [burgerOpen, setBurgerOpen] = useState(false);
 	const history = useHistory();
-	const { height, width } = useWindowDimensions();
+	const { width } = useWindowDimensions();
 
 	return (
 		<header className="header">

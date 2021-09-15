@@ -1,0 +1,128 @@
+.info {
+  animation: info-Animation 1.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(0);
+  padding-left: 5%;
+
+  &__columns {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__column {
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: calc(min(50vh, 50vw));
+      width: calc(min(50vh, 50vw));
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: calc(min(6vh, 6vw));
+    margin-left: calc(min(0.8vh, 0.8vw));
+  }
+
+  &__secondTitle {
+    font-weight: 900;
+    line-height: calc(min(13vh, 13vw));
+    font-size: calc(min(14vh, 14vw));
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: calc(min(3vh, 3vw));
+    line-height: calc(min(3vh, 3vw));
+    margin-left: calc(min(0.9vh, 0.9vw));
+    max-width: calc(min(43vh, 43vw));
+  }
+  &_animBack {
+    animation: info-Animation-back 1.2s;
+    animation-fill-mode: forwards;
+  }
+
+  &__btn {
+    margin-top: calc(max(-2vh, -2vw));
+    width: auto;
+    font-size: calc(min(3vh, 3vw));
+    line-height: calc(min(3vh, 3vw));
+    white-space: nowrap;
+    padding: calc(min(1.5vh, 1.5vw)) calc(min(2vh, 2vw));
+    font-weight: 300;
+    border-radius: calc(min(1vh, 1vw));
+    border: calc(min(0.3vh, 0.3vw)) solid #fff;
+    position: relative;
+    background: transparent;
+    font-family: Roboto, sans-serif;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    overflow: hidden;
+    &:after { //пробегающий блик
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 0; left: 0;
+      opacity: 0.5;
+      filter: blur;
+      background: linear-gradient(to left, transparent 0%, #fff 40%, #fff 60%, transparent 100%);
+      transform: translate(-100%, 0) rotate(10deg);
+      animation: blick 3s infinite;
+    }
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0;
+      z-index: -1;
+      content: '';
+      color: #000 !important;
+      background: #ffffff;
+      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    }
+    &:hover {
+      color: #c95691;
+      background-color: #ffffff;
+      text-shadow: currentColor;
+    }
+    &:hover:before {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes info-Animation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes info-Animation-back {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+
+

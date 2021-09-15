@@ -13,7 +13,20 @@
       margin-right: 0;
     }
   }
-  @media (max-width: 780px) {
+  img {
+    display: none;
+    @media (max-width: 767px) {
+      display: inline;
+    }
+  }
+  span {
+    display: none;
+    @media (min-width: 768px) {
+      display: inline;
+    }
+  }
+
+  @media (max-width: 768px) {
     font-size: 15px;
     margin-right: 0;
   }
@@ -21,28 +34,3 @@
     display: none;
   }
 }
-
-.phone > span {
-  @media (min-width: 780px) {
-    background: none !important;
-    padding: 0 !important;
-  }
-}
-.phone > span > span {
-  @media (max-width: 780px) {
-    display: none;
-  }
-}
-
-.email > span {
-  @media (min-width: 780px) {
-    background: none !important;
-    padding: 0 !important;
-  }
-}
-.email > span > span {
-  @media (max-width: 780px) {
-    display: none;
-  }
-}
-

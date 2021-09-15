@@ -1,0 +1,21 @@
+.error__wrapper {
+  z-index: 5;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  @media (orientation: landscape) {
+    display: flex;
+  }
+  span {
+    font-size: 22px;
+    user-select: none;
+  }
+}

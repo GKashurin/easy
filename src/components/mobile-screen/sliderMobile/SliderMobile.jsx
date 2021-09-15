@@ -31,8 +31,7 @@ const SliderMobile = ({mainData, setCollapseGridMobile}) => {
 
 	return (
 		<>
-			<section className="content-mobile"
-			>
+			<section className="content-mobile">
 				<div className="content-mobile__wrapper">
 					<div className="content-mobile__col content-mobile__col-left">
 						<div {...handlers} className="slider"

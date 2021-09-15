@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch} from "react-router-dom";
-import {Chat, Home, Instamask, Mobile, Team, Tours360, Vfx, Vr, Web} from "../../pages";
+import {Chat, Home, Instamask, Mobile, Tours360, Vfx, Vr, Web} from "../../pages";
 
 const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData, collapseGridDesktop, setCollapseGridDesktop}) => {
 	return (
@@ -17,49 +17,49 @@ const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData, coll
 				/>
 			</Route>
 
-			<Route path="/team">
-				<Team visiblePopup={visiblePopup} setVisiblePopup={setVisiblePopup}/>
-			</Route>
+			{/*<Route path="/team">*/}
+			{/*	<Team visiblePopup={visiblePopup} setVisiblePopup={setVisiblePopup}/>*/}
+			{/*</Route>*/}
 
 			<Route path="/web">
 				<Web visiblePopup={visiblePopup}
 					 setVisiblePopup={setVisiblePopup}
-					 setAnim={setAnim}
+					 collapseGridDesktop={collapseGridDesktop}
 					 anim={anim}
 				/>
 			</Route>
 			<Route path="/instamask">
 				<Instamask visiblePopup={visiblePopup}
 						   setVisiblePopup={setVisiblePopup}
-						   setAnim={setAnim}
+						   collapseGridDesktop={collapseGridDesktop}
 						   anim={anim}
 				/>
 			</Route>
 			<Route path="/mobile">
 				<Mobile visiblePopup={visiblePopup}
 						setVisiblePopup={setVisiblePopup}
-						setAnim={setAnim}
+						collapseGridDesktop={collapseGridDesktop}
 						anim={anim}
 				/>
 			</Route>
 			<Route path="/vr-ar">
 				<Vr visiblePopup={visiblePopup}
 					setVisiblePopup={setVisiblePopup}
-					setAnim={setAnim}
+					collapseGridDesktop={collapseGridDesktop}
 					anim={anim}
 				/>
 			</Route>
 			<Route path="/vfx">
 				<Vfx visiblePopup={visiblePopup}
 					 setVisiblePopup={setVisiblePopup}
-					 setAnim={setAnim}
+					 collapseGridDesktop={collapseGridDesktop}
 					 anim={anim}
 				/>
 			</Route>
 			<Route path="/tours360">
 				<Tours360 visiblePopup={visiblePopup}
 						  setVisiblePopup={setVisiblePopup}
-						  setAnim={setAnim}
+						  collapseGridDesktop={collapseGridDesktop}
 						  anim={anim}
 				/>
 			</Route>
@@ -70,7 +70,6 @@ const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData, coll
 					  collapseGridDesktop={collapseGridDesktop}
 				/>
 			</Route>
-			{/*<Redirect to="/"/>*/}
 		</Switch>
 	);
 };

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Route, Switch, useHistory} from "react-router-dom";
-import {Header, Footer, FooterMobile, SliderMobile, AppRouter, FormMobile} from "./components/";
+import {Header, Footer, FooterMobile, SliderMobile, AppRouter, FormMobile, Error} from "./components/";
 import {mainData} from "./mainData";
 import useWindowDimensions from "./hooks/useWindowDimensions";
 import "./app.scss";
@@ -15,8 +15,9 @@ const App = () => {
 	const [visibleFormContainer, setVisibleFormContainer] = useState(false)// состояние для темного контейнера
 	const [collapseGridMobile, setCollapseGridMobile] = useState(false) //сужение сетки на моб. версии
 	const [collapseGridDesktop, setCollapseGridDesktop] = useState(false) //сужение сетки на десктопной версии
+	// const [orientationError, setOrientationError] = useState(false) //Если пользователь перевернет мобильный в горионтальную ориентацию, всплывет модалка
 
-	const { height, width } = useWindowDimensions();
+	const { width } = useWindowDimensions();
 	const history = useHistory()
 
 	if (width <= 550 ) {
@@ -27,10 +28,12 @@ const App = () => {
 
 	useEffect(() => {//сужение сетки на моб. версии
 		setTimeout(() => setCollapseGridMobile(false), 550)
+		return () => console.log(".")
 	}, [collapseGridMobile])
 
 	useEffect(() => {//сужение сетки на десктопной версии
 		setTimeout(() => setCollapseGridDesktop(false), 1550)
+		return () => console.log(".")
 	}, [collapseGridDesktop])
 
 	return (
@@ -68,6 +71,7 @@ const App = () => {
 							setVisibleFormMobile={setVisibleFormMobile}
 							setVisibleFormContainer={setVisibleFormContainer}
 						/>
+						<Error/>
 					</Route>
 				</Switch>
 			<img className={!collapseGridMobile ? "background-mobile" : "background-mobile background-mobile_collapsed"} src="/image/grid.svg" alt="grid"/>

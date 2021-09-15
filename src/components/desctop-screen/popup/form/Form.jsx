@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import InputMask from "react-input-mask";
 import {useHistory} from "react-router-dom";
 import {prices, checkboxes} from "./data"
-import FileLoader from "../../../UI/FileLoader/FileLoader";
 import {sendForm} from "../../../../API/API";
 
 const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksModal, visibleThanksModal }) => {
@@ -15,7 +14,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 	})
 	const [checkedItems, setCheckedItems] = useState({})
 	const [budgetItem, setBudgetItem] = useState(prices[3])
-	const [selectedFile, setSelectedFile] = useState(null);
+
 
 	const values = { //объединенные данные с формы
 		project: checkedItems,
@@ -24,7 +23,6 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 		name: formState.name,
 		phone: formState.phone,
 		messenger: formState.messenger,
-		file: selectedFile,
 	}
 
 	const changeHandler = (e) => {
@@ -51,6 +49,7 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 			}
 			return checkedItems
 		})
+		return () => console.log(".")
 	}, [])//получение чекбокса из адресной строки
 
 	return (
@@ -104,11 +103,20 @@ const Form = ({ setTimerActive, timerActive, setVisiblePopup, setVisibleThanksMo
 					value={formState.description}
 					onChange={e => setFormState({...formState, description: e.target.value})}
 				/>
-				<FileLoader
-					selectedFile={selectedFile}
-					onFileSelectSuccess={(file) => setSelectedFile(file)}
-					onFileSelectError={({ error }) => alert(error)}
+				<input
+					id="file-input"
+					type="file"
+					name="file"
+					multiple
+					// value={}
+					// onChange={}
 				/>
+				<label htmlFor="file-input"
+					   // onClick={}
+				>
+					<img src="/image/paperclip.svg" alt="paper"/>
+					&ensp;Прикрепить ТЗ
+				</label>
 			</div>
 
 

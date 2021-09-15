@@ -28,7 +28,7 @@ const Home = ({ setAnim, visiblePopup, setVisiblePopup, mainData, collapseGridDe
 	}
 
 	const history = useHistory();
-	const { height, width } = useWindowDimensions();
+	const { width } = useWindowDimensions();
 
 	return (
 		<>
