@@ -1,7 +1,5 @@
 import React from "react"
 import "./ThanksModal.scss"
-import "../Popup.scss"
-import "../form/Form.scss"
 
 const ThanksModal = ({visibleThanksModal, seconds}) => {
 	return (

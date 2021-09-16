@@ -1,6 +1,6 @@
 .content-mobile {
   &__subtitle {
-    font-family: Inter;
+    font-family: Inter, Roboto, sans-serif;
     font-weight: normal;
     font-size: 7vw;
     text-align: right;
@@ -9,7 +9,7 @@
   }
 
   &__text {
-    font-family: Inter;
+    font-family: Inter, Roboto, sans-serif;
     font-weight: 200;
     font-size: 4vw;
     text-align: right;

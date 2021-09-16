@@ -16,11 +16,6 @@ const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData, coll
 					setCollapseGridDesktop={setCollapseGridDesktop}
 				/>
 			</Route>
-
-			{/*<Route path="/team">*/}
-			{/*	<Team visiblePopup={visiblePopup} setVisiblePopup={setVisiblePopup}/>*/}
-			{/*</Route>*/}
-
 			<Route path="/web">
 				<Web visiblePopup={visiblePopup}
 					 setVisiblePopup={setVisiblePopup}

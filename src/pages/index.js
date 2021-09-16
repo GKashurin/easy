@@ -1,5 +1,4 @@
 export { default as Home } from './Home/Home';
-// export { default as Team } from './team/Team';
 export { default as Chat } from './products/Chat'
 export { default as Instamask } from './products/Instamask';
 export { default as Mobile } from './products/Mobile';

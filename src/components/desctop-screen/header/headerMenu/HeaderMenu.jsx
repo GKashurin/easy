@@ -5,9 +5,6 @@ const HeaderMenu = () => {
 	return (
 		<nav>
 			<ul className="headerMenu">
-				{/*<li className="headerMenu__item" >*/}
-				{/*	<Link to="/team" className="animated-link">команда</Link>*/}
-				{/*</li>*/}
 				<li className="headerMenu__item">
 					<address>
 						<a href="mailto:hello@easycgmailto:namaste@easycg.ru"
