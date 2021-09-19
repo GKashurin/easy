@@ -15,7 +15,6 @@ const App = () => {
 	const [visibleFormContainer, setVisibleFormContainer] = useState(false)// состояние для темного контейнера
 	const [collapseGridMobile, setCollapseGridMobile] = useState(false) //сужение сетки на моб. версии
 	const [collapseGridDesktop, setCollapseGridDesktop] = useState(false) //сужение сетки на десктопной версии
-	// const [orientationError, setOrientationError] = useState(false) //Если пользователь перевернет мобильный в горионтальную ориентацию, всплывет модалка
 
 	const { width } = useWindowDimensions();
 	const history = useHistory()

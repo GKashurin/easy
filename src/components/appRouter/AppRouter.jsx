@@ -16,49 +16,49 @@ const AppRouter = ({visiblePopup, setVisiblePopup, setAnim, anim, mainData, coll
 					setCollapseGridDesktop={setCollapseGridDesktop}
 				/>
 			</Route>
-			<Route path="/web">
+			<Route path="/sozdanie-web-prilozhenij">
 				<Web visiblePopup={visiblePopup}
 					 setVisiblePopup={setVisiblePopup}
 					 collapseGridDesktop={collapseGridDesktop}
 					 anim={anim}
 				/>
 			</Route>
-			<Route path="/instamask">
+			<Route path="/zakazat-instagram-masku">
 				<Instamask visiblePopup={visiblePopup}
 						   setVisiblePopup={setVisiblePopup}
 						   collapseGridDesktop={collapseGridDesktop}
 						   anim={anim}
 				/>
 			</Route>
-			<Route path="/mobile">
+			<Route path="/razrabotka-mobilnykh-prilozhenij">
 				<Mobile visiblePopup={visiblePopup}
 						setVisiblePopup={setVisiblePopup}
 						collapseGridDesktop={collapseGridDesktop}
 						anim={anim}
 				/>
 			</Route>
-			<Route path="/vr-ar">
+			<Route path="/razrabotka-virtualnoj-realnosti-vr">
 				<Vr visiblePopup={visiblePopup}
 					setVisiblePopup={setVisiblePopup}
 					collapseGridDesktop={collapseGridDesktop}
 					anim={anim}
 				/>
 			</Route>
-			<Route path="/vfx">
+			<Route path="/sozdaem-vizualnye-effekty-vfx">
 				<Vfx visiblePopup={visiblePopup}
 					 setVisiblePopup={setVisiblePopup}
 					 collapseGridDesktop={collapseGridDesktop}
 					 anim={anim}
 				/>
 			</Route>
-			<Route path="/tours360">
+			<Route path="/proektirovanie-i-razrabotka-3d-modelej-tury-360">
 				<Tours360 visiblePopup={visiblePopup}
 						  setVisiblePopup={setVisiblePopup}
 						  collapseGridDesktop={collapseGridDesktop}
 						  anim={anim}
 				/>
 			</Route>
-			<Route path="/chat">
+			<Route path="/razrabotka-chat-botov">
 				<Chat visiblePopup={visiblePopup}
 					  setVisiblePopup={setVisiblePopup}
 					  anim={anim}
